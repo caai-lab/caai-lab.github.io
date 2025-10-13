@@ -159,6 +159,97 @@ Center for Applied Artificial Intelligence (CAAI)<br>
 E-mail: <a href="mailto:#">[NOSPAM]</a><br><br>
 Research Interest: Artificial Intelligence for computer vision, Machine Learning <br>
 </span></p>
+
+<!-- Research Progress Visualization for Lamia Qamar -->
+<div style="margin-top: 15px; padding: 10px; background-color: #f9f9f9; border-radius: 5px;">
+    <p style="font-size: 10pt; margin: 0 0 10px 0; font-weight: bold; color: #333;">Research Progress:</p>
+    
+    <!-- Publications -->
+    <div style="margin-bottom: 8px;">
+        <span style="font-size: 9pt; color: #555; display: inline-block; width: 100px;">Publications:</span>
+        <div style="display: inline-block; width: 300px; height: 4px; background-color: #e0e0e0; border-radius: 2px; vertical-align: middle; position: relative; overflow: hidden;">
+            <div style="width: 0%; height: 100%; background: linear-gradient(90deg, #4285f4, #34a853); border-radius: 2px; animation: fillPublications 2s ease-out forwards;"></div>
+        </div>
+        <span id="pubCount" style="font-size: 9pt; color: #555; margin-left: 8px;">0</span>
+    </div>
+    
+    <!-- Citations -->
+    <div style="margin-bottom: 8px;">
+        <span style="font-size: 9pt; color: #555; display: inline-block; width: 100px;">Citations:</span>
+        <div style="display: inline-block; width: 300px; height: 4px; background-color: #e0e0e0; border-radius: 2px; vertical-align: middle; position: relative; overflow: hidden;">
+            <div style="width: 0%; height: 100%; background: linear-gradient(90deg, #fbbc04, #ea4335); border-radius: 2px; animation: fillCitations 2s ease-out 0.3s forwards;"></div>
+        </div>
+        <span id="citCount" style="font-size: 9pt; color: #555; margin-left: 8px;">0</span>
+    </div>
+    
+    <!-- Projects -->
+    <div style="margin-bottom: 8px;">
+        <span style="font-size: 9pt; color: #555; display: inline-block; width: 100px;">Projects:</span>
+        <div style="display: inline-block; width: 300px; height: 4px; background-color: #e0e0e0; border-radius: 2px; vertical-align: middle; position: relative; overflow: hidden;">
+            <div style="width: 0%; height: 100%; background: linear-gradient(90deg, #9c27b0, #e91e63); border-radius: 2px; animation: fillProjects 2s ease-out 0.6s forwards;"></div>
+        </div>
+        <span id="projCount" style="font-size: 9pt; color: #555; margin-left: 8px;">0</span>
+    </div>
+    
+    <!-- Collaborations -->
+    <div style="margin-bottom: 0;">
+        <span style="font-size: 9pt; color: #555; display: inline-block; width: 100px;">Collaborations:</span>
+        <div style="display: inline-block; width: 300px; height: 4px; background-color: #e0e0e0; border-radius: 2px; vertical-align: middle; position: relative; overflow: hidden;">
+            <div style="width: 0%; height: 100%; background: linear-gradient(90deg, #00bcd4, #009688); border-radius: 2px; animation: fillCollaborations 2s ease-out 0.9s forwards;"></div>
+        </div>
+        <span id="collabCount" style="font-size: 9pt; color: #555; margin-left: 8px;">0</span>
+    </div>
+</div>
+
+<style>
+    @keyframes fillPublications {
+        to { width: 25%; }
+    }
+    @keyframes fillCitations {
+        to { width: 15%; }
+    }
+    @keyframes fillProjects {
+        to { width: 40%; }
+    }
+    @keyframes fillCollaborations {
+        to { width: 30%; }
+    }
+    
+    @keyframes countUp {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+</style>
+
+<script>
+    // Animate counters for Lamia Qamar's research metrics
+    function animateCounter(elementId, targetValue, duration, delay) {
+        setTimeout(function() {
+            var element = document.getElementById(elementId);
+            var start = 0;
+            var increment = targetValue / (duration / 16);
+            var current = start;
+            
+            var timer = setInterval(function() {
+                current += increment;
+                if (current >= targetValue) {
+                    element.textContent = targetValue;
+                    clearInterval(timer);
+                } else {
+                    element.textContent = Math.floor(current);
+                }
+            }, 16);
+        }, delay);
+    }
+    
+    // Set target values (you can easily edit these numbers)
+    animateCounter('pubCount', 0, 2000, 0);
+    animateCounter('citCount', 0, 2000, 300);
+    animateCounter('projCount', 1, 2000, 600);
+    animateCounter('collabCount', 1, 2000, 900);
+</script>
+<!-- End Research Progress Visualization -->
+
         </td>
     </tr>
 </table>
