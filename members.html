@@ -122,6 +122,125 @@ Research interests:<br>
 </span>
 </p>
 
+<!-- Research Statistics for Gurpreet Singh -->
+<span style="font-size:11pt;">
+<p><b>[Research Statistics]</b></p>
+</span>
+
+<div style="margin: 20px 0; padding: 15px; background-color: #f5f5f5; border-radius: 8px; max-width: 600px;">
+    <p style="font-size: 10pt; margin: 0 0 15px 0; font-weight: bold; color: #1a237e;">Research Metrics Overview</p>
+    
+    <!-- Publications -->
+    <div style="margin-bottom: 12px;">
+        <div style="display: flex; align-items: center; margin-bottom: 4px;">
+            <span style="font-size: 10pt; color: #333; width: 120px; font-weight: 500;">Publications:</span>
+            <span id="gurpreet_pubCount" style="font-size: 10pt; color: #1a237e; font-weight: bold;">0</span>
+        </div>
+        <div style="width: 100%; height: 6px; background-color: #e0e0e0; border-radius: 3px; overflow: hidden;">
+            <div id="gurpreet_pubBar" style="width: 0%; height: 100%; background: linear-gradient(90deg, #4285f4, #34a853); border-radius: 3px; transition: width 2s ease-out;"></div>
+        </div>
+    </div>
+    
+    <!-- Citations -->
+    <div style="margin-bottom: 12px;">
+        <div style="display: flex; align-items: center; margin-bottom: 4px;">
+            <span style="font-size: 10pt; color: #333; width: 120px; font-weight: 500;">Citations:</span>
+            <span id="gurpreet_citCount" style="font-size: 10pt; color: #1a237e; font-weight: bold;">0</span>
+        </div>
+        <div style="width: 100%; height: 6px; background-color: #e0e0e0; border-radius: 3px; overflow: hidden;">
+            <div id="gurpreet_citBar" style="width: 0%; height: 100%; background: linear-gradient(90deg, #fbbc04, #ea4335); border-radius: 3px; transition: width 2s ease-out;"></div>
+        </div>
+    </div>
+    
+    <!-- Projects -->
+    <div style="margin-bottom: 12px;">
+        <div style="display: flex; align-items: center; margin-bottom: 4px;">
+            <span style="font-size: 10pt; color: #333; width: 120px; font-weight: 500;">Projects:</span>
+            <span id="gurpreet_projCount" style="font-size: 10pt; color: #1a237e; font-weight: bold;">0</span>
+        </div>
+        <div style="width: 100%; height: 6px; background-color: #e0e0e0; border-radius: 3px; overflow: hidden;">
+            <div id="gurpreet_projBar" style="width: 0%; height: 100%; background: linear-gradient(90deg, #9c27b0, #e91e63); border-radius: 3px; transition: width 2s ease-out;"></div>
+        </div>
+    </div>
+    
+    <!-- Collaborations -->
+    <div style="margin-bottom: 0;">
+        <div style="display: flex; align-items: center; margin-bottom: 4px;">
+            <span style="font-size: 10pt; color: #333; width: 120px; font-weight: 500;">Collaborations:</span>
+            <span id="gurpreet_collabCount" style="font-size: 10pt; color: #1a237e; font-weight: bold;">0</span>
+        </div>
+        <div style="width: 100%; height: 6px; background-color: #e0e0e0; border-radius: 3px; overflow: hidden;">
+            <div id="gurpreet_collabBar" style="width: 0%; height: 100%; background: linear-gradient(90deg, #00bcd4, #009688); border-radius: 3px; transition: width 2s ease-out;"></div>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Research Statistics Configuration for Gurpreet Singh
+    // EDIT THESE VALUES to update the statistics
+    var gurpreetStats = {
+        publications: 3,
+        citations: 2,
+        projects: 24,
+        collaborations: 6
+    };
+    
+    // Auto-calculate percentages based on the highest value for proportional bars
+    var maxValue = Math.max(gurpreetStats.publications, gurpreetStats.citations, gurpreetStats.projects, gurpreetStats.collaborations);
+    
+    // Animate counters and bars
+    function animateGurpreetStats() {
+        // Animate Publications
+        animateValue('gurpreet_pubCount', 0, gurpreetStats.publications, 1500);
+        setTimeout(function() {
+            document.getElementById('gurpreet_pubBar').style.width = ((gurpreetStats.publications / maxValue) * 100) + '%';
+        }, 100);
+        
+        // Animate Citations
+        setTimeout(function() {
+            animateValue('gurpreet_citCount', 0, gurpreetStats.citations, 1500);
+            document.getElementById('gurpreet_citBar').style.width = ((gurpreetStats.citations / maxValue) * 100) + '%';
+        }, 300);
+        
+        // Animate Projects
+        setTimeout(function() {
+            animateValue('gurpreet_projCount', 0, gurpreetStats.projects, 1500);
+            document.getElementById('gurpreet_projBar').style.width = ((gurpreetStats.projects / maxValue) * 100) + '%';
+        }, 600);
+        
+        // Animate Collaborations
+        setTimeout(function() {
+            animateValue('gurpreet_collabCount', 0, gurpreetStats.collaborations, 1500);
+            document.getElementById('gurpreet_collabBar').style.width = ((gurpreetStats.collaborations / maxValue) * 100) + '%';
+        }, 900);
+    }
+    
+    function animateValue(elementId, start, end, duration) {
+        var element = document.getElementById(elementId);
+        var range = end - start;
+        var increment = range / (duration / 16);
+        var current = start;
+        
+        var timer = setInterval(function() {
+            current += increment;
+            if (current >= end) {
+                element.textContent = end;
+                clearInterval(timer);
+            } else {
+                element.textContent = Math.floor(current);
+            }
+        }, 16);
+    }
+    
+    // Run animation when page loads
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', animateGurpreetStats);
+    } else {
+        animateGurpreetStats();
+    }
+</script>
+<!-- End Research Statistics -->
+
     
 <table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%"
  style='width:100.0%;mso-cellspacing:0cm;background:#CCCCCC;mso-yfti-tbllook:1184'>
