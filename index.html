@@ -6,6 +6,7 @@
 </head>
 
 <body bgcolor="white" text="black" link="blue" vlink="purple" alink="red">
+
 <!-- ===== CAAI First-Visit Math Gate ===== -->
 <style>
   #mathGate {
@@ -110,6 +111,41 @@
 </script>
 <!-- ====================================== -->
 <span id="equation" style="font-size:11pt; color:#555; font-style:italic;"></span>
+
+<script>
+  const equations = [
+    "⊕ Vision ⊗ Language ⊗ Audio ⟶ Intelligence",
+    "AI ≈ limₙ→∞ (Knowledgeₙ)",
+    "∫ Data · Ethics → Intelligence",
+    "f(x) = ∑(Perception × Learning)",
+    "Intelligence emerges."
+  ];
+
+  let currentIndex = 0;
+  let lastScrollY = window.scrollY;
+  const eq = document.getElementById("equation");
+
+  eq.innerText = equations[currentIndex];
+
+  window.addEventListener("scroll", () => {
+    const currentScrollY = window.scrollY;
+
+    if (currentScrollY > lastScrollY && currentIndex < equations.length - 1) {
+      // scrolling down → simplify
+      currentIndex++;
+      eq.innerText = equations[currentIndex];
+    }
+
+    if (currentScrollY < lastScrollY && currentIndex > 0) {
+      // scrolling up → increase complexity
+      currentIndex--;
+      eq.innerText = equations[currentIndex];
+    }
+
+    lastScrollY = currentScrollY;
+  });
+</script>
+
 
 <script>
   const equations = [
