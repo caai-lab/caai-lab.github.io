@@ -45,6 +45,53 @@ An independent, online research lab dedicated to advancing applied artificial in
 </table>
 </p>
 
+<!-- ===== CAAI Music Playlist Player ===== -->
+<table width="100%" cellpadding="10" cellspacing="0">
+  <tr>
+    <td align="right">
+
+      <span style="font-size:10pt; color:#333;">
+        🎧 Optional Background Audio
+      </span><br><br>
+
+      <audio id="audioPlayer" controls>
+        <source src="caai-theme-1.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+      <br><br>
+
+      <button onclick="prevTrack()">⏮ Previous</button>
+      <button onclick="nextTrack()">⏭ Next</button>
+
+    </td>
+  </tr>
+</table>
+
+<script>
+  const tracks = [
+    "caai-theme-1.mp3",
+    "caai-theme-2.mp3",
+    "caai-theme-3.mp3"
+  ];
+
+  let currentTrack = 0;
+  const player = document.getElementById("audioPlayer");
+
+  function nextTrack() {
+    currentTrack = (currentTrack + 1) % tracks.length;
+    player.src = tracks[currentTrack];
+    player.play();
+  }
+
+  function prevTrack() {
+    currentTrack = (currentTrack - 1 + tracks.length) % tracks.length;
+    player.src = tracks[currentTrack];
+    player.play();
+  }
+</script>
+<!-- ===================================== -->
+
+
 <table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%"
  style='width:100.0%;mso-cellspacing:0cm;background:#CCCCCC;mso-yfti-tbllook:1184'>
  <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes;mso-yfti-lastrow:yes'>
