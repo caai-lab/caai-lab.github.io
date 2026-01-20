@@ -45,23 +45,56 @@ An independent, online research lab dedicated to advancing applied artificial in
 </table>
 </p>
 
-<!-- ===== CAAI Music Playlist Player ===== -->
+<!-- ===== CAAI Mini iPod-Style Music Player ===== -->
+<style>
+  .ipod-player {
+    width: 170px;
+    background: linear-gradient(#f5f5f5, #e0e0e0);
+    border: 1px solid #bbb;
+    border-radius: 14px;
+    padding: 10px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  }
+
+  .ipod-title {
+    font-size: 9pt;
+    color: #333;
+    margin-bottom: 6px;
+  }
+
+  .ipod-controls button {
+    background: #fff;
+    border: 1px solid #aaa;
+    border-radius: 50%;
+    width: 34px;
+    height: 34px;
+    margin: 4px;
+    font-size: 12pt;
+    cursor: pointer;
+  }
+
+  .ipod-controls button:hover {
+    background: #f0f0f0;
+  }
+</style>
+
 <table width="100%" cellpadding="10" cellspacing="0">
   <tr>
     <td align="right">
 
-      <span style="font-size:10pt; color:#333;">
-        🎧 Optional Background Audio
-      </span><br><br>
+      <div class="ipod-player">
+        <div class="ipod-title">🎧 CAAI Audio</div>
 
-      <audio id="audioPlayer" controls>
-        <source src="caai-theme-1.mp3" type="audio/mpeg">
-        Your browser does not support the audio element.
-      </audio>
-      <br><br>
+        <audio id="audioPlayer" preload="none"></audio>
 
-      <button onclick="prevTrack()">⏮ Previous</button>
-      <button onclick="nextTrack()">⏭ Next</button>
+        <div class="ipod-controls">
+          <button onclick="prevTrack()">⏮</button>
+          <button onclick="togglePlay()">▶</button>
+          <button onclick="nextTrack()">⏭</button>
+        </div>
+      </div>
 
     </td>
   </tr>
@@ -75,21 +108,38 @@ An independent, online research lab dedicated to advancing applied artificial in
   ];
 
   let currentTrack = 0;
+  let isPlaying = false;
   const player = document.getElementById("audioPlayer");
+
+  player.src = tracks[currentTrack];
+
+  function togglePlay() {
+    if (isPlaying) {
+      player.pause();
+    } else {
+      player.play();
+    }
+    isPlaying = !isPlaying;
+  }
 
   function nextTrack() {
     currentTrack = (currentTrack + 1) % tracks.length;
     player.src = tracks[currentTrack];
     player.play();
+    isPlaying = true;
   }
 
   function prevTrack() {
     currentTrack = (currentTrack - 1 + tracks.length) % tracks.length;
     player.src = tracks[currentTrack];
     player.play();
+    isPlaying = true;
   }
+
+  player.addEventListener("ended", nextTrack);
 </script>
-<!-- ===================================== -->
+<!-- =========================================== -->
+
 
 
 <table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%"
