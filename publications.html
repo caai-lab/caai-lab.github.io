@@ -115,6 +115,15 @@ An independent, online research lab dedicated to advancing applied artificial in
     
 </span>
 
+<script>
+  document.addEventListener("contextmenu", e => e.preventDefault());
+  document.addEventListener("keydown", e => {
+    if (e.ctrlKey && (e.key === 'u' || e.key === 's')) {
+      e.preventDefault();
+      alert("Viewing source is disabled 😎");
+    }
+  });
+</script>
     
 </body>
 </html> 
