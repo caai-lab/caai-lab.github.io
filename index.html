@@ -545,6 +545,14 @@ If you are interested in joining, please send an email with your CV, academic tr
   </p>
 </span>
 
-
+<script>
+  document.addEventListener("contextmenu", e => e.preventDefault());
+  document.addEventListener("keydown", e => {
+    if (e.ctrlKey && (e.key === 'u' || e.key === 's')) {
+      e.preventDefault();
+      alert("Viewing source is disabled 😎");
+    }
+  });
+</script>
 </body>
 </html> 
