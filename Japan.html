@@ -26,6 +26,14 @@
     <img src="IMG_1386.jpg" alt="Ninth Image" width="400">
     <br><br>
     
-
+<script>
+  document.addEventListener("contextmenu", e => e.preventDefault());
+  document.addEventListener("keydown", e => {
+    if (e.ctrlKey && (e.key === 'u' || e.key === 's')) {
+      e.preventDefault();
+      alert("Viewing source is disabled 😎");
+    }
+  });
+</script>
 </body>
 </html>
