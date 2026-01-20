@@ -3,31 +3,9 @@
 <head>
 <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <title>CAAI: Center for Applied Artificial Intelligence</title>
-<span id="equation" style="font-size:11pt; color:#555; font-style:italic;"></span>
-
-<script>
-  const equations = [
-    "f(x) = ∑(Perception × Learning)",
-    "∫ Data · Ethics → Intelligence",
-    "AI ≈ limₙ→∞ (Knowledgeₙ)",
-    "⊕ Vision ⊗ Language ⊗ Audio"
-  ];
-
-  let i = 0;
-  const eq = document.getElementById("equation");
-
-  setInterval(() => {
-    eq.innerText = equations[i];
-    i = (i + 1) % equations.length;
-  }, 3500);
-
-  eq.innerText = equations[0];
-</script>
-
 </head>
 
 <body bgcolor="white" text="black" link="blue" vlink="purple" alink="red">
-
 <!-- ===== CAAI First-Visit Math Gate ===== -->
 <style>
   #mathGate {
@@ -131,6 +109,63 @@
   }
 </script>
 <!-- ====================================== -->
+<span id="equation" style="font-size:11pt; color:#555; font-style:italic;"></span>
+
+<script>
+  const equations = [
+    "f(x) = ∑(Perception × Learning)",
+    "∫ Data · Ethics → Intelligence",
+    "AI ≈ limₙ→∞ (Knowledgeₙ)",
+    "⊕ Vision ⊗ Language ⊗ Audio"
+  ];
+
+  let i = 0;
+  const eq = document.getElementById("equation");
+
+  setInterval(() => {
+    eq.innerText = equations[i];
+    i = (i + 1) % equations.length;
+  }, 3500);
+
+  eq.innerText = equations[0];
+</script>
+
+<!-- ===== Live Thinking Status Bar ===== -->
+<style>
+  #caaiStatus {
+    font-size: 10pt;
+    color: #444;
+    font-family: "Courier New", monospace;
+    margin-top: 6px;
+    opacity: 0.85;
+  }
+</style>
+
+<div id="caaiStatus">
+  CAAI Status: Initializing research environment…
+</div>
+
+<script>
+  const caaiStatuses = [
+    "Optimizing models…",
+    "Verifying assumptions…",
+    "Minimizing loss…",
+    "Evaluating generalization…",
+    "Checking ethical constraints…",
+    "Updating priors…",
+    "Converged ✓"
+  ];
+
+  let statusIndex = 0;
+  const statusEl = document.getElementById("caaiStatus");
+
+  setInterval(() => {
+    statusEl.innerText = "CAAI Status: " + caaiStatuses[statusIndex];
+    statusIndex = (statusIndex + 1) % caaiStatuses.length;
+  }, 3200);
+</script>
+
+
 
 <p>
 <table class="MsoNormal" cellpadding="0" cellspacing="0" width="812">
