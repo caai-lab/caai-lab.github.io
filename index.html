@@ -58,12 +58,12 @@
 
   .gate-equation {
     font-size: 14pt;
-    margin: 16px 0;
+    margin: 18px 0;
   }
 
   .gate-options button {
     margin: 6px;
-    padding: 8px 14px;
+    padding: 8px 16px;
     border-radius: 20px;
     border: 1px solid #999;
     background: #f5f5f5;
@@ -77,7 +77,7 @@
   .gate-note {
     font-size: 9pt;
     color: #666;
-    margin-top: 12px;
+    margin-top: 14px;
   }
 </style>
 
@@ -87,19 +87,18 @@
 
     <div class="gate-equation">
       Solve to Enter:<br>
-      <b>∫<sub>0</sub><sup>1</sup> x dx = ?</b>
+      <b>∫<sub>0</sub><sup>∞</sup> e<sup>−x</sup> dx = ?</b>
     </div>
 
     <div class="gate-options">
-      <button onclick="checkGate(0.25)">0.25</button>
-      <button onclick="checkGate(0.5)">0.5</button>
+      <button onclick="checkGate(0)">0</button>
       <button onclick="checkGate(1)">1</button>
       <button onclick="checkGate(2)">2</button>
+      <button onclick="checkGate('inf')">∞</button>
     </div>
 
     <div class="gate-note">
-      Academic welcome ritual · Shown only once<br>
-      <a href="#" onclick="skipGate()">Skip</a>
+      Academic welcome ritual · Shown only once
     </div>
   </div>
 </div>
@@ -107,22 +106,28 @@
 <script>
   const gateKey = "caai_gate_passed";
 
+  // If already passed, hide gate
   if (localStorage.getItem(gateKey)) {
     document.getElementById("mathGate").style.display = "none";
   }
 
   function checkGate(answer) {
-    if (answer === 0.5) {
+    if (answer === 1) {
       localStorage.setItem(gateKey, "yes");
       document.getElementById("mathGate").style.display = "none";
     } else {
-      alert("Not quite. Try again 🙂");
+      document.querySelector(".gate-box").innerHTML = `
+        <div class="gate-title">Access Denied</div>
+        <div class="gate-equation">
+          This was a fundamental integral.<br><br>
+          If this felt difficult, we recommend asking the person who sent you this website link for the answer.<br><br>
+          <b>CAAI politely suggests revisiting basic calculus.</b>
+        </div>
+        <div class="gate-note">
+          No second attempts · Academic standards enforced
+        </div>
+      `;
     }
-  }
-
-  function skipGate() {
-    localStorage.setItem(gateKey, "skipped");
-    document.getElementById("mathGate").style.display = "none";
   }
 </script>
 <!-- ====================================== -->
