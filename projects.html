@@ -1,113 +1,216 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-<meta http-equiv="content-type" content="text/html; charset=utf-8">
-<title>CAAI: Center for Applied Artificial Intelligence - Research Projects</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CAAI: Center for Applied Artificial Intelligence - Research Projects</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Lato:wght@300;400;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 
-<body bgcolor="white" text="black" link="blue" vlink="purple" alink="red">
+<body>
 
-<p>
-<table class="MsoNormal" cellpadding="0" cellspacing="0" width="812">
-<tr>
-<td width="100">
-    <p><img src="caai cropped.jpg" border="0" width="100" height="100"></p>
-</td>
-<td width="650">
-<p>
-<span style="font-size:16pt;">
-<b>
-<span style="color:#1a237e">CAAI</span>:
-<span style="color:#1a237e">C</span>enter for
-<span style="color:#1a237e">A</span>pplied
-<span style="color:#1a237e">A</span>rtificial
-<span style="color:#1a237e">I</span>ntelligence
-</b>
-</span>
-<br>
-<span style="font-size:12pt;">
-An independent, online research lab dedicated to advancing applied artificial intelligence for real-world impact.
-</span>
-</p>
+  <header>
+    <div class="container">
+      <div class="header-content">
+        <div class="logo-section">
+          <img src="caai cropped.jpg" alt="CAAI Logo">
+          <div class="title-section">
+            <h1>CAAI</h1>
+            <p>Center for Applied Artificial Intelligence</p>
+          </div>
+        </div>
+        <button class="menu-toggle" aria-label="Toggle navigation">&#9776;</button>
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li>
+              <a href="#">About ▾</a>
+              <ul class="dropdown-menu">
+                <li><a href="about.html">About the Lab</a></li>
+                <li><a href="join-us.html">Join Us</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#" class="active">Research ▾</a>
+              <ul class="dropdown-menu">
+                <li><a href="projects.html" class="active">Research Projects</a></li>
+                <li><a href="research-areas.html">Research Areas</a></li>
+                <li><a href="resources.html">Datasets & Code</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">People ▾</a>
+              <ul class="dropdown-menu">
+                <li><a href="members.html">Current Team</a></li>
+                <li><a href="members.html#alumni">Alumni</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">Happenings ▾</a>
+              <ul class="dropdown-menu">
+                <li><a href="news.html">News & Events</a></li>
+                <li><a href="gallery.html">Photo Gallery</a></li>
+              </ul>
+            </li>
+            <li><a href="publications.html">Publications</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
 
-<span style="font-size:12pt;">
-<p>
-| <a href="index.html">Home</a>
-| <a href="members.html">Members</a>
-| <b>Research Projects</b>
-| <a href="publications.html">Publications</a>
-| <a href="other.html">Other stuff</a>
-|
-</p>
-</span>
-</td>
-</tr>
-</table>
-</p>
+  <div class="page-intro">
+    <div class="container">
+      <h2>Research Projects</h2>
+      <p>Exploring the frontiers of multimodal AI, ethics, and application.</p>
+    </div>
+  </div>
 
-<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%"
- style='width:100.0%;mso-cellspacing:0cm;background:#CCCCCC;mso-yfti-tbllook:1184'>
- <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes;mso-yfti-lastrow:yes'>
-  <td width="100%" style='width:100.0%;padding:.75pt .75pt .75pt .75pt' height="32">
-<p align=left>
-<span style="font-size:14pt;"><b>Research Projects</b></span>
-</p>
-  </td>
- </tr>
-</table>
+  <section>
+    <div class="container">
+      <div class="project-grid">
 
-<span style="font-size:10pt;">
+        <div class="project-card">
+          <div class="project-image">
+            <img src="project_nlp.png" alt="NLP Visualization">
+          </div>
+          <div class="project-content">
+            <div class="project-title">[8] Neural Segmentation for Language Learning Analytics</div>
+            <div class="project-meta">2025.10.25 - 2026.01.10</div>
+            <div class="project-description">
+              Students will develop and analyze neural segmentation models to identify and interpret linguistic patterns
+              for improving personalized language learning analytics.
+            </div>
+          </div>
+        </div>
 
-<p>
-  <strong><span style="color: #1a73e8;">[8] Neural Segmentation for Language Learning Analytics</span></strong>
-  <strong><span style="color: #d93025;"> (2025.10.25 - 2026.01.10)</span></strong>: 
-  Students will develop and analyze neural segmentation models to identify and interpret linguistic patterns for improving personalized language learning analytics.
+        <div class="project-card">
+          <div class="project-image">
+            <img src="project_waveform.png" alt="Audio Waveform Visualization">
+          </div>
+          <div class="project-content">
+            <div class="project-title">[7] Text-to-Audio (T2A) Generation under CAAI</div>
+            <div class="project-meta">2025</div>
+            <div class="project-description">
+              This cross-modal research project explores the generation of audio from textual inputs using a variety of
+              models and deep learning techniques, including convolutional neural networks (CNNs). The study aims to
+              improve semantic understanding and audio synthesis in text-driven audio generation systems.
+            </div>
+          </div>
+        </div>
 
-<p>
+        <div class="project-card">
+          <div class="project-image">
+            <img src="project_neural.png" alt="Neural Network Visualization">
+          </div>
+          <div class="project-content">
+            <div class="project-title">[6] AI-Assisted Storytelling Generation under CAAI</div>
+            <div class="project-meta">2025</div>
+            <div class="project-description">
+              This cross-modal research project explores AI-assisted storytelling generation using a range of models and
+              deep learning techniques, including convolutional neural networks (CNNs). The study focuses on integrating
+              narrative structure, creativity, and multimodal learning to enhance automated storytelling systems.
+            </div>
+          </div>
+        </div>
 
-<p>[7] Text-to-Audio (T2A) Generation under CAAI (2025): This cross-modal research project explores the generation of audio from textual inputs using a variety of models and deep learning techniques, including convolutional neural networks (CNNs). The study aims to improve semantic understanding and audio synthesis in text-driven audio generation systems.</p>
+        <div class="project-card">
+          <div class="project-image">
+            <img src="project_waveform.png" alt="Visual-to-Audio Visualization">
+          </div>
+          <div class="project-content">
+            <div class="project-title">[5] Visual-to-Audio (V2A) Generation under CAAI</div>
+            <div class="project-meta">2025</div>
+            <div class="project-description">
+              This cross-modal research project explores the generation of audio from visual inputs by leveraging
+              techniques in computer vision, CNNs, RNNs, and Vision Transformers (ViT). Initiated under CAAI, the study
+              aims to advance cross-modality by developing models capable of interpreting visual stimuli and generating
+              corresponding audio representations.
+            </div>
+          </div>
+        </div>
 
+        <div class="project-card" style="opacity: 0.6;">
+          <div class="project-image">
+            <img src="project_nlp.png" alt="Gender Bias Analysis" style="filter: grayscale(100%);">
+          </div>
+          <div class="project-content">
+            <div class="project-title" style="text-decoration: line-through;">[4] Analyzing Gender Bias in Media Using
+              AI: A Cross-Cultural Study of Representation, Language, and Imagery</div>
+            <div class="project-meta">2025.7.21 - 2025.12.25</div>
+            <div class="project-description">
+              This flagship project investigates gender bias in media content across cultures by leveraging natural
+              language processing, computer vision, and ethical frameworks. The study aims to uncover patterns of
+              representation and language, and to develop AI tools that promote fairness and inclusivity in media
+              analysis. (Discontinued/Cancelled)
+            </div>
+          </div>
+        </div>
 
-<p>[6] AI-Assisted Storytelling Generation under CAAI (2025): This cross-modal research project explores AI-assisted storytelling generation using a range of models and deep learning techniques, including convolutional neural networks (CNNs). The study focuses on integrating narrative structure, creativity, and multimodal learning to enhance automated storytelling systems.</p>
+        <div class="project-card">
+          <div class="project-image">
+            <img src="project_business.png" alt="Business Growth Analysis">
+          </div>
+          <div class="project-content">
+            <div class="project-title">[3] Business Growth and Management Research Team Formation</div>
+            <div class="project-meta">2023 - 2024 (Completed)</div>
+            <div class="project-description">
+              In 2023, a research team was formed to explore the intersection of business growth, management, and AI.
+              Members Simran Singh, Nahid Rehmani, Pushpa Kumari, and Vedha Varshini worked on projects that applied
+              AI-driven analytics to optimize business strategies and foster innovation across industries.
+            </div>
+          </div>
+        </div>
 
+        <div class="project-card">
+          <div class="project-image">
+            <img src="project_security.png" alt="Cybersecurity Shield">
+          </div>
+          <div class="project-content">
+            <div class="project-title">[2] Cybersecurity and AI: Assessing Vulnerabilities in Modern Infrastructure
+            </div>
+            <div class="project-meta">Spring 2024</div>
+            <div class="project-description">
+              Gurpreet Singh and Prof. Saurabh Singh conducted an in-depth analysis of the vulnerabilities and impacts
+              of open SSH ports on CENTOS 9 virtual machines hosted on Mac ARM computers (CVE-2023-25136). The research
+              provides practical recommendations for securing cloud and virtualized environments in the age of AI-driven
+              cyber threats.
+            </div>
+          </div>
+        </div>
 
-<p>[5] Visual-to-Audio (V2A) Generation under CAAI (2025): This cross-modal research project explores the generation of audio from visual inputs by leveraging techniques in computer vision, CNNs, RNNs, and Vision Transformers (ViT). Initiated under CAAI, the study aims to advance cross-modality by developing models capable of interpreting visual stimuli and generating corresponding audio representations.</p>
+        <div class="project-card">
+          <div class="project-image">
+            <img src="project_security.png" alt="ChatGPT Security">
+          </div>
+          <div class="project-content">
+            <div class="project-title">[1] ChatGPT and Cybersecurity: Implications and Repercussions</div>
+            <div class="project-meta">2022</div>
+            <div class="project-description">
+              In collaboration with Prof. Preethi Ananthachari, Gurpreet Singh explored the impact of large language
+              models like ChatGPT on cybersecurity. The project, published in a leading journal, discusses both the
+              opportunities and risks posed by generative AI in the context of digital security and privacy.
+            </div>
+          </div>
+        </div>
 
+      </div>
+    </div>
+  </section>
 
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Center for Applied Artificial Intelligence (CAAI). All rights reserved. | <a
+          href="mailto:admission@thekoreancad.com" style="color: #bbb; text-decoration: underline;">Contact Us</a></p>
+    </div>
+  </footer>
 
-<p style="position: relative;">
-  <span style="
-    display: inline;
-    text-decoration: line-through;
-    text-decoration-thickness: 3px;
-    text-decoration-color: #000;
-  ">
-    <strong><span style="color: #1a73e8;">[4] Analyzing Gender Bias in Media Using AI: A Cross-Cultural Study of Representation, Language, and Imagery</span></strong>
-    <strong><span style="color: #d93025;"> (2025.7.21 - 2025.12.25)</span></strong>: 
-    This flagship project investigates gender bias in media content across cultures by leveraging natural language processing, computer vision, and ethical frameworks. 
-    The study aims to uncover patterns of representation and language, and to develop AI tools that promote fairness and inclusivity in media analysis.
-  </span>
-</p>
-
-
-
-
-<p>[3] Business Growth and Management Research Team Formation (2023 - 2024, finished): In 2023, a research team was formed to explore the intersection of business growth, management, and AI. Members Simran Singh, Nahid Rehmani, Pushpa Kumari, and Vedha Varshini worked on projects that applied AI-driven analytics to optimize business strategies and foster innovation across industries. The project was successfully completed in 2024.</p>
-
-<p>[2] Cybersecurity and AI: Assessing Vulnerabilities in Modern Infrastructure (Spring 2024): Gurpreet Singh and Prof. Saurabh Singh conducted an in-depth analysis of the vulnerabilities and impacts of open SSH ports on CENTOS 9 virtual machines hosted on Mac ARM computers (CVE-2023-25136). The research provides practical recommendations for securing cloud and virtualized environments in the age of AI-driven cyber threats.</p>
-
-<p>[1] ChatGPT and Cybersecurity: Implications and Repercussions (2022): In collaboration with Prof. Preethi Ananthachari, Gurpreet Singh explored the impact of large language models like ChatGPT on cybersecurity. The project, published in a leading journal, discusses both the opportunities and risks posed by generative AI in the context of digital security and privacy.</p>
-
-</span>
-
-<script>
-  document.addEventListener("contextmenu", e => e.preventDefault());
-  document.addEventListener("keydown", e => {
-    if (e.ctrlKey && (e.key === 'u' || e.key === 's')) {
-      e.preventDefault();
-      alert("Viewing source is disabled 😎");
-    }
-  });
-</script>
-    
 </body>
-</html> 
+
+</html>

@@ -1,561 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta http-equiv="content-type" content="text/html; charset=utf-8">
-<title>CAAI: Center for Applied Artificial Intelligence</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAAI: Center for Applied Artificial Intelligence</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Lato:wght@300;400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 
-<body bgcolor="white" text="black" link="blue" vlink="purple" alink="red">
+<body>
 
-<!-- ===== CAAI First-Visit Math Gate ===== -->
-<style>
-  #mathGate {
-    position: fixed;
-    inset: 0;
-    background: rgba(255,255,255,0.97);
-    z-index: 10000;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: Arial, sans-serif;
-  }
-
-  .gate-box {
-    width: 420px;
-    border: 1px solid #ccc;
-    border-radius: 14px;
-    padding: 24px;
-    text-align: center;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-  }
-
-  .gate-title {
-    font-size: 16pt;
-    color: #1a237e;
-    margin-bottom: 10px;
-  }
-
-  .gate-equation {
-    font-size: 14pt;
-    margin: 18px 0;
-  }
-
-  .gate-options button {
-    margin: 6px;
-    padding: 8px 16px;
-    border-radius: 20px;
-    border: 1px solid #999;
-    background: #f5f5f5;
-    cursor: pointer;
-  }
-
-  .gate-options button:hover {
-    background: #e0e0e0;
-  }
-
-  .gate-note {
-    font-size: 9pt;
-    color: #666;
-    margin-top: 14px;
-  }
-</style>
-
-<div id="mathGate">
-  <div class="gate-box">
-    <div class="gate-title">Welcome to CAAI</div>
-
-    <div class="gate-equation">
-      Solve to Enter:<br>
-      <b>∫<sub>0</sub><sup>∞</sup> e<sup>−x</sup> dx = ?</b>
-    </div>
-
-    <div class="gate-options">
-      <button onclick="checkGate(0)">0</button>
-      <button onclick="checkGate(1)">1</button>
-      <button onclick="checkGate(2)">2</button>
-      <button onclick="checkGate('inf')">∞</button>
-    </div>
-
-    <div class="gate-note">
-      Academic welcome ritual · Shown only once
-    </div>
-  </div>
-</div>
-
-<script>
-  const gateKey = "caai_gate_passed";
-
-  // If already passed, hide gate
-  if (localStorage.getItem(gateKey)) {
-    document.getElementById("mathGate").style.display = "none";
-  }
-
-  function checkGate(answer) {
-    if (answer === 1) {
-      localStorage.setItem(gateKey, "yes");
-      document.getElementById("mathGate").style.display = "none";
-    } else {
-      document.querySelector(".gate-box").innerHTML = `
-        <div class="gate-title">Access Denied</div>
-        <div class="gate-equation">
-          This was a fundamental integral.<br><br>
-          If this felt difficult, we recommend asking the person who sent you this website link for the answer.<br><br>
-          <b>CAAI politely suggests revisiting basic calculus.</b>
+    <header class="transparent-header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo-section">
+                    <img src="caai cropped.jpg" alt="CAAI Logo">
+                    <div class="title-section">
+                        <h1>CAAI</h1>
+                        <p>Center for Applied Artificial Intelligence</p>
+                    </div>
+                </div>
+                <button class="menu-toggle" aria-label="Toggle navigation">&#9776;</button>
+                <nav>
+                    <ul>
+                        <li><a href="index.html" class="active">Home</a></li>
+                        <li>
+                            <a href="#">About ▾</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="about.html">About the Lab</a></li>
+                                <li><a href="join-us.html">Join Us</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">Research ▾</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="projects.html">Research Projects</a></li>
+                                <li><a href="research-areas.html">Research Areas</a></li>
+                                <li><a href="resources.html">Datasets & Code</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">People ▾</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="members.html">Current Team</a></li>
+                                <li><a href="members.html#alumni">Alumni</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">Happenings ▾</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="news.html">News & Events</a></li>
+                                <li><a href="gallery.html">Photo Gallery</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="publications.html">Publications</a></li>
+                    </ul>
+                </nav>
+            </div>
         </div>
-        <div class="gate-note">
-          No second attempts · Academic standards enforced
+    </header>
+
+    <section class="hero-video">
+        <video id="lab-video" autoplay muted playsinline>
+            <source src="lab video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="video-credit">Video is property of Northwestern University</div>
+    </section>
+
+
+
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Center for Applied Artificial Intelligence (CAAI). All rights reserved. | <a
+                    href="mailto:admission@thekoreancad.com" style="color: #bbb; text-decoration: underline;">Contact
+                    Us</a></p>
         </div>
-      `;
-    }
-  }
-</script>
-<!-- ====================================== -->
-<span id="equation" style="font-size:11pt; color:#555; font-style:italic;"></span>
+    </footer>
 
-<script>
-  const equations = [
-    "⊕ Vision ⊗ Language ⊗ Audio ⟶ Intelligence",
-    "AI ≈ limₙ→∞ (Knowledgeₙ)",
-    "∫ Data · Ethics → Intelligence",
-    "f(x) = ∑(Perception × Learning)",
-    "Intelligence emerges."
-  ];
-
-  let currentIndex = 0;
-  let lastScrollY = window.scrollY;
-  const eq = document.getElementById("equation");
-
-  eq.innerText = equations[currentIndex];
-
-  window.addEventListener("scroll", () => {
-    const currentScrollY = window.scrollY;
-
-    if (currentScrollY > lastScrollY && currentIndex < equations.length - 1) {
-      // scrolling down → simplify
-      currentIndex++;
-      eq.innerText = equations[currentIndex];
-    }
-
-    if (currentScrollY < lastScrollY && currentIndex > 0) {
-      // scrolling up → increase complexity
-      currentIndex--;
-      eq.innerText = equations[currentIndex];
-    }
-
-    lastScrollY = currentScrollY;
-  });
-</script>
-
-
-<script>
-  const equations = [
-    "f(x) = ∑(Perception × Learning)",
-    "∫ Data · Ethics → Intelligence",
-    "AI ≈ limₙ→∞ (Knowledgeₙ)",
-    "⊕ Vision ⊗ Language ⊗ Audio"
-  ];
-
-  let i = 0;
-  const eq = document.getElementById("equation");
-
-  setInterval(() => {
-    eq.innerText = equations[i];
-    i = (i + 1) % equations.length;
-  }, 3500);
-
-  eq.innerText = equations[0];
-</script>
-
-<!-- ===== Live Thinking Status Bar ===== -->
-<style>
-  #caaiStatus {
-    font-size: 10pt;
-    color: #444;
-    font-family: "Courier New", monospace;
-    margin-top: 6px;
-    opacity: 0.85;
-  }
-</style>
-
-<div id="caaiStatus">
-  CAAI Status: Initializing research environment…
-</div>
-
-<script>
-  const caaiStatuses = [
-    "Optimizing models…",
-    "Verifying assumptions…",
-    "Minimizing loss…",
-    "Evaluating generalization…",
-    "Checking ethical constraints…",
-    "Updating priors…",
-    "Converged ✓"
-  ];
-
-  let statusIndex = 0;
-  const statusEl = document.getElementById("caaiStatus");
-
-  setInterval(() => {
-    statusEl.innerText = "CAAI Status: " + caaiStatuses[statusIndex];
-    statusIndex = (statusIndex + 1) % caaiStatuses.length;
-  }, 3200);
-</script>
-
-
-
-<p>
-<table class="MsoNormal" cellpadding="0" cellspacing="0" width="812">
-<tr>
-<td width="100">
-    <p><img src="caai cropped.jpg" border="0" width="100" height="100"></p>
-</td>
-<td width="650">
-<p>
-<span style="font-size:16pt;">
-<b>
-<span style="color:#1a237e">CAAI</span>:
-<span style="color:#1a237e">C</span>enter for
-<span style="color:#1a237e">A</span>pplied
-<span style="color:#1a237e">A</span>rtificial
-<span style="color:#1a237e">I</span>ntelligence
-</b>
-</span>
-<br>
-<span style="font-size:12pt;">
-An independent, online research lab dedicated to advancing applied artificial intelligence for real-world impact.
-</span>
-<span style="font-size:11pt; color:#555; font-style:italic;">
-AI = limₙ→∞ (Dataⁿ × Ethics)
-</span>
-</p>
-
-<span style="font-size:12pt;">
-<p>
-| <b>News & Notice</b>
-| <a href="members.html">Members</a>
-| <a href="projects.html">Research Projects</a>
-| <a href="publications.html">Publications</a>
-| <a href="other.html">Other stuff</a>
-|
-</p>
-</span>
-</td>
-</tr>
-</table>
-</p>
-
-<!-- ===== Fixed Top-Right iPod-Style Music Player ===== -->
-<style>
-  .ipod-player {
-    position: fixed;
-    top: 12px;
-    right: 12px;
-    width: 170px;
-    background: linear-gradient(#f5f5f5, #e0e0e0);
-    border: 1px solid #bbb;
-    border-radius: 14px;
-    padding: 10px;
-    text-align: center;
-    font-family: Arial, sans-serif;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
-    z-index: 9999;
-  }
-
-  .ipod-title {
-    font-size: 9pt;
-    color: #333;
-    margin-bottom: 6px;
-  }
-
-  .ipod-controls button {
-    background: #fff;
-    border: 1px solid #aaa;
-    border-radius: 50%;
-    width: 34px;
-    height: 34px;
-    margin: 4px;
-    font-size: 12pt;
-    cursor: pointer;
-  }
-
-  .ipod-controls button:hover {
-    background: #f0f0f0;
-  }
-</style>
-
-<div class="ipod-player">
-  <div class="ipod-title">🎧 CAAI Audio</div>
-
-  <audio id="audioPlayer" preload="none"></audio>
-
-  <div class="ipod-controls">
-    <button onclick="prevTrack()">⏮</button>
-    <button onclick="togglePlay()">▶</button>
-    <button onclick="nextTrack()">⏭</button>
-  </div>
-</div>
-
-<script>
-  const tracks = [
-    "caai-theme-1.mp3",
-    "caai-theme-2.mp3",
-    "caai-theme-3.mp3"
-  ];
-
-  let currentTrack = 0;
-  let isPlaying = false;
-  const player = document.getElementById("audioPlayer");
-
-  player.src = tracks[currentTrack];
-
-  function togglePlay() {
-    if (isPlaying) {
-      player.pause();
-    } else {
-      player.play();
-    }
-    isPlaying = !isPlaying;
-  }
-
-  function nextTrack() {
-    currentTrack = (currentTrack + 1) % tracks.length;
-    player.src = tracks[currentTrack];
-    player.play();
-    isPlaying = true;
-  }
-
-  function prevTrack() {
-    currentTrack = (currentTrack - 1 + tracks.length) % tracks.length;
-    player.src = tracks[currentTrack];
-    player.play();
-    isPlaying = true;
-  }
-
-  player.addEventListener("ended", nextTrack);
-</script>
-<!-- =============================================== -->
-
-
-
-<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%"
- style='width:100.0%;mso-cellspacing:0cm;background:#CCCCCC;mso-yfti-tbllook:1184'>
- <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes;mso-yfti-lastrow:yes'>
-  <td width="100%" style='width:100.0%;padding:.75pt .75pt .75pt .75pt' height="32">
-<p align=left>
-<span style="font-size:14pt;"><b>News</b></span>
-</p>
-  </td>
- </tr>
-</table>
-
-<span style="font-size:10pt;">
-<p>• New member joined (2026.1.22): Alimpia Roy joined as a member who will be doing research (Interdisciplinary - Research)</p>
-<p>• New member joined (2026.1.22): Purva. Mundada joined as a member who will be doing research (Interdisciplinary - Research)</p>
-<p>• Gurpreet Singh, Alisha Naaz, Asma Syed, Vanatala Akhila published their research paper as a PREPRINT titled “AI-Assisted Storytelling: Enhancing Narrative Creation in Digital Media” January 2026.</p>
-<p>• Gurpreet Singh, Nishaa Ghosh, Trina Banerjee, Sonakshi Shrivastava, and Joy joined and attended The European AI Conference 2025.</p>
-<p>• Gurpreet Singh, Nishaa Ghosh, Trina Banerjee, Sonakshi Shrivastava, and Joy joined and attended SECON International – 4th Annual International ISC2 Chapter Conference, December 2025.</p>
-<!--<p>• Gurpreet Singh joined and attended the International Conference on Platform and AI Society in Asia, November 2025.</p>
-<p>• Gurpreet Singh, Nishaa Ghosh, and Trina Banerjee published their research paper titled “Tracing the Evolution of Artificial Intelligence: A Review of Tools, Frameworks, and Technologies (1950–2025)” in the World Journal of Applied Mathematics and Statistics, 2025.</p>
-<!--<p>• Lamia Qamar presented her paper titled “Comparative Study of Convolutional Neural Networks for Deepfake Video Detection on Social Media” at the First International Conference on Advances in Artificial Intelligence for Society (ICA2S 2025)</p>
-<!--<p>• New member joined (2025.10.20): Trina Banerjee joined as a member who will be doing research related to Sustainable AI, Privacy</p>
-<p>• New member joined (2025.10.20):Sonakshi Shrivastava joined as a member who will be doing research related to Language, AI, Education Technology</p>
-<p>• New member joined (2025.10.20):Joy Racheal Emiaka joined as a member who will be doing research related to Machine learning, ANNs, BCI, and Neuro-inspired AI</p>
-<p>• New member joined (2025.10.12):Khanyile joined as a member who will be doing research related to Artificial Intelligence, Machine Learning</p>
-<p>• New member joined (2025.10.12):Lamia joined as a member who will be doing research related to Artificial Intelligence, Machine Learning</p>
-<p>• New member joined (2025.10.12):Nicholas joined as a member who will be doing research related to Artificial Intelligence, Machine Learning</p>
-<p>• New member joined (2025.10.12):Amruta joined as a member who will be doing research related to Artificial Intelligence, Machine Learning</p>
-<p>• New member joined (2025.9.29): Nishaa joined as a member who will be doing research related to Sociology, Political Sociology, Sociology  of Religion,  Sociology of migration,  virtual ethnography (Interdisciplinary - Research)</p>
-<p>• New member joined (2025.9.12): Alisha joined as a member who will be doing research related to Intercultural Communication, Digital Media, and Advertising & PR (Interdisciplinary - Research)</p>
-<p>• New member joined (2025.9.12): Asma joined as a member who will be doing research related to Media & Communications (Interdisciplinary - Research)</p>
-<p>• New member joined (2025.9.12): Akhila joined as a member who will be doing research related to Artificial Intelligence (Interdisciplinary - Research)</p>
-<p>• New member joined (2025.9.12): Janya joined as a member who will be doing research related to Artificial Intelligence (Interdisciplinary - Research)</p>
-<p>• New member joined (2025.9.12): Sakshi joined as a member who will be doing research related to Finance (Interdisciplinary - Research)</p>
-<p>
-  <span style="color: #34a853; font-weight: bold;">• GKS Selection (GLOBAL KOREA SCHOLARSHIP)</span> 
-  <strong><span style="color: #4285f4;">(2025.9.12)</span></strong>: 
-  <strong><span style="color: #d93025;">Nahid Rehmani</span></strong> got selected in 
-  <span style="background-color: #fff3cd; color: #e69500; font-weight: bold;">GKS Scholarship</span> 
-  from <span style="color: #0b8043; font-weight: bold;">in Korea</span>, 
-  <span style="color: #5f6368;"></span> towards the admission.
-</p>
-<p>• Dataset Relesed (2025.7.24): Synthetic Image Dataset of Five Object Classes Generated Using Stable Diffusion XL</p>
-<p>• New research project (2025.7.24): The project "Visual-to-Audio (V2A) Generation" has been initiated under CAAI. The study combines Cross-Modality, Computer Vision, CNNs RNNs , ViT models etc.</p>
-<p>• New member joined (2025.7.24): Lakshya Kumar joined as an Intern who will be doing research related to Cross-Modality</p>
-<p>• New member joined (2025.7.24): Bhavya Madireddy joined as an Intern who will be doing research related to Cross-Modality</p>
-<p>• New member joined (2025.7.22): Nahid Rehmani who will be doing research related to Marketing, Media and Entertainment Industry</p>
-<p>• New member joined (2025.7.22): Kollapu. Ramya Sree who will be doing research related to Business, Human Resource Management & Psychology.</p>
-<p>• New lab founded (2025.7.21): Center for Applied Artificial Intelligence (CAAI) has been officially launched as an independent research lab focused on ethical and interdisciplinary AI research.</p>
-<p>• New research project (2025.7.21): The project "Analyzing Gender Bias in Media Using AI: A Cross-Cultural Study of Representation, Language, and Imagery" has been initiated under CAAI. The study combines NLP, computer vision, and ethics.</p>
-<p>
-  <span style="color: #34a853; font-weight: bold;">• Scholarship Offered</span> 
-  <strong><span style="color: #4285f4;">(2025.7.10)</span></strong>: 
-  <strong><span style="color: #d93025;">Gurpreet Singh</span></strong> is offered a 
-  <span style="background-color: #fff3cd; color: #e69500; font-weight: bold;">€4500 Scholarship</span> 
-  from <span style="color: #0b8043; font-weight: bold;">Lancaster University</span>, 
-  <span style="color: #5f6368;">United Kingdom</span> towards the admission.
-</p>
-<p>
-  <span style="color: #34a853; font-weight: bold;">• Scholarship Offered</span> 
-  <strong><span style="color: #4285f4;">(2025.7.14)</span></strong>: 
-  <strong><span style="color: #d93025;">Gurpreet Singh</span></strong> is offered a 
-  <span style="background-color: #fff3cd; color: #e69500; font-weight: bold;">20% Scholarship</span> 
-  from <span style="color: #0b8043; font-weight: bold;">RMIT Vietnam</span> 
-  <span style="color: #5f6368;">(Australian University)</span> towards the admission.
-</p>
-<p>• New members joined (2025.7.20): Astha Gautam, Ayushi Srivastava, Jiya Gupta, Pallavi Wagh, and Prachi have joined the CAAI research team to work on the ongoing AI and gender bias project.</p>
-<p>
-  <span style="color: #34a853; font-weight: bold;">• Member got Admission</span> 
-  <strong><span style="color: #4285f4;">(2025.2.01)</span></strong>: 
-  <strong><span style="color: #d93025;">Sundareswari Thitagarajan</span></strong> 
-  got admission in <span style="color: #fbbc05; font-weight: bold;">Inha University, South Korea</span> 
-  on <span style="color: #0b8043; font-weight: bold;">professor funding</span> with a 
-  <span style="background-color: #e8f0fe; color: #1a73e8; font-weight: bold;">monthly stipend</span>.
-</p>
-<!--<p>• Fall 2024: Gurpreet Singh, S Singh, N Rehmani, P Kumari, SV Varshini published "The Role of Data Analytics in Driving Business Innovation and Economic Growth - A Comparative Study Across Industries" in the International Journal of Innovative Research in Engineering and Management.</p>
-<p>• Spring 2024: Gurpreet Singh and Prof. Saurabh Singh published "Assessing the Vulnerabilities and Impacts of Open SSH Ports on CENTOS 9 Virtual Machines Hosted on Mac ARM Computers (CVE-2023-25136)" in the Journal IDPR.</p>
-<p>• 2023: Simran Singh, Nahid Rehmani, Pushpa Kumari, and Vedha Varshini joined CAAI to research Business Growth and Management.</p>
-<p>• 2022: Gurpreet Singh and Prof. Preethi Ananthachari published "Repercussion of ChatGPT in Cybersecurity" in the International Journal of Research Publication and Reviews 4 (2), 1429-1430.</p> -->
-<!--<p>• Past publication (2023.8): A student named Nuzhat published a research article under The Korean Academy, marking an early academic milestone aligned with CAAI’s vision.</p>  -->
-</span>
-
-<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%"
- style='width:100.0%;mso-cellspacing:0cm;background:#CCCCCC;mso-yfti-tbllook:1184'>
- <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes;mso-yfti-lastrow:yes'>
-  <td width="100%" style='width:100.0%;padding:.75pt .75pt .75pt .75pt' height="32">
-<p align=left>
-<span style="font-size:14pt;"><b>Notice</b></span>
-</p>
-  </td>
- </tr>
-</table>
-
-<span style="font-size:11pt;">
-<p><b>Open Positions – Fall 2025</b></p>
-</span>
-<span style="font-size:10pt;">
-<p>
-The Center for Applied Artificial Intelligence (CAAI) is now accepting new members and collaborators for the upcoming academic term. We have openings for graduate research positions (2) and undergraduate research internships (2). Graduate research positions are open to students interested in AI, computer vision, machine learning, or cross-modal applications, and candidates may join either as students of The Korean Academy (such as TOPIK holders preparing for Korean university admission) or by demonstrating strong skills in programming (e.g., Python, machine learning frameworks, data science) and research. These positions are ideal for highly motivated individuals aiming to build a strong research profile for future graduate studies or international PhD programs, and for those willing to contribute to paper writing, model development, and experiments. Lab members will have access to resources such as dedicated workspace and equipment, and will receive guidance on research publishing and opportunities to co-author international conference or journal papers.
-</p>
-<p>
-Undergraduate research internships are available for 3rd or 4th year undergraduates passionate about AI and seeking hands-on research experience. Interns will contribute to ongoing projects through programming, testing, dataset handling, and literature review, and will benefit from mentorship by graduate-level researchers, involvement in real research workflows, and recommendation or experience certificates for academic or industry applications. These internships are ideal for students planning to pursue higher education (MS/PhD) or to enter the IT industry with strong research and project experience.
-</p>
-<p>
-If you are interested in joining, please send an email with your CV, academic transcripts (undergraduate and/or graduate, if available), and a short research statement or project portfolio to <a href="mailto:gurpreetsinghmcse@gmail.com">gurpreetsinghmcse@gmail.com</a>. For questions or informal inquiries, feel free to reach out anytime.
-</p>
-</span>
-
-<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%"
- style='width:100.0%;mso-cellspacing:0cm;background:#CCCCCC;mso-yfti-tbllook:1184'>
- <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes;mso-yfti-lastrow:yes'>
-  <td width="100%" style='width:100.0%;padding:.75pt .75pt .75pt .75pt' height="32">
-<p align=left>
-<span style="font-size:14pt;"><b>About CAAI Lab</b></span>
-</p>
-  </td>
- </tr>
-</table>
-
-<span style="font-size:10pt;">
-  <p>
-    The CAAI Lab (Center for Applied Artificial Intelligence) is an experimental eLAB focused on supporting students who are new to academic research and wish to enter the field of artificial intelligence, machine learning, computer vision, and cross-modal systems. The lab is designed as a guided research environment where beginners can learn research methodologies, implementation practices, paper writing, and experimentation under structured mentorship.
-  </p>
-
-  <p>
-    CAAI Lab operates under The Korean Academy, an MSME-registered organization in India. Through this association, the lab plays an important academic support role for students learning the Korean language and preparing for future academic or professional transitions to Korea or other countries. The lab environment is especially beneficial for students aiming to build a research profile while preparing for international higher education opportunities.
-  </p>
-
-  <p>
-    CAAI Lab itself does charge any joining or participation fee. However, joining under The Korean Academy involving TOPIK Level 5 or Level 6 holders who are enrolled as students under The Korean Academy can join the lab with no charge, applicable academy-level policies may apply. Students who are new to research and wish to learn more about joining criteria or fee-related matters should refer to the official website of The Korean Academy or contact <a href="mailto:admission@thekoreancad.com">admission@thekoreancad.com</a> for accurate and updated information.
-  </p>
-
-  <p>
-    Research projects at CAAI Lab typically span a duration of approximately three (3) months. Upon successful completion of the assigned research objectives and submission of a research paper or equivalent deliverable, eligible participants may receive a Certificate of Research Participation and, where appropriate, a Letter of Recommendation based on performance, contribution, and commitment.
-  </p>
-<p>
-  <b>Policies, Governance, and Participation Terms</b>
-</p>
-
-<ul>
-  <li>
-    Participation in CAAI Lab is purely academic, voluntary, and non-contractual in nature. Joining the lab does not establish an employer–employee relationship, legal partnership, or guarantee of continued association.
-  </li>
-
-  <li>
-    Admission into CAAI Lab does not imply or guarantee publication acceptance, conference presentation, journal indexing, funding, employment, visa approval, university admission, scholarships, or any other academic or professional outcome.
-  </li>
-
-  <li>
-    All research activities are conducted on a best-effort basis. Research timelines, deliverables, and outcomes may vary depending on project complexity, participant performance, external review processes, and unforeseen technical or academic constraints.
-  </li>
-
-  <li>
-    Participants are required to maintain consistent engagement, attend scheduled meetings (online or offline), complete assigned tasks, and follow research guidance. Repeated non-participation, unresponsiveness, or failure to meet deadlines may result in removal from the project without prior notice.
-  </li>
-
-  <li>
-    If a participant voluntarily withdraws, becomes inactive, or fails to complete the research project, CAAI Lab reserves the full right to:
-    <ul>
-      <li>Exclude the participant from authorship or acknowledgments</li>
-      <li>Withhold certificates, recommendation letters, or official confirmation</li>
-      <li>Reassign or discontinue the participant’s research responsibilities</li>
-    </ul>
-  </li>
-
-  <li>
-    Research certificates, experience letters, and recommendation letters are issued strictly at the discretion of CAAI Lab and are contingent upon successful project completion, quality of contribution, ethical conduct, and adherence to lab policies.
-  </li>
-
-  <li>
-    Authorship on research papers is determined solely based on meaningful intellectual, technical, and experimental contributions, in accordance with standard academic ethics. Financial contribution, enrollment status, or duration of association does not automatically qualify a participant for authorship.
-  </li>
-
-  <li>
-    All participants must adhere to strict academic integrity standards. Plagiarism, data manipulation, misrepresentation of results, unauthorized use of datasets or models, or violation of publication ethics will result in immediate termination from the lab and possible reporting to relevant academic bodies.
-  </li>
-
-  <li>
-    CAAI Lab retains the right to use research outputs, anonymized data, experimental results, and project descriptions for academic, educational, and promotional purposes, while respecting confidentiality and ethical guidelines.
-  </li>
-
-  <li>
-    Any tools, models, datasets, or intellectual property developed during the project may remain under the ownership or joint ownership of CAAI Lab, subject to institutional, journal, or conference policies. Participants waive any claim to exclusive ownership unless otherwise agreed in writing.
-  </li>
-
-  <li>
-    CAAI Lab shall not be held liable for external decisions made by universities, immigration authorities, employers, publishers, or funding agencies based on research participation, certificates, or recommendation letters.
-  </li>
-
-  <li>
-    Communication related to projects, deadlines, feedback, or policy updates will be conducted via official email or designated platforms. Participants are responsible for regularly checking communications and responding in a timely manner.
-  </li>
-
-  <li>
-    CAAI Lab reserves the right to modify, suspend, or terminate any project, policy, collaboration, or mentorship arrangement due to academic, administrative, ethical, or operational reasons without obligation to provide compensation.
-  </li>
-
-  <li>
-    In case of disputes, the decision of the CAAI Lab administration shall be considered final. By participating, members agree to resolve disagreements internally and avoid public misrepresentation or defamatory claims.
-  </li>
-
-  <li>
-    By joining CAAI Lab, all participants acknowledge that they have read, understood, and agreed to comply with the lab’s policies, ethical standards, and governance structure.
-  </li>
-</ul>
-
-
-  <p>
-    By joining CAAI Lab, participants acknowledge and agree to the above terms and understand that research outcomes depend on individual effort, collaboration, and academic rigor.
-  </p>
-</span>
-
-<script>
-  document.addEventListener("contextmenu", e => e.preventDefault());
-  document.addEventListener("keydown", e => {
-    if (e.ctrlKey && (e.key === 'u' || e.key === 's')) {
-      e.preventDefault();
-      alert("Viewing source is disabled 😎");
-    }
-  });
-</script>
+    <script src="script.js"></script>
 </body>
-</html> 
+
+</html>

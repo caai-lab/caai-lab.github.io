@@ -1,39 +1,72 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-    <title>My Image Page</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAAI: Center for Applied Artificial Intelligence - Japan Visit Gallery</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Lato:wght@300;400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-    <img src="IMG_1366.jpg" alt="First Image" width="400">
-    <br><br>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo-section">
+                    <img src="caai cropped.jpg" alt="CAAI Logo">
+                    <div class="title-section">
+                        <h1>CAAI</h1>
+                        <p>Center for Applied Artificial Intelligence</p>
+                    </div>
+                </div>
+                <nav>
+                    <a href="index.html">News & Notices</a>
+                    <a href="members.html">Members</a>
+                    <a href="projects.html">Research</a>
+                    <a href="publications.html">Publications</a>
+                    <a href="other.html">Resources</a>
+                </nav>
+            </div>
+        </div>
+    </header>
 
-    <img src="IMG_1368.jpg" alt="Second Image" width="400">
-    <br><br>
+    <div class="page-intro">
+        <div class="container">
+            <h2>Gallery: Visit to Japan 2024</h2>
+            <p>Highlights from our academic exchange and research visit.</p>
+        </div>
+    </div>
 
-    <img src="IMG_1369.jpg" alt="Third Image" width="400">
-    <br><br>
-    <img src="IMG_1370.jpg" alt="Fourth Image" width="400">
-    <br><br>
-    <img src="IMG_1372.jpg" alt="Fifth Image" width="400">
-    <br><br>
-    <img src="IMG_1375.jpg" alt="Sixth Image" width="400">
-    <br><br>
-    <img src="IMG_1377.jpg" alt="Seventh Image" width="400">
-    <br><br>
-    <img src="IMG_1379.jpg" alt="Eighth Image" width="400">
-    <br><br>
-    <img src="IMG_1386.jpg" alt="Ninth Image" width="400">
-    <br><br>
-    
-<script>
-  document.addEventListener("contextmenu", e => e.preventDefault());
-  document.addEventListener("keydown", e => {
-    if (e.ctrlKey && (e.key === 'u' || e.key === 's')) {
-      e.preventDefault();
-      alert("Viewing source is disabled 😎");
-    }
-  });
-</script>
+    <section>
+        <div class="container">
+            <div class="gallery-grid">
+                <div class="gallery-item"><img src="IMG_1366.jpg" alt="Japan Visit Image 1"></div>
+                <div class="gallery-item"><img src="IMG_1368.jpg" alt="Japan Visit Image 2"></div>
+                <div class="gallery-item"><img src="IMG_1369.jpg" alt="Japan Visit Image 3"></div>
+                <div class="gallery-item"><img src="IMG_1370.jpg" alt="Japan Visit Image 4"></div>
+                <div class="gallery-item"><img src="IMG_1372.jpg" alt="Japan Visit Image 5"></div>
+                <div class="gallery-item"><img src="IMG_1375.jpg" alt="Japan Visit Image 6"></div>
+                <div class="gallery-item"><img src="IMG_1377.jpg" alt="Japan Visit Image 7"></div>
+                <div class="gallery-item"><img src="IMG_1379.jpg" alt="Japan Visit Image 8"></div>
+                <div class="gallery-item"><img src="IMG_1386.jpg" alt="Japan Visit Image 9"></div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Center for Applied Artificial Intelligence (CAAI). All rights reserved. | <a
+                    href="mailto:admission@thekoreancad.com" style="color: #bbb; text-decoration: underline;">Contact
+                    Us</a></p>
+        </div>
+    </footer>
+
 </body>
+
 </html>
