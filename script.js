@@ -11,8 +11,21 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Ensure it's muted to allow autoplay
+    // Required for autoplay
     video.muted = true;
+
+    // 🔊 Sound toggle
+    const soundBtn = document.getElementById('sound-toggle');
+
+    if (soundBtn) {
+        soundBtn.addEventListener('click', () => {
+            video.muted = false;
+            video.volume = 1.0;
+            video.play();
+
+            soundBtn.style.display = 'none'; // Hide after enabling sound
+        });
+    }
 
     // Mobile Menu Toggle
     const menuToggle = document.querySelector('.menu-toggle');
@@ -22,12 +35,9 @@ document.addEventListener('DOMContentLoaded', () => {
         menuToggle.addEventListener('click', () => {
             nav.classList.toggle('active');
 
-            // Toggle icon icon? (Optional)
-            if (nav.classList.contains('active')) {
-                menuToggle.innerHTML = '&times;'; // Close icon
-            } else {
-                menuToggle.innerHTML = '&#9776;'; // Hamburger icon
-            }
+            menuToggle.innerHTML = nav.classList.contains('active')
+                ? '&times;'
+                : '&#9776;';
         });
     }
 });
