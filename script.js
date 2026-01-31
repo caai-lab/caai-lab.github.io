@@ -46,6 +46,31 @@ document.addEventListener('DOMContentLoaded', () => {
     if (autoNewsContainer) {
         loadAINews();
     }
+
+    // --- Conference Popup Logic ---
+    const popup = document.getElementById('conference-popup');
+    if (popup) {
+        const closeBtn = popup.querySelector('.popup-close');
+
+        // Show popup after 3 seconds
+        setTimeout(() => {
+            popup.classList.add('show');
+        }, 3000);
+
+        // Close on 'X' click
+        if (closeBtn) {
+            closeBtn.addEventListener('click', () => {
+                popup.classList.remove('show');
+            });
+        }
+
+        // Close on clicking outside the content
+        popup.addEventListener('click', (e) => {
+            if (e.target === popup) {
+                popup.classList.remove('show');
+            }
+        });
+    }
 });
 
 async function loadAINews() {
