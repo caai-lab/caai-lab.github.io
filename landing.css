@@ -1582,13 +1582,14 @@ a.entry:hover {
    Reveal on scroll
    ============================================================ */
 
-[data-reveal] {
+/* Hidden only when JS is alive to un-hide it — see landing.js */
+.js [data-reveal] {
     opacity: 0;
     transform: translateY(22px);
     transition: opacity 0.9s var(--ease), transform 0.9s var(--ease);
 }
 
-[data-reveal].is-in {
+.js [data-reveal].is-in {
     opacity: 1;
     transform: none;
 }
@@ -1800,7 +1801,7 @@ a.entry:hover {
         scroll-behavior: auto !important;
     }
 
-    [data-reveal] {
+    .js [data-reveal] {
         opacity: 1;
         transform: none;
     }

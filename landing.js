@@ -1,5 +1,10 @@
 /* CAAI — landing page interactions */
 
+/* Runs immediately, before anything else in this file. The reveal-on-scroll
+   styles hide [data-reveal] behind `html.js`, so if this script ever fails to
+   load the page still renders every section instead of a blank column. */
+document.documentElement.classList.add('js');
+
 document.addEventListener('DOMContentLoaded', () => {
 
     /* ---------- Header: solid once we leave the hero ---------- */
@@ -66,7 +71,11 @@ document.addEventListener('DOMContentLoaded', () => {
                     observer.unobserve(entry.target);
                 }
             });
-        }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+            // threshold MUST stay 0. A percentage threshold asks for a share of the
+            // element's own area to be on screen, and these grids (19 member cards,
+            // 23 alumni) are many times taller than a phone viewport — 12% of them
+            // can never be visible at once, so they would never reveal on mobile.
+        }, { threshold: 0, rootMargin: '0px 0px -8% 0px' });
 
         revealables.forEach((el) => observer.observe(el));
     } else {
