@@ -4,104 +4,267 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CAAI: About the Lab</title>
+    <title>About the Lab — CAAI</title>
+    <meta name="description"
+        content="CAAI is an experimental research lab supporting students entering artificial intelligence, machine learning, computer vision and cross-modal systems.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Lato:wght@300;400;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..500&family=Inter:wght@400;500&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="landing.css">
+    <link rel="stylesheet" href="pages.css">
 </head>
 
-<body>
+<body class="page">
 
-    <header>
-        <div class="container">
-            <div class="header-content">
-                <div class="logo-section">
-                    <img src="caai cropped.jpg" alt="CAAI Logo">
-                    <div class="title-section">
-                        <h1>CAAI</h1>
-                        <p>Center for Applied Artificial Intelligence</p>
-                    </div>
-                </div>
-                <button class="menu-toggle" aria-label="Toggle navigation">&#9776;</button>
-                <nav>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li>
-                            <a href="#" class="active">About ▾</a>
-                            <ul class="dropdown-menu">
-                                <li><a href="about.html" class="active">About the Lab</a></li>
-                                <li><a href="join-us.html">Join Us</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#">Research ▾</a>
-                            <ul class="dropdown-menu">
-                                <li><a href="projects.html">Research Projects</a></li>
-                                <li><a href="research-areas.html">Research Areas</a></li>
-                                <li><a href="resources.html">Datasets & Code</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#">People ▾</a>
-                            <ul class="dropdown-menu">
-                                <li><a href="members.html">Current Team</a></li>
-                                <li><a href="members.html#alumni">Alumni</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#">Happenings ▾</a>
-                            <ul class="dropdown-menu">
-                                <li><a href="news.html">News & Events</a></li>
-                                <li><a href="gallery.html">Photo Gallery</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="publications.html">Publications</a></li>
-                    </ul>
-                </nav>
-            </div>
+    <!-- ============ Header ============ -->
+    <header class="site-header" id="site-header">
+        <div class="shell header-inner">
+            <a class="brand" href="index.html">
+                <img class="brand__mark" src="caai cropped.jpg" alt="">
+                <span>
+                    <span class="brand__name">CAAI</span>
+                    <span class="brand__sub">Center for Applied Artificial Intelligence</span>
+                </span>
+            </a>
+
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                <span></span><span></span>
+            </button>
+
+            <nav class="nav" id="nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li>
+                        <a href="about.html" class="is-active">About <span class="caret">▼</span></a>
+                        <ul class="submenu">
+                            <li><a href="about.html">About the Lab</a></li>
+                            <li><a href="join-us.html">Join Us</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="projects.html">Research <span class="caret">▼</span></a>
+                        <ul class="submenu">
+                            <li><a href="projects.html">Research Projects</a></li>
+                            <li><a href="research-areas.html">Research Areas</a></li>
+                            <li><a href="resources.html">Datasets &amp; Code</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="members.html">People <span class="caret">▼</span></a>
+                        <ul class="submenu">
+                            <li><a href="members.html">Current Team</a></li>
+                            <li><a href="members.html#alumni">Alumni</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="news.html">Happenings <span class="caret">▼</span></a>
+                        <ul class="submenu">
+                            <li><a href="news.html">News &amp; Events</a></li>
+                            <li><a href="gallery.html">Photo Gallery</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="publications.html">Publications</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
 
-    <div class="page-intro">
-        <div class="container">
-            <h2>About CAAI Lab</h2>
-            <p>Fostering the next generation of AI researchers.</p>
-        </div>
-    </div>
+    <main>
 
-    <section>
-        <div class="container">
-            <div class="about-content">
-                <div class="about-section">
-                    <h3>Mission</h3>
-                    <p>CAAI Lab is an experimental research lab supporting students entering the field of artificial
-                        intelligence, machine learning, computer vision, and cross-modal systems. We provide a guided
-                        research environment where beginners learn research methodologies, implementation practices,
-                        paper writing, and experimentation under structured mentorship.</p>
+        <!-- ============ Masthead ============ -->
+        <section class="masthead">
+            <div class="shell masthead__inner">
+                <div data-reveal>
+                    <p class="eyebrow eyebrow--plain">About</p>
+                    <h1>Fostering the next generation of <em>researchers</em>.</h1>
                 </div>
+                <p class="masthead__lede" data-reveal>
+                    CAAI is an experimental research lab for students entering artificial intelligence — a place
+                    to learn the craft by running real projects, not by reading about them.
+                </p>
+            </div>
+        </section>
 
-                <div class="about-section">
-                    <h3>Organization</h3>
-                    <p>CAAI Lab operates under The Korean Academy, registered organization in India. The lab
-                        supports students learning Korean and preparing for academic or professional transitions to
-                        Korea or other countries, while building research profiles for international higher education
-                        opportunities.</p>
+        <!-- ============ Mission ============ -->
+        <section class="shell">
+            <div class="prose">
+                <p class="prose__label" data-reveal>01 — Mission</p>
+                <div data-reveal>
+                    <h2>Teaching research by doing research.</h2>
+                    <p>CAAI Lab supports students entering the field of artificial intelligence, machine learning,
+                        computer vision and cross-modal systems. We provide a guided research environment where
+                        beginners learn research methodologies, implementation practices, paper writing and
+                        experimentation under structured mentorship.</p>
+                    <p>Members take a question and carry it end to end — literature, method, implementation,
+                        evaluation, write-up. The work that comes out is theirs, and it goes out under their names.</p>
+                    <div class="prose__actions">
+                        <a class="link-quiet" href="projects.html">See the projects <span class="arrow">→</span></a>
+                        <a class="link-quiet" href="publications.html">See the output <span class="arrow">→</span></a>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 Center for Applied Artificial Intelligence (CAAI). All rights reserved. | <a
-                    href="mailto:admission@thekoreancad.com" style="color: #bbb; text-decoration: underline;">Contact
-                    Us</a></p>
+            <!-- ============ Organization ============ -->
+            <div class="prose">
+                <p class="prose__label" data-reveal>02 — Organization</p>
+                <div data-reveal>
+                    <h2>Under The Korean Academy.</h2>
+                    <p>CAAI Lab operates under The Korean Academy, a registered organization in India. The lab
+                        supports students learning Korean and preparing for academic or professional transitions
+                        to Korea or other countries, while building research profiles for international higher
+                        education opportunities.</p>
+
+                    <dl class="facts">
+                        <div>
+                            <dt>Founded</dt>
+                            <dd>2022</dd>
+                        </div>
+                        <div>
+                            <dt>Operating under</dt>
+                            <dd>The Korean Academy</dd>
+                        </div>
+                        <div>
+                            <dt>Registered in</dt>
+                            <dd>India</dd>
+                        </div>
+                        <div>
+                            <dt>Researchers &amp; alumni</dt>
+                            <dd>54</dd>
+                        </div>
+                    </dl>
+                </div>
+            </div>
+
+            <!-- ============ How it works ============ -->
+            <div class="prose">
+                <p class="prose__label" data-reveal>03 — How the lab works</p>
+                <div data-reveal>
+                    <h2>Structured mentorship, real deliverables.</h2>
+                    <ul>
+                        <li><strong>Guided projects.</strong> Every member joins an active project with a defined
+                            scope, a timeline and a mentor — currently image-to-music generation, text-to-comic
+                            generation, multimodal AI in gene editing, and an international research
+                            collaboration.</li>
+                        <li><strong>Research methodology.</strong> Reading papers properly, framing a question,
+                            designing an experiment and reporting results honestly.</li>
+                        <li><strong>Implementation practice.</strong> Python with PyTorch or TensorFlow, working
+                            through the gap between a paper's method section and code that runs.</li>
+                        <li><strong>Writing and submission.</strong> Drafting, revising and submitting to preprint
+                            servers, journals and conferences — twelve papers and datasets so far.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ Research pillars ============ -->
+        <section class="band band--tint">
+            <div class="shell">
+                <div class="band-head" data-reveal>
+                    <div>
+                        <p class="eyebrow eyebrow--plain">04 — What we work on</p>
+                        <h2>Four pillars.</h2>
+                    </div>
+                    <div class="band-head__side">
+                        <a class="link-quiet" href="research-areas.html">In detail <span class="arrow">→</span></a>
+                    </div>
+                </div>
+
+                <div class="pillars" data-reveal>
+                    <article class="pillar">
+                        <span class="pillar__num">01</span>
+                        <h3>Multimodal AI</h3>
+                        <p>Vision, text and audio in one system — captioning, visual question answering, cross-modal
+                            alignment.</p>
+                    </article>
+                    <article class="pillar">
+                        <span class="pillar__num">02</span>
+                        <h3>AI Ethics &amp; Bias</h3>
+                        <p>Fairness, accountability and transparency — measuring where models fail people.</p>
+                    </article>
+                    <article class="pillar">
+                        <span class="pillar__num">03</span>
+                        <h3>Generative Models</h3>
+                        <p>Language and diffusion models for text, image, audio and code generation.</p>
+                    </article>
+                    <article class="pillar">
+                        <span class="pillar__num">04</span>
+                        <h3>AI for Social Good</h3>
+                        <p>Healthcare, education and environmental problems where better models matter.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ CTA ============ -->
+        <section class="band band--ink">
+            <div class="shell cta">
+                <div data-reveal>
+                    <p class="eyebrow eyebrow--plain">Join us</p>
+                    <h2>Come and do the work.</h2>
+                </div>
+                <div data-reveal>
+                    <p>The lab takes graduate research assistants and undergraduate research interns each term.
+                        If you can program and you're willing to be patient with an experiment, we want to hear
+                        from you.</p>
+                    <div class="cta__actions">
+                        <a class="btn btn--light" href="join-us.html">How to apply <span class="arrow">→</span></a>
+                        <a class="btn btn--light" href="members.html">Meet the team</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ============ Footer ============ -->
+    <footer class="site-footer">
+        <div class="shell">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="footer-brand__name">CAAI</div>
+                    <p>Center for Applied Artificial Intelligence — a guided research lab operating under
+                        The Korean Academy.</p>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Research</h4>
+                    <ul>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="research-areas.html">Areas</a></li>
+                        <li><a href="publications.html">Publications</a></li>
+                        <li><a href="resources.html">Datasets &amp; Code</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Lab</h4>
+                    <ul>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="members.html">People</a></li>
+                        <li><a href="news.html">News &amp; Events</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="mailto:admission@thekoreancad.com">admission@thekoreancad.com</a></li>
+                        <li><a href="join-us.html">Apply to the lab</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-base">
+                <span>© 2025 Center for Applied Artificial Intelligence</span>
+                <span>All rights reserved</span>
+            </div>
         </div>
     </footer>
 
+    <script src="landing.js"></script>
 </body>
 
 </html>

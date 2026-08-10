@@ -4,118 +4,785 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CAAI: Center for Applied Artificial Intelligence</title>
+    <title>CAAI — Center for Applied Artificial Intelligence</title>
+    <meta name="description"
+        content="CAAI is a guided research lab in multimodal AI, vision–language models, generative systems and AI ethics, operating under The Korean Academy.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Lato:wght@300;400;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..500&family=Inter:wght@400;500&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="landing.css">
 </head>
 
 <body>
 
-    <header class="transparent-header">
-        <div class="container">
-            <div class="header-content">
-                <div class="logo-section">
-                    <img src="caai cropped.jpg" alt="CAAI Logo">
-                    <div class="title-section">
-                        <h1>CAAI</h1>
-                        <p>Center for Applied Artificial Intelligence</p>
-                    </div>
-                </div>
-                <button class="menu-toggle" aria-label="Toggle navigation">&#9776;</button>
-                <nav>
-                    <ul>
-                        <li><a href="index.html" class="active">Home</a></li>
-                        <li>
-                            <a href="#">About ▾</a>
-                            <ul class="dropdown-menu">
-                                <li><a href="about.html">About the Lab</a></li>
-                                <li><a href="join-us.html">Join Us</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#">Research ▾</a>
-                            <ul class="dropdown-menu">
-                                <li><a href="projects.html">Research Projects</a></li>
-                                <li><a href="research-areas.html">Research Areas</a></li>
-                                <li><a href="resources.html">Datasets & Code</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#">People ▾</a>
-                            <ul class="dropdown-menu">
-                                <li><a href="members.html">Current Team</a></li>
-                                <li><a href="members.html#alumni">Alumni</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#">Happenings ▾</a>
-                            <ul class="dropdown-menu">
-                                <li><a href="news.html">News & Events</a></li>
-                                <li><a href="gallery.html">Photo Gallery</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="publications.html">Publications</a></li>
-                    </ul>
-                </nav>
-            </div>
+    <!-- ============ Header ============ -->
+    <header class="site-header" id="site-header">
+        <div class="shell header-inner">
+            <a class="brand" href="index.html">
+                <img class="brand__mark" src="caai cropped.jpg" alt="">
+                <span>
+                    <span class="brand__name">CAAI</span>
+                    <span class="brand__sub">Center for Applied Artificial Intelligence</span>
+                </span>
+            </a>
+
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                <span></span><span></span>
+            </button>
+
+            <nav class="nav" id="nav">
+                <ul>
+                    <li><a href="index.html" class="is-active">Home</a></li>
+                    <li>
+                        <a href="about.html">About <span class="caret">▼</span></a>
+                        <ul class="submenu">
+                            <li><a href="about.html">About the Lab</a></li>
+                            <li><a href="join-us.html">Join Us</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="projects.html">Research <span class="caret">▼</span></a>
+                        <ul class="submenu">
+                            <li><a href="projects.html">Research Projects</a></li>
+                            <li><a href="research-areas.html">Research Areas</a></li>
+                            <li><a href="resources.html">Datasets &amp; Code</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="members.html">People <span class="caret">▼</span></a>
+                        <ul class="submenu">
+                            <li><a href="members.html">Current Team</a></li>
+                            <li><a href="members.html#alumni">Alumni</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="news.html">Happenings <span class="caret">▼</span></a>
+                        <ul class="submenu">
+                            <li><a href="news.html">News &amp; Events</a></li>
+                            <li><a href="gallery.html">Photo Gallery</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="publications.html">Publications</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
 
-    <section class="hero-video">
-        <video id="lab-video" autoplay muted playsinline>
-            <source src="lab video.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-        <button id="sound-toggle" class="sound-btn">🔊 Enable Sound</button>
+    <main>
 
-        <div class="video-credit">Video is property of Northwestern University</div>
-    </section>
+        <!-- ============ Hero ============ -->
+        <section class="hero">
+            <div class="hero__media">
+                <video id="lab-video" autoplay muted playsinline loop preload="auto" aria-hidden="true">
+                    <source src="lab video.mp4" type="video/mp4">
+                </video>
+                <div class="hero__veil"></div>
+                <div class="hero__grain"></div>
+            </div>
 
+            <div class="shell hero__inner">
+                <p class="eyebrow hero__eyebrow">Center for Applied Artificial Intelligence</p>
 
+                <h1>Where beginners<br>become <em>researchers</em>.</h1>
 
+                <p class="hero__sub">
+                    A guided research lab working across multimodal AI, vision–language models, generative
+                    systems and the ethics that hold them accountable — built so that first-time researchers
+                    can publish real work.
+                </p>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 Center for Applied Artificial Intelligence (CAAI). All rights reserved. | <a
-                    href="mailto:admission@thekoreancad.com" style="color: #bbb; text-decoration: underline;">Contact
-                    Us</a></p>
+                <div class="hero__actions">
+                    <a class="btn btn--light" href="projects.html">Explore research <span class="arrow">→</span></a>
+                    <a class="btn btn--light" href="join-us.html">Join the lab <span class="arrow">→</span></a>
+                </div>
+
+                <div class="hero__foot">
+                    <span>Operating under The Korean Academy</span>
+                    <span>Video is property of Northwestern University</span>
+                    <button id="sound-toggle" class="sound-btn" type="button">Enable sound</button>
+                </div>
+            </div>
+
+            <span class="scroll-cue">Scroll</span>
+        </section>
+
+        <!-- ============ Marquee ============ -->
+        <div class="marquee" aria-hidden="true">
+            <div class="marquee__track">
+                <div class="marquee__group">
+                    <span>Multimodal AI</span><span>Vision–Language Models</span><span>Generative Models</span>
+                    <span>AI Ethics &amp; Bias</span><span>Cross-Modal Generation</span><span>AI for Social Good</span>
+                </div>
+                <div class="marquee__group">
+                    <span>Multimodal AI</span><span>Vision–Language Models</span><span>Generative Models</span>
+                    <span>AI Ethics &amp; Bias</span><span>Cross-Modal Generation</span><span>AI for Social Good</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============ Statement ============ -->
+        <section class="band">
+            <div class="shell statement">
+                <div class="statement__aside" data-reveal>
+                    <p class="eyebrow eyebrow--plain">01 — The Lab</p>
+                    <dl>
+                        <dt>Founded</dt>
+                        <dd>2022</dd>
+                        <dt>Operating under</dt>
+                        <dd>The Korean Academy</dd>
+                        <dt>Registered in</dt>
+                        <dd>India</dd>
+                    </dl>
+                </div>
+
+                <div class="statement__body" data-reveal>
+                    <p class="lede">
+                        CAAI is an experimental research lab for students entering artificial intelligence,
+                        machine learning, computer vision and cross-modal systems.
+                    </p>
+                    <p class="body-text">
+                        We provide a guided environment where beginners learn research methodology, implementation
+                        practice, paper writing and experimental design under structured mentorship — not by
+                        watching, but by running projects end to end. Members join a cohort, take a question,
+                        and carry it through to a preprint, a journal submission or a released dataset.
+                    </p>
+                    <p class="body-text">
+                        The lab supports students learning Korean and preparing for academic or professional
+                        transitions to Korea and elsewhere, while building research profiles for international
+                        higher education.
+                    </p>
+                    <p style="margin-top: 34px;">
+                        <a class="link-quiet" href="about.html">Read about the lab <span class="arrow">→</span></a>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ Figures ============ -->
+        <section class="band" style="padding-top: 0;">
+            <div class="shell">
+                <div class="figures" data-reveal>
+                    <div class="figure">
+                        <span class="figure__num">54</span>
+                        <div class="figure__label">Researchers &amp; alumni</div>
+                    </div>
+                    <div class="figure">
+                        <span class="figure__num">12</span>
+                        <div class="figure__label">Research projects</div>
+                    </div>
+                    <div class="figure">
+                        <span class="figure__num">12</span>
+                        <div class="figure__label">Papers &amp; datasets</div>
+                    </div>
+                    <div class="figure">
+                        <span class="figure__num">04</span>
+                        <div class="figure__label">Research pillars</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ Research areas ============ -->
+        <section class="band band--tint">
+            <div class="shell">
+                <div class="band-head" data-reveal>
+                    <div>
+                        <p class="eyebrow eyebrow--plain">02 — Research Areas</p>
+                        <h2>Four pillars, one question: how machines make meaning.</h2>
+                    </div>
+                    <div class="band-head__side">
+                        <a class="link-quiet" href="research-areas.html">All areas <span class="arrow">→</span></a>
+                    </div>
+                </div>
+
+                <div class="areas" data-reveal>
+                    <article class="area">
+                        <span class="area__num">01</span>
+                        <h3>Multimodal AI</h3>
+                        <p>Merging vision, text and audio into systems that read the world the way people do —
+                            visual question answering, captioning, and cross-modal alignment.</p>
+                    </article>
+
+                    <article class="area">
+                        <span class="area__num">02</span>
+                        <h3>AI Ethics &amp; Bias</h3>
+                        <p>Fairness, accountability and transparency in machine learning — measuring where models
+                            fail people, and designing evaluations that catch it early.</p>
+                    </article>
+
+                    <article class="area">
+                        <span class="area__num">03</span>
+                        <h3>Generative Models</h3>
+                        <p>Large language models and diffusion systems for generating text, images, audio and code,
+                            and the architectures that make them controllable.</p>
+                    </article>
+
+                    <article class="area">
+                        <span class="area__num">04</span>
+                        <h3>AI for Social Good</h3>
+                        <p>Applying the same techniques to healthcare, education and environmental problems where
+                            better models translate into better outcomes.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ Selected work ============ -->
+        <section class="band">
+            <div class="shell">
+                <div class="band-head" data-reveal>
+                    <div>
+                        <p class="eyebrow eyebrow--plain">03 — Current Work</p>
+                        <h2>Four projects are running in the lab right now.</h2>
+                    </div>
+                    <div class="band-head__side">
+                        <a class="link-quiet" href="projects.html">All projects <span class="arrow">→</span></a>
+                    </div>
+                </div>
+
+                <div class="work-grid">
+
+                    <!-- ---- Current project 01 ---- -->
+                    <article class="work-card" data-reveal>
+                        <figure class="build">
+                            <svg viewBox="0 0 480 300" role="img"
+                                aria-label="Diagram: an image grid resolving into an audio waveform">
+                                <!-- corner ticks -->
+                                <path class="fig-hair" d="M24 40 V24 H40 M440 24 h16 v16 M456 260 v16 h-16 M40 276 H24 v-16" />
+
+                                <text class="fig-label" x="44" y="66">Image</text>
+                                <text class="fig-label" x="292" y="66">Music</text>
+
+                                <!-- pixel grid -->
+                                <g>
+                                    <rect class="cell" x="44" y="82" width="22" height="22" style="animation-delay:0s" />
+                                    <rect class="cell" x="70" y="82" width="22" height="22" style="animation-delay:.06s" />
+                                    <rect class="cell" x="96" y="82" width="22" height="22" style="animation-delay:.12s" />
+                                    <rect class="cell" x="122" y="82" width="22" height="22" style="animation-delay:.18s" />
+                                    <rect class="cell" x="148" y="82" width="22" height="22" style="animation-delay:.24s" />
+                                    <rect class="cell" x="44" y="108" width="22" height="22" style="animation-delay:.06s" />
+                                    <rect class="cell" x="70" y="108" width="22" height="22" style="animation-delay:.12s" />
+                                    <rect class="cell" x="96" y="108" width="22" height="22" style="animation-delay:.18s" />
+                                    <rect class="cell" x="122" y="108" width="22" height="22" style="animation-delay:.24s" />
+                                    <rect class="cell" x="148" y="108" width="22" height="22" style="animation-delay:.3s" />
+                                    <rect class="cell" x="44" y="134" width="22" height="22" style="animation-delay:.12s" />
+                                    <rect class="cell" x="70" y="134" width="22" height="22" style="animation-delay:.18s" />
+                                    <rect class="cell" x="96" y="134" width="22" height="22" style="animation-delay:.24s" />
+                                    <rect class="cell" x="122" y="134" width="22" height="22" style="animation-delay:.3s" />
+                                    <rect class="cell" x="148" y="134" width="22" height="22" style="animation-delay:.36s" />
+                                    <rect class="cell" x="44" y="160" width="22" height="22" style="animation-delay:.18s" />
+                                    <rect class="cell" x="70" y="160" width="22" height="22" style="animation-delay:.24s" />
+                                    <rect class="cell" x="96" y="160" width="22" height="22" style="animation-delay:.3s" />
+                                    <rect class="cell" x="122" y="160" width="22" height="22" style="animation-delay:.36s" />
+                                    <rect class="cell" x="148" y="160" width="22" height="22" style="animation-delay:.42s" />
+                                    <rect class="cell" x="44" y="186" width="22" height="22" style="animation-delay:.24s" />
+                                    <rect class="cell" x="70" y="186" width="22" height="22" style="animation-delay:.3s" />
+                                    <rect class="cell" x="96" y="186" width="22" height="22" style="animation-delay:.36s" />
+                                    <rect class="cell" x="122" y="186" width="22" height="22" style="animation-delay:.42s" />
+                                    <rect class="cell" x="148" y="186" width="22" height="22" style="animation-delay:.48s" />
+                                    <line class="scan" x1="40" y1="80" x2="174" y2="80" />
+                                </g>
+
+                                <!-- encoder → decoder flow -->
+                                <line class="fig-hair" x1="186" y1="145" x2="278" y2="145" />
+                                <circle class="flow" cx="206" cy="145" r="2.6" style="animation-delay:0s" />
+                                <circle class="flow" cx="228" cy="145" r="2.6" style="animation-delay:.4s" />
+                                <circle class="flow" cx="250" cy="145" r="2.6" style="animation-delay:.8s" />
+                                <rect class="fig-line" x="216" y="126" width="38" height="38" rx="1" opacity="0.35" />
+
+                                <!-- waveform bars -->
+                                <g>
+                                    <line class="fig-hair" x1="288" y1="215" x2="452" y2="215" />
+                                    <rect class="bar" x="292" y="95" width="8" height="120" style="animation-delay:0s" />
+                                    <rect class="bar" x="306" y="95" width="8" height="120" style="animation-delay:.09s" />
+                                    <rect class="bar" x="320" y="95" width="8" height="120" style="animation-delay:.18s" />
+                                    <rect class="bar" x="334" y="95" width="8" height="120" style="animation-delay:.27s" />
+                                    <rect class="bar" x="348" y="95" width="8" height="120" style="animation-delay:.36s" />
+                                    <rect class="bar" x="362" y="95" width="8" height="120" style="animation-delay:.45s" />
+                                    <rect class="bar" x="376" y="95" width="8" height="120" style="animation-delay:.54s" />
+                                    <rect class="bar" x="390" y="95" width="8" height="120" style="animation-delay:.63s" />
+                                    <rect class="bar" x="404" y="95" width="8" height="120" style="animation-delay:.72s" />
+                                    <rect class="bar" x="418" y="95" width="8" height="120" style="animation-delay:.81s" />
+                                    <rect class="bar" x="432" y="95" width="8" height="120" style="animation-delay:.9s" />
+                                </g>
+                            </svg>
+                            <figcaption>Fig. 1 — Cross-modal encode → generate</figcaption>
+                        </figure>
+
+                        <div class="work-card__body">
+                            <span class="status">In progress</span>
+                            <h3>Multimodal Image-to-Music Generation</h3>
+                            <p class="work-card__desc">Learning a mapping from visual input to musical output —
+                                encoding an image into a shared representation and decoding it into audio that
+                                carries the scene's structure, mood and rhythm.</p>
+
+                            <div class="work-card__foot">
+                                <div class="work-meta">
+                                    <span>10 August 2026 — Ongoing</span>
+                                    <span>Cross-modal generation</span>
+                                </div>
+                                <div class="work-meta" style="border: 0; margin-top: 14px; padding-top: 0;">
+                                    <span>Researchers</span>
+                                </div>
+                                <p class="work-people">Gurpreet Singh · Lamia Qamar</p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- ---- Current project 02 ---- -->
+                    <article class="work-card" data-reveal>
+                        <figure class="build">
+                            <svg viewBox="0 0 480 300" role="img"
+                                aria-label="Diagram: lines of script assembling into drawn comic panels">
+                                <path class="fig-hair" d="M24 40 V24 H40 M440 24 h16 v16 M456 260 v16 h-16 M40 276 H24 v-16" />
+
+                                <text class="fig-label" x="44" y="66">Script</text>
+                                <text class="fig-label" x="288" y="66">Panels</text>
+
+                                <!-- typed script lines -->
+                                <g>
+                                    <rect class="type" x="44" y="88" width="128" height="7" style="animation-delay:0s" />
+                                    <rect class="type" x="44" y="108" width="104" height="7" style="animation-delay:.12s" />
+                                    <rect class="type" x="44" y="128" width="136" height="7" style="animation-delay:.24s" />
+                                    <rect class="type" x="44" y="148" width="88" height="7" style="animation-delay:.36s" />
+                                    <rect class="type" x="44" y="168" width="124" height="7" style="animation-delay:.48s" />
+                                    <rect class="type" x="44" y="188" width="72" height="7" style="animation-delay:.6s" />
+                                </g>
+
+                                <!-- flow -->
+                                <line class="fig-hair" x1="196" y1="145" x2="276" y2="145" />
+                                <circle class="flow" cx="212" cy="145" r="2.6" style="animation-delay:.2s" />
+                                <circle class="flow" cx="234" cy="145" r="2.6" style="animation-delay:.6s" />
+                                <circle class="flow" cx="256" cy="145" r="2.6" style="animation-delay:1s" />
+
+                                <!-- comic panels drawing themselves -->
+                                <g>
+                                    <rect class="panel" x="288" y="82" width="80" height="60" style="animation-delay:0s" />
+                                    <rect class="panel" x="378" y="82" width="80" height="60" style="animation-delay:.25s" />
+                                    <rect class="panel" x="288" y="152" width="80" height="60" style="animation-delay:.5s" />
+                                    <rect class="panel" x="378" y="152" width="80" height="60" style="animation-delay:.75s" />
+
+                                    <!-- panel 1: figure -->
+                                    <g class="pop" style="animation-delay:0s">
+                                        <circle cx="316" cy="106" r="8" class="fig-line" />
+                                        <path class="fig-line" d="M316 116 v14 M306 124 h20 M310 130 l-4 8 M322 130 l4 8" />
+                                    </g>
+                                    <!-- panel 2: speech bubble -->
+                                    <g class="pop" style="animation-delay:.25s">
+                                        <rect class="fig-line" x="396" y="96" width="44" height="24" rx="3" />
+                                        <path class="fig-line" d="M406 120 l-2 9 l11 -9" />
+                                        <line class="fig-hair" x1="402" y1="104" x2="434" y2="104" />
+                                        <line class="fig-hair" x1="402" y1="112" x2="424" y2="112" />
+                                    </g>
+                                    <!-- panel 3: scene -->
+                                    <g class="pop" style="animation-delay:.5s">
+                                        <circle cx="342" cy="174" r="9" class="fig-line" />
+                                        <line class="fig-line" x1="298" y1="192" x2="358" y2="192" />
+                                        <path class="fig-line" d="M306 192 l12 -14 l12 14" />
+                                    </g>
+                                    <!-- panel 4: motion -->
+                                    <g class="pop" style="animation-delay:.75s">
+                                        <line class="fig-line" x1="392" y1="170" x2="424" y2="170" />
+                                        <line class="fig-line" x1="398" y1="180" x2="436" y2="180" />
+                                        <line class="fig-line" x1="392" y1="190" x2="418" y2="190" />
+                                    </g>
+                                </g>
+                            </svg>
+                            <figcaption>Fig. 2 — Narrative text → sequential panels</figcaption>
+                        </figure>
+
+                        <div class="work-card__body">
+                            <span class="status">In progress</span>
+                            <h3>Text-to-Comic Generation</h3>
+                            <p class="work-card__desc">Turning written narrative into sequential visual storytelling —
+                                segmenting a script into beats, then generating panel layout, imagery and dialogue
+                                that stay consistent across the sequence.</p>
+
+                            <div class="work-card__foot">
+                                <div class="work-meta">
+                                    <span>Ongoing</span>
+                                    <span>Multimodal generation</span>
+                                </div>
+                                <div class="work-meta" style="border: 0; margin-top: 14px; padding-top: 0;">
+                                    <span>Researchers</span>
+                                </div>
+                                <p class="work-people">Trina Banerjee · Mukhthikka · Gurpreet Singh</p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- ---- Current project 03 ---- -->
+                    <article class="work-card" data-reveal>
+                        <figure class="build">
+                            <svg viewBox="0 0 480 300" role="img"
+                                aria-label="Diagram: sequence and imaging inputs converging on a DNA strand where a target segment is excised and replaced">
+                                <path class="fig-hair" d="M24 40 V24 H40 M440 24 h16 v16 M456 260 v16 h-16 M40 276 H24 v-16" />
+                                <text class="fig-label" x="44" y="66">Sequence</text>
+                                <text class="fig-label" x="44" y="152">Imaging</text>
+                                <text class="fig-label" x="286" y="66">Target edit</text>
+
+                                <!-- sequence rows -->
+                                <g>
+                                    <rect class="type" x="44" y="80" width="96" height="6" style="animation-delay:0s" />
+                                    <rect class="type" x="44" y="96" width="72" height="6" style="animation-delay:.12s" />
+                                    <rect class="type" x="44" y="112" width="88" height="6" style="animation-delay:.24s" />
+                                </g>
+
+                                <!-- imaging grid -->
+                                <g>
+                                    <rect class="cell" x="44" y="166" width="18" height="18" style="animation-delay:.1s" />
+                                    <rect class="cell" x="66" y="166" width="18" height="18" style="animation-delay:.18s" />
+                                    <rect class="cell" x="88" y="166" width="18" height="18" style="animation-delay:.26s" />
+                                    <rect class="cell" x="44" y="188" width="18" height="18" style="animation-delay:.18s" />
+                                    <rect class="cell" x="66" y="188" width="18" height="18" style="animation-delay:.26s" />
+                                    <rect class="cell" x="88" y="188" width="18" height="18" style="animation-delay:.34s" />
+                                </g>
+
+                                <!-- convergence -->
+                                <g class="fig-hair">
+                                    <path d="M150 100 C180 100 180 148 206 148" />
+                                    <path d="M118 214 C160 214 175 150 206 148" />
+                                </g>
+                                <circle class="flow" cx="170" cy="120" r="2.6" style="animation-delay:.1s" />
+                                <circle class="flow" cx="188" cy="140" r="2.6" style="animation-delay:.5s" />
+                                <circle class="flow" cx="172" cy="182" r="2.6" style="animation-delay:.9s" />
+
+                                <!-- DNA rails -->
+                                <g class="fig-line">
+                                    <path class="f-draw f-draw--long" d="M215 105 q20 -18 40 0 t40 0 t40 0 t40 0 t40 0 t40 0" />
+                                    <path class="f-draw f-draw--long" d="M215 195 q20 18 40 0 t40 0 t40 0 t40 0 t40 0 t40 0"
+                                        style="animation-delay:.1s" />
+                                </g>
+
+                                <!-- base pairs -->
+                                <g class="fig-line">
+                                    <line class="f-fade" x1="225" y1="112" x2="225" y2="188" style="animation-delay:.2s" />
+                                    <line class="f-fade" x1="249" y1="112" x2="249" y2="188" style="animation-delay:.28s" />
+                                    <line class="f-fade" x1="273" y1="112" x2="273" y2="188" style="animation-delay:.36s" />
+                                    <line class="f-fade" x1="345" y1="112" x2="345" y2="188" style="animation-delay:.6s" />
+                                    <line class="f-fade" x1="369" y1="112" x2="369" y2="188" style="animation-delay:.68s" />
+                                    <line class="f-fade" x1="393" y1="112" x2="393" y2="188" style="animation-delay:.76s" />
+                                    <line class="f-fade" x1="417" y1="112" x2="417" y2="188" style="animation-delay:.84s" />
+                                    <line class="f-fade" x1="441" y1="112" x2="441" y2="188" style="animation-delay:.92s" />
+                                </g>
+
+                                <!-- excision window -->
+                                <rect class="fig-line f-draw" x="286" y="94" width="46" height="112"
+                                    stroke-dasharray="4 5" style="animation-delay:.4s" />
+                                <path class="fig-line f-fade" d="M296 84 l6 -8 l6 8 M316 84 l6 -8 l6 8"
+                                    style="animation-delay:.5s" />
+
+                                <!-- inserted pair -->
+                                <g class="pop" style="animation-delay:.35s">
+                                    <line class="fig-line" x1="297" y1="112" x2="297" y2="188" stroke-width="2" />
+                                    <line class="fig-line" x1="321" y1="112" x2="321" y2="188" stroke-width="2" />
+                                    <circle class="net-dot" cx="309" cy="150" r="7" />
+                                </g>
+                            </svg>
+                            <figcaption>Fig. 3 — Sequence + imaging &rarr; targeted edit</figcaption>
+                        </figure>
+
+                        <div class="work-card__body">
+                            <span class="status">In progress</span>
+                            <h3>Multimodal AI in Gene Editing</h3>
+                            <p class="work-card__desc">Bringing the lab's cross-modal methods to molecular biology —
+                                combining sequence data, imaging and published literature in a single representation
+                                to support target selection and outcome prediction in gene editing.</p>
+
+                            <div class="work-card__foot">
+                                <div class="work-meta">
+                                    <span>Ongoing</span>
+                                    <span>Multimodal &middot; Biomedical</span>
+                                </div>
+                                <div class="work-meta" style="border: 0; margin-top: 14px; padding-top: 0;">
+                                    <span>Researchers</span>
+                                </div>
+                                <p class="work-people">Sudipta Patil &middot; Gurpreet Singh</p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- ---- Current project 04 ---- -->
+                    <article class="work-card" data-reveal>
+                        <figure class="build">
+                            <svg viewBox="0 0 480 300" role="img"
+                                aria-label="Diagram: a globe with research sites in different regions linked by arcs">
+                                <path class="fig-hair" d="M24 40 V24 H40 M440 24 h16 v16 M456 260 v16 h-16 M40 276 H24 v-16" />
+                                <text class="fig-label" x="44" y="66">Partners</text>
+                                <text class="fig-label" x="352" y="66">Shared work</text>
+
+                                <!-- globe -->
+                                <g class="fig-line">
+                                    <circle class="f-draw f-draw--long" cx="240" cy="158" r="92" />
+                                    <ellipse class="fig-hair" cx="240" cy="118" rx="78" ry="22" />
+                                    <ellipse class="fig-hair" cx="240" cy="158" rx="92" ry="30" />
+                                    <ellipse class="fig-hair" cx="240" cy="198" rx="78" ry="22" />
+                                    <ellipse class="fig-hair" cx="240" cy="158" rx="32" ry="92" />
+                                    <ellipse class="fig-hair" cx="240" cy="158" rx="66" ry="92" />
+                                    <line class="fig-hair" x1="240" y1="66" x2="240" y2="250" />
+                                </g>
+
+                                <!-- routes -->
+                                <g class="fig-line">
+                                    <path class="f-draw" d="M186 118 Q240 84 298 144" style="animation-delay:.2s" />
+                                    <path class="f-draw" d="M298 144 Q262 186 214 200" style="animation-delay:.35s" />
+                                    <path class="f-draw" d="M214 200 Q176 166 186 118" style="animation-delay:.5s" />
+                                </g>
+
+                                <!-- sites -->
+                                <circle class="cell f-fade" cx="186" cy="118" r="5.5" style="animation-delay:.5s" />
+                                <circle class="cell f-fade" cx="298" cy="144" r="5.5" style="animation-delay:.65s" />
+                                <circle class="cell f-fade" cx="214" cy="200" r="5.5" style="animation-delay:.8s" />
+
+                                <!-- orbiting signal -->
+                                <circle class="net-pulse" cx="240" cy="158" r="92" />
+
+                                <!-- side markers -->
+                                <g class="fig-hair">
+                                    <line x1="44" y1="158" x2="140" y2="158" />
+                                    <line x1="344" y1="158" x2="440" y2="158" />
+                                </g>
+                                <circle class="flow" cx="76" cy="158" r="2.6" style="animation-delay:.1s" />
+                                <circle class="flow" cx="108" cy="158" r="2.6" style="animation-delay:.6s" />
+                                <circle class="flow" cx="376" cy="158" r="2.6" style="animation-delay:.3s" />
+                                <circle class="flow" cx="408" cy="158" r="2.6" style="animation-delay:.8s" />
+                            </svg>
+                            <figcaption>Fig. 4 — Distributed sites, one research programme</figcaption>
+                        </figure>
+
+                        <div class="work-card__body">
+                            <span class="status">In progress</span>
+                            <h3>International Research Collaboration</h3>
+                            <p class="work-card__desc">A collaboration run across borders, pairing the lab's AI
+                                methods with research in international business, ESG and media — and testing how a
+                                distributed team actually sustains a shared research programme.</p>
+
+                            <div class="work-card__foot">
+                                <div class="work-meta">
+                                    <span>Ongoing</span>
+                                    <span>Cross-disciplinary</span>
+                                </div>
+                                <div class="work-meta" style="border: 0; margin-top: 14px; padding-top: 0;">
+                                    <span>Researchers</span>
+                                </div>
+                                <p class="work-people">Ritika Kanojia &middot; Alimpia Roy &middot; Gurpreet Singh</p>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- ---- Completed work ---- -->
+                <div class="past" data-reveal>
+                    <div class="past__head">
+                        <h3>Previously in the lab</h3>
+                        <a class="link-quiet" href="projects.html">Archive <span class="arrow">→</span></a>
+                    </div>
+
+                    <a class="past__row" href="projects.html">
+                        <span>[08]</span>
+                        <span class="past__title">Neural Segmentation for Language Learning Analytics</span>
+                        <span class="past__year">2025–26</span>
+                    </a>
+                    <a class="past__row" href="projects.html">
+                        <span>[07]</span>
+                        <span class="past__title">Text-to-Audio Generation</span>
+                        <span class="past__year">2025</span>
+                    </a>
+                    <a class="past__row" href="projects.html">
+                        <span>[06]</span>
+                        <span class="past__title">AI-Assisted Storytelling Generation</span>
+                        <span class="past__year">2025</span>
+                    </a>
+                    <a class="past__row" href="projects.html">
+                        <span>[05]</span>
+                        <span class="past__title">Visual-to-Audio Generation</span>
+                        <span class="past__year">2025</span>
+                    </a>
+                    <a class="past__row" href="projects.html">
+                        <span>[03]</span>
+                        <span class="past__title">Business Growth and Management Research Team</span>
+                        <span class="past__year">2023–24</span>
+                    </a>
+                    <a class="past__row" href="projects.html">
+                        <span>[02]</span>
+                        <span class="past__title">Cybersecurity and AI: Vulnerabilities in Modern Infrastructure</span>
+                        <span class="past__year">2024</span>
+                    </a>
+                    <a class="past__row" href="projects.html">
+                        <span>[01]</span>
+                        <span class="past__title">ChatGPT and Cybersecurity: Implications and Repercussions</span>
+                        <span class="past__year">2022</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ Dispatch ============ -->
+        <section class="band band--tint">
+            <div class="shell">
+                <div class="band-head" data-reveal>
+                    <div>
+                        <p class="eyebrow eyebrow--plain">04 — Dispatch</p>
+                        <h2>Recent from the lab.</h2>
+                    </div>
+                </div>
+
+                <div class="dispatch">
+                    <div class="dispatch__col" data-reveal>
+                        <h3>News &amp; Events</h3>
+
+                        <div class="entry">
+                            <div class="entry__date">December 2025</div>
+                            <div class="entry__title">Team members attended The European AI Conference 2025.</div>
+                        </div>
+
+                        <div class="entry">
+                            <div class="entry__date">December 2025</div>
+                            <div class="entry__title">Team attended SECON International — 4th Annual International
+                                ISC2 Chapter Conference.</div>
+                        </div>
+
+                        <div class="entry">
+                            <div class="entry__date">November 2025</div>
+                            <div class="entry__title">Gurpreet Singh attended the International Conference on
+                                Platform and AI Society in Asia.</div>
+                        </div>
+
+                        <div class="entry">
+                            <div class="entry__date">2025</div>
+                            <div class="entry__title">Lamia Qamar presented “Comparative Study of Convolutional
+                                Neural Networks for Deepfake Video Detection on Social Media” at ICA2S 2025.</div>
+                        </div>
+
+                        <div class="dispatch__foot">
+                            <a class="link-quiet" href="news.html">All news <span class="arrow">→</span></a>
+                        </div>
+                    </div>
+
+                    <div class="dispatch__col" data-reveal>
+                        <h3>Publications</h3>
+
+                        <div class="entry">
+                            <div class="entry__date">Preprint · Under review</div>
+                            <div class="entry__title">Vision–Language Foundation Models and Multimodal Large Language
+                                Models: A Comprehensive Survey of Architectures, Benchmarks, and Open Challenges
+                            </div>
+                            <div class="entry__note">Gurpreet Singh — Preprints by MDPI</div>
+                        </div>
+
+                        <a class="entry" href="https://doi.org/10.20944/preprints202511.0637.v1" target="_blank"
+                            rel="noopener">
+                            <div class="entry__date">Journal · 2025</div>
+                            <div class="entry__title">Tracing the Evolution of Artificial Intelligence: A Review of
+                                Tools, Frameworks, and Technologies (1950–2025)</div>
+                            <div class="entry__note">Singh, Banerjee, Ghosh — World Journal of Applied Mathematics
+                                and Statistics</div>
+                        </a>
+
+                        <a class="entry" href="https://dx.doi.org/10.2139/ssrn.5640432" target="_blank" rel="noopener">
+                            <div class="entry__date">Preprint · SSRN &amp; bioRxiv</div>
+                            <div class="entry__title">Multiple Approaches for Drug–Drug Interaction Extraction using
+                                Machine Learning and Transformer-Based Models</div>
+                            <div class="entry__note">Singh, Thiyagarajan</div>
+                        </a>
+
+                        <div class="dispatch__foot">
+                            <a class="link-quiet" href="publications.html">All publications <span
+                                    class="arrow">→</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ CTA ============ -->
+        <section class="band band--ink">
+            <div class="shell cta">
+                <div data-reveal>
+                    <p class="eyebrow eyebrow--plain">05 — Join Us</p>
+                    <h2>Open positions, Fall 2025.</h2>
+                </div>
+                <div data-reveal>
+                    <p>CAAI is accepting graduate research assistants and undergraduate research interns.
+                        We look for strong programming ability — Python, PyTorch or TensorFlow — and the
+                        patience research actually takes.</p>
+                    <div class="cta__actions">
+                        <a class="btn btn--light" href="join-us.html">Application details <span
+                                class="arrow">→</span></a>
+                        <a class="btn btn--light" href="mailto:gurpreetsinghmcse@gmail.com">Write to us</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ============ Footer ============ -->
+    <footer class="site-footer">
+        <div class="shell">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="footer-brand__name">CAAI</div>
+                    <p>Center for Applied Artificial Intelligence — a guided research lab operating under
+                        The Korean Academy.</p>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Research</h4>
+                    <ul>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="research-areas.html">Areas</a></li>
+                        <li><a href="publications.html">Publications</a></li>
+                        <li><a href="resources.html">Datasets &amp; Code</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Lab</h4>
+                    <ul>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="members.html">People</a></li>
+                        <li><a href="news.html">News &amp; Events</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="mailto:admission@thekoreancad.com">admission@thekoreancad.com</a></li>
+                        <li><a href="join-us.html">Apply to the lab</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-base">
+                <span>© 2025 Center for Applied Artificial Intelligence</span>
+                <span>All rights reserved</span>
+            </div>
         </div>
     </footer>
 
-    <!-- Conference Popup -->
-    <div id="conference-popup" class="popup-overlay">
-        <div class="popup-content">
-            <span class="popup-close">&times;</span>
-            <div class="popup-header">
-                <h3>Upcoming AI Conferences</h3>
-                <div class="popup-badge">Notification</div>
+    <!-- ============ Conference notice ============ -->
+    <aside class="notice" id="conference-notice" role="complementary" aria-label="Upcoming conferences">
+        <div class="notice__head">
+            <div>
+                <span class="notice__label">Notice</span>
+                <h4>Upcoming AI conferences</h4>
             </div>
-            <div class="popup-body">
-                <p>Stay updated with the latest in Artificial Intelligence, NLP, and Computer Vision!</p>
-                <ul class="conference-list">
-                    <li>
-                        <strong>CVPR 2026</strong>
-                        <span>June 15-19, 2026</span>
-                    </li>
-                    <li>
-                        <strong>ICML 2026</strong>
-                        <span>July 12-18, 2026</span>
-                    </li>
-                    <li>
-                        <strong>ACL 2026</strong>
-                        <span>August 2-7, 2026</span>
-                    </li>
-                </ul>
-                <p class="popup-note">Check our <a href="news.html">News & Events</a> page for more details.</p>
-            </div>
+            <button class="notice__close" id="notice-close" type="button" aria-label="Dismiss">&times;</button>
         </div>
-    </div>
+        <ul>
+            <li>CVPR 2026 <span>Jun 15–19</span></li>
+            <li>ICML 2026 <span>Jul 12–18</span></li>
+            <li>ACL 2026 <span>Aug 2–7</span></li>
+        </ul>
+        <a class="link-quiet" href="news.html">News &amp; events <span class="arrow">→</span></a>
+    </aside>
 
-    <script src="script.js"></script>
+    <script src="landing.js"></script>
 </body>
 
 </html>

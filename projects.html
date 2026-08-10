@@ -2,215 +2,980 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CAAI: Center for Applied Artificial Intelligence - Research Projects</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Lato:wght@300;400;700&display=swap"
-    rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research Projects — CAAI</title>
+    <meta name="description"
+        content="Four projects are currently running at CAAI: image-to-music generation, text-to-comic generation, multimodal AI in gene editing, and an international research collaboration. Plus the lab's completed work since 2022.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..500&family=Inter:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="landing.css">
+    <link rel="stylesheet" href="pages.css">
 </head>
 
-<body>
+<body class="page">
 
-  <header>
-    <div class="container">
-      <div class="header-content">
-        <div class="logo-section">
-          <img src="caai cropped.jpg" alt="CAAI Logo">
-          <div class="title-section">
-            <h1>CAAI</h1>
-            <p>Center for Applied Artificial Intelligence</p>
-          </div>
+    <!-- ============ Header ============ -->
+    <header class="site-header" id="site-header">
+        <div class="shell header-inner">
+            <a class="brand" href="index.html">
+                <img class="brand__mark" src="caai cropped.jpg" alt="">
+                <span>
+                    <span class="brand__name">CAAI</span>
+                    <span class="brand__sub">Center for Applied Artificial Intelligence</span>
+                </span>
+            </a>
+
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                <span></span><span></span>
+            </button>
+
+            <nav class="nav" id="nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li>
+                        <a href="about.html">About <span class="caret">▼</span></a>
+                        <ul class="submenu">
+                            <li><a href="about.html">About the Lab</a></li>
+                            <li><a href="join-us.html">Join Us</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="projects.html" class="is-active">Research <span class="caret">▼</span></a>
+                        <ul class="submenu">
+                            <li><a href="projects.html">Research Projects</a></li>
+                            <li><a href="research-areas.html">Research Areas</a></li>
+                            <li><a href="resources.html">Datasets &amp; Code</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="members.html">People <span class="caret">▼</span></a>
+                        <ul class="submenu">
+                            <li><a href="members.html">Current Team</a></li>
+                            <li><a href="members.html#alumni">Alumni</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="news.html">Happenings <span class="caret">▼</span></a>
+                        <ul class="submenu">
+                            <li><a href="news.html">News &amp; Events</a></li>
+                            <li><a href="gallery.html">Photo Gallery</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="publications.html">Publications</a></li>
+                </ul>
+            </nav>
         </div>
-        <button class="menu-toggle" aria-label="Toggle navigation">&#9776;</button>
-        <nav>
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li>
-              <a href="#">About ▾</a>
-              <ul class="dropdown-menu">
-                <li><a href="about.html">About the Lab</a></li>
-                <li><a href="join-us.html">Join Us</a></li>
-              </ul>
-            </li>
-            <li>
-              <a href="#" class="active">Research ▾</a>
-              <ul class="dropdown-menu">
-                <li><a href="projects.html" class="active">Research Projects</a></li>
-                <li><a href="research-areas.html">Research Areas</a></li>
-                <li><a href="resources.html">Datasets & Code</a></li>
-              </ul>
-            </li>
-            <li>
-              <a href="#">People ▾</a>
-              <ul class="dropdown-menu">
-                <li><a href="members.html">Current Team</a></li>
-                <li><a href="members.html#alumni">Alumni</a></li>
-              </ul>
-            </li>
-            <li>
-              <a href="#">Happenings ▾</a>
-              <ul class="dropdown-menu">
-                <li><a href="news.html">News & Events</a></li>
-                <li><a href="gallery.html">Photo Gallery</a></li>
-              </ul>
-            </li>
-            <li><a href="publications.html">Publications</a></li>
-          </ul>
-        </nav>
-      </div>
-    </div>
-  </header>
+    </header>
 
-  <div class="page-intro">
-    <div class="container">
-      <h2>Research Projects</h2>
-      <p>Exploring the frontiers of multimodal AI, ethics, and application.</p>
-    </div>
-  </div>
+    <main>
 
-  <section>
-    <div class="container">
-      <div class="project-grid">
-
-        <div class="project-card">
-          <div class="project-image">
-            <img src="project_nlp.png" alt="NLP Visualization">
-          </div>
-          <div class="project-content">
-            <div class="project-title">[8] Neural Segmentation for Language Learning Analytics</div>
-            <div class="project-meta">2025.10.25 - 2026.01.10</div>
-            <div class="project-description">
-              Students will develop and analyze neural segmentation models to identify and interpret linguistic patterns
-              for improving personalized language learning analytics.
+        <!-- ============ Masthead ============ -->
+        <section class="masthead">
+            <div class="shell masthead__inner">
+                <div data-reveal>
+                    <p class="eyebrow eyebrow--plain">Research</p>
+                    <h1>Projects, running and <em>finished</em>.</h1>
+                </div>
+                <p class="masthead__lede" data-reveal>
+                    Twelve projects since 2022, across cross-modal generation, language, biology, ethics and
+                    security. Four are running in the lab right now.
+                </p>
             </div>
-          </div>
+        </section>
+
+        <!-- ============ Currently running ============ -->
+        <section class="shell">
+
+            <div class="prose" style="border-bottom: 0; padding-bottom: 0;">
+                <p class="prose__label" data-reveal>01 — Currently running</p>
+                <div data-reveal>
+                    <h2>Four active projects.</h2>
+                    <p>Three of them sit in the same territory &mdash; taking one modality and generating another &mdash;
+                        and the fourth carries the lab's methods across borders and disciplines. Members join one
+                        of these on arrival and work it through to a submission.</p>
+                </div>
+            </div>
+
+            <!-- ---- [09] Image to Music ---- -->
+            <article class="dossier" id="image-to-music">
+                <div class="dossier__figure" data-reveal>
+                    <figure class="build">
+                        <svg viewBox="0 0 480 300" role="img"
+                            aria-label="Diagram: an image grid resolving into an audio waveform">
+                            <path class="fig-hair" d="M24 40 V24 H40 M440 24 h16 v16 M456 260 v16 h-16 M40 276 H24 v-16" />
+                            <text class="fig-label" x="44" y="66">Image</text>
+                            <text class="fig-label" x="292" y="66">Music</text>
+
+                            <g>
+                                <rect class="cell" x="44" y="82" width="22" height="22" style="animation-delay:0s" />
+                                <rect class="cell" x="70" y="82" width="22" height="22" style="animation-delay:.06s" />
+                                <rect class="cell" x="96" y="82" width="22" height="22" style="animation-delay:.12s" />
+                                <rect class="cell" x="122" y="82" width="22" height="22" style="animation-delay:.18s" />
+                                <rect class="cell" x="148" y="82" width="22" height="22" style="animation-delay:.24s" />
+                                <rect class="cell" x="44" y="108" width="22" height="22" style="animation-delay:.06s" />
+                                <rect class="cell" x="70" y="108" width="22" height="22" style="animation-delay:.12s" />
+                                <rect class="cell" x="96" y="108" width="22" height="22" style="animation-delay:.18s" />
+                                <rect class="cell" x="122" y="108" width="22" height="22" style="animation-delay:.24s" />
+                                <rect class="cell" x="148" y="108" width="22" height="22" style="animation-delay:.3s" />
+                                <rect class="cell" x="44" y="134" width="22" height="22" style="animation-delay:.12s" />
+                                <rect class="cell" x="70" y="134" width="22" height="22" style="animation-delay:.18s" />
+                                <rect class="cell" x="96" y="134" width="22" height="22" style="animation-delay:.24s" />
+                                <rect class="cell" x="122" y="134" width="22" height="22" style="animation-delay:.3s" />
+                                <rect class="cell" x="148" y="134" width="22" height="22" style="animation-delay:.36s" />
+                                <rect class="cell" x="44" y="160" width="22" height="22" style="animation-delay:.18s" />
+                                <rect class="cell" x="70" y="160" width="22" height="22" style="animation-delay:.24s" />
+                                <rect class="cell" x="96" y="160" width="22" height="22" style="animation-delay:.3s" />
+                                <rect class="cell" x="122" y="160" width="22" height="22" style="animation-delay:.36s" />
+                                <rect class="cell" x="148" y="160" width="22" height="22" style="animation-delay:.42s" />
+                                <rect class="cell" x="44" y="186" width="22" height="22" style="animation-delay:.24s" />
+                                <rect class="cell" x="70" y="186" width="22" height="22" style="animation-delay:.3s" />
+                                <rect class="cell" x="96" y="186" width="22" height="22" style="animation-delay:.36s" />
+                                <rect class="cell" x="122" y="186" width="22" height="22" style="animation-delay:.42s" />
+                                <rect class="cell" x="148" y="186" width="22" height="22" style="animation-delay:.48s" />
+                                <line class="scan" x1="40" y1="80" x2="174" y2="80" />
+                            </g>
+
+                            <line class="fig-hair" x1="186" y1="145" x2="278" y2="145" />
+                            <circle class="flow" cx="206" cy="145" r="2.6" style="animation-delay:0s" />
+                            <circle class="flow" cx="228" cy="145" r="2.6" style="animation-delay:.4s" />
+                            <circle class="flow" cx="250" cy="145" r="2.6" style="animation-delay:.8s" />
+                            <rect class="fig-line" x="216" y="126" width="38" height="38" rx="1" opacity="0.35" />
+
+                            <g>
+                                <line class="fig-hair" x1="288" y1="215" x2="452" y2="215" />
+                                <rect class="bar" x="292" y="95" width="8" height="120" style="animation-delay:0s" />
+                                <rect class="bar" x="306" y="95" width="8" height="120" style="animation-delay:.09s" />
+                                <rect class="bar" x="320" y="95" width="8" height="120" style="animation-delay:.18s" />
+                                <rect class="bar" x="334" y="95" width="8" height="120" style="animation-delay:.27s" />
+                                <rect class="bar" x="348" y="95" width="8" height="120" style="animation-delay:.36s" />
+                                <rect class="bar" x="362" y="95" width="8" height="120" style="animation-delay:.45s" />
+                                <rect class="bar" x="376" y="95" width="8" height="120" style="animation-delay:.54s" />
+                                <rect class="bar" x="390" y="95" width="8" height="120" style="animation-delay:.63s" />
+                                <rect class="bar" x="404" y="95" width="8" height="120" style="animation-delay:.72s" />
+                                <rect class="bar" x="418" y="95" width="8" height="120" style="animation-delay:.81s" />
+                                <rect class="bar" x="432" y="95" width="8" height="120" style="animation-delay:.9s" />
+                            </g>
+                        </svg>
+                        <figcaption>Fig. 1 — Encode image, condition decoder, generate audio</figcaption>
+                    </figure>
+                    <div class="dossier__ref">
+                        <span>Project [09]</span>
+                        <span>Cross-modal generation</span>
+                    </div>
+                </div>
+
+                <div data-reveal>
+                    <span class="status">In progress</span>
+                    <h2>Multimodal Image-to-Music Generation</h2>
+
+                    <p>This project asks a deceptively simple question: if a person can look at a photograph and
+                        hum something that fits it, what would a model have to learn in order to do the same? The
+                        work sits at the join of computer vision and audio generation, and treats music as a
+                        second description of the same scene rather than a decorative accompaniment to it.</p>
+
+                    <p>The approach is encoder–decoder. A pretrained vision backbone maps an image into a dense
+                        representation; that representation is projected into a shared embedding space and used to
+                        condition an audio generation decoder. The interesting engineering is in the middle — the
+                        projection — because that is where the model either learns a real correspondence between
+                        visual and musical structure or collapses into producing the same pleasant loop for every
+                        input.</p>
+
+                    <p>Alongside the model, the team is assembling an aligned image–music dataset and defining how
+                        this task should even be scored. Objective audio metrics say very little about whether a
+                        piece <em>suits</em> a picture, so evaluation combines retrieval-style measures with
+                        structured human listening comparisons.</p>
+
+                    <p class="subhead">Research questions</p>
+                    <ol>
+                        <li>Which visual attributes — palette and colour temperature, composition, density, subject
+                            matter — carry information the decoder can actually use?</li>
+                        <li>Do those attributes map onto musical ones in a stable way: tempo, mode, instrumentation,
+                            dynamic range?</li>
+                        <li>How much of the correspondence is genuinely learned, and how much is the model falling
+                            back on a prior over "generic pleasant music"?</li>
+                        <li>What evaluation protocol separates a musically competent output from an appropriate
+                            one?</li>
+                    </ol>
+
+                    <dl class="spec">
+                        <div>
+                            <dt>Status</dt>
+                            <dd><em>In progress</em></dd>
+                        </div>
+                        <div>
+                            <dt>Started</dt>
+                            <dd>10 August 2026 — ongoing</dd>
+                        </div>
+                        <div>
+                            <dt>Modalities</dt>
+                            <dd>Image → Audio</dd>
+                        </div>
+                        <div>
+                            <dt>Areas</dt>
+                            <dd>Multimodal AI · Generative Models</dd>
+                        </div>
+                        <div>
+                            <dt>Researchers</dt>
+                            <dd>Gurpreet Singh · Lamia Qamar</dd>
+                        </div>
+                    </dl>
+                </div>
+            </article>
+
+            <!-- ---- [10] Text to Comic ---- -->
+            <article class="dossier" id="text-to-comic">
+                <div class="dossier__figure" data-reveal>
+                    <figure class="build">
+                        <svg viewBox="0 0 480 300" role="img"
+                            aria-label="Diagram: lines of script assembling into drawn comic panels">
+                            <path class="fig-hair" d="M24 40 V24 H40 M440 24 h16 v16 M456 260 v16 h-16 M40 276 H24 v-16" />
+                            <text class="fig-label" x="44" y="66">Script</text>
+                            <text class="fig-label" x="288" y="66">Panels</text>
+
+                            <g>
+                                <rect class="type" x="44" y="88" width="128" height="7" style="animation-delay:0s" />
+                                <rect class="type" x="44" y="108" width="104" height="7" style="animation-delay:.12s" />
+                                <rect class="type" x="44" y="128" width="136" height="7" style="animation-delay:.24s" />
+                                <rect class="type" x="44" y="148" width="88" height="7" style="animation-delay:.36s" />
+                                <rect class="type" x="44" y="168" width="124" height="7" style="animation-delay:.48s" />
+                                <rect class="type" x="44" y="188" width="72" height="7" style="animation-delay:.6s" />
+                            </g>
+
+                            <line class="fig-hair" x1="196" y1="145" x2="276" y2="145" />
+                            <circle class="flow" cx="212" cy="145" r="2.6" style="animation-delay:.2s" />
+                            <circle class="flow" cx="234" cy="145" r="2.6" style="animation-delay:.6s" />
+                            <circle class="flow" cx="256" cy="145" r="2.6" style="animation-delay:1s" />
+
+                            <g>
+                                <rect class="panel" x="288" y="82" width="80" height="60" style="animation-delay:0s" />
+                                <rect class="panel" x="378" y="82" width="80" height="60" style="animation-delay:.25s" />
+                                <rect class="panel" x="288" y="152" width="80" height="60" style="animation-delay:.5s" />
+                                <rect class="panel" x="378" y="152" width="80" height="60" style="animation-delay:.75s" />
+
+                                <g class="pop" style="animation-delay:0s">
+                                    <circle cx="316" cy="106" r="8" class="fig-line" />
+                                    <path class="fig-line" d="M316 116 v14 M306 124 h20 M310 130 l-4 8 M322 130 l4 8" />
+                                </g>
+                                <g class="pop" style="animation-delay:.25s">
+                                    <rect class="fig-line" x="396" y="96" width="44" height="24" rx="3" />
+                                    <path class="fig-line" d="M406 120 l-2 9 l11 -9" />
+                                    <line class="fig-hair" x1="402" y1="104" x2="434" y2="104" />
+                                    <line class="fig-hair" x1="402" y1="112" x2="424" y2="112" />
+                                </g>
+                                <g class="pop" style="animation-delay:.5s">
+                                    <circle cx="342" cy="174" r="9" class="fig-line" />
+                                    <line class="fig-line" x1="298" y1="192" x2="358" y2="192" />
+                                    <path class="fig-line" d="M306 192 l12 -14 l12 14" />
+                                </g>
+                                <g class="pop" style="animation-delay:.75s">
+                                    <line class="fig-line" x1="392" y1="170" x2="424" y2="170" />
+                                    <line class="fig-line" x1="398" y1="180" x2="436" y2="180" />
+                                    <line class="fig-line" x1="392" y1="190" x2="418" y2="190" />
+                                </g>
+                            </g>
+                        </svg>
+                        <figcaption>Fig. 2 — Segment narrative, plan layout, render panels</figcaption>
+                    </figure>
+                    <div class="dossier__ref">
+                        <span>Project [10]</span>
+                        <span>Multimodal generation</span>
+                    </div>
+                </div>
+
+                <div data-reveal>
+                    <span class="status">In progress</span>
+                    <h2>Text-to-Comic Generation</h2>
+
+                    <p>Generating a single illustration from a sentence is close to solved. Generating twenty
+                        illustrations that tell one coherent story is not. This project takes written narrative as
+                        input and produces sequential comic pages — and the hard part is everything that has to
+                        stay true from one panel to the next.</p>
+
+                    <p>The pipeline runs in stages. A script is segmented into narrative beats, one per panel;
+                        a layout planner decides how those beats sit on a page and in what reading order; an
+                        image generator renders each panel; and dialogue is extracted and placed into balloons
+                        positioned so the eye reaches them in the right sequence. Each stage is a research problem
+                        on its own, but the failures compound — a good panel in the wrong place still breaks the
+                        page.</p>
+
+                    <p>The dominant open problem is consistency. A character must remain recognisably the same
+                        person across panels drawn independently, in changing poses, framing and lighting. The
+                        team is working on conditioning strategies that carry identity through the sequence, and
+                        on an evaluation that scores narrative faithfulness and character consistency separately
+                        from raw image quality.</p>
+
+                    <p>The work builds directly on the lab's earlier storytelling and cross-modal generation
+                        projects, which handled narrative structure and modality translation independently.</p>
+
+                    <p class="subhead">Research questions</p>
+                    <ol>
+                        <li>How should continuous prose be segmented into discrete panels — by event, by dialogue
+                            turn, or by a learned boundary?</li>
+                        <li>What conditioning keeps a character identifiable across independently generated panels?
+                        </li>
+                        <li>Can panel layout and reading order be planned by the model rather than templated?</li>
+                        <li>How do you measure whether a generated page tells the story it was given?</li>
+                    </ol>
+
+                    <dl class="spec">
+                        <div>
+                            <dt>Status</dt>
+                            <dd><em>In progress</em></dd>
+                        </div>
+                        <div>
+                            <dt>Started</dt>
+                            <dd>Ongoing</dd>
+                        </div>
+                        <div>
+                            <dt>Modalities</dt>
+                            <dd>Text → Image sequence</dd>
+                        </div>
+                        <div>
+                            <dt>Areas</dt>
+                            <dd>Generative Models · Multimodal AI</dd>
+                        </div>
+                        <div>
+                            <dt>Researchers</dt>
+                            <dd>Trina Banerjee · Mukhthikka · Gurpreet Singh</dd>
+                        </div>
+                    </dl>
+                </div>
+            </article>
+
+            <!-- ---- [11] Multimodal Gene Editing ---- -->
+            <article class="dossier" id="gene-editing">
+                <div class="dossier__figure" data-reveal>
+                    <figure class="build">
+                        <svg viewBox="0 0 480 300" role="img"
+                                aria-label="Diagram: sequence and imaging inputs converging on a DNA strand where a target segment is excised and replaced">
+                                <path class="fig-hair" d="M24 40 V24 H40 M440 24 h16 v16 M456 260 v16 h-16 M40 276 H24 v-16" />
+                                <text class="fig-label" x="44" y="66">Sequence</text>
+                                <text class="fig-label" x="44" y="152">Imaging</text>
+                                <text class="fig-label" x="286" y="66">Target edit</text>
+
+                                <!-- sequence rows -->
+                                <g>
+                                    <rect class="type" x="44" y="80" width="96" height="6" style="animation-delay:0s" />
+                                    <rect class="type" x="44" y="96" width="72" height="6" style="animation-delay:.12s" />
+                                    <rect class="type" x="44" y="112" width="88" height="6" style="animation-delay:.24s" />
+                                </g>
+
+                                <!-- imaging grid -->
+                                <g>
+                                    <rect class="cell" x="44" y="166" width="18" height="18" style="animation-delay:.1s" />
+                                    <rect class="cell" x="66" y="166" width="18" height="18" style="animation-delay:.18s" />
+                                    <rect class="cell" x="88" y="166" width="18" height="18" style="animation-delay:.26s" />
+                                    <rect class="cell" x="44" y="188" width="18" height="18" style="animation-delay:.18s" />
+                                    <rect class="cell" x="66" y="188" width="18" height="18" style="animation-delay:.26s" />
+                                    <rect class="cell" x="88" y="188" width="18" height="18" style="animation-delay:.34s" />
+                                </g>
+
+                                <!-- convergence -->
+                                <g class="fig-hair">
+                                    <path d="M150 100 C180 100 180 148 206 148" />
+                                    <path d="M118 214 C160 214 175 150 206 148" />
+                                </g>
+                                <circle class="flow" cx="170" cy="120" r="2.6" style="animation-delay:.1s" />
+                                <circle class="flow" cx="188" cy="140" r="2.6" style="animation-delay:.5s" />
+                                <circle class="flow" cx="172" cy="182" r="2.6" style="animation-delay:.9s" />
+
+                                <!-- DNA rails -->
+                                <g class="fig-line">
+                                    <path class="f-draw f-draw--long" d="M215 105 q20 -18 40 0 t40 0 t40 0 t40 0 t40 0 t40 0" />
+                                    <path class="f-draw f-draw--long" d="M215 195 q20 18 40 0 t40 0 t40 0 t40 0 t40 0 t40 0"
+                                        style="animation-delay:.1s" />
+                                </g>
+
+                                <!-- base pairs -->
+                                <g class="fig-line">
+                                    <line class="f-fade" x1="225" y1="112" x2="225" y2="188" style="animation-delay:.2s" />
+                                    <line class="f-fade" x1="249" y1="112" x2="249" y2="188" style="animation-delay:.28s" />
+                                    <line class="f-fade" x1="273" y1="112" x2="273" y2="188" style="animation-delay:.36s" />
+                                    <line class="f-fade" x1="345" y1="112" x2="345" y2="188" style="animation-delay:.6s" />
+                                    <line class="f-fade" x1="369" y1="112" x2="369" y2="188" style="animation-delay:.68s" />
+                                    <line class="f-fade" x1="393" y1="112" x2="393" y2="188" style="animation-delay:.76s" />
+                                    <line class="f-fade" x1="417" y1="112" x2="417" y2="188" style="animation-delay:.84s" />
+                                    <line class="f-fade" x1="441" y1="112" x2="441" y2="188" style="animation-delay:.92s" />
+                                </g>
+
+                                <!-- excision window -->
+                                <rect class="fig-line f-draw" x="286" y="94" width="46" height="112"
+                                    stroke-dasharray="4 5" style="animation-delay:.4s" />
+                                <path class="fig-line f-fade" d="M296 84 l6 -8 l6 8 M316 84 l6 -8 l6 8"
+                                    style="animation-delay:.5s" />
+
+                                <!-- inserted pair -->
+                                <g class="pop" style="animation-delay:.35s">
+                                    <line class="fig-line" x1="297" y1="112" x2="297" y2="188" stroke-width="2" />
+                                    <line class="fig-line" x1="321" y1="112" x2="321" y2="188" stroke-width="2" />
+                                    <circle class="net-dot" cx="309" cy="150" r="7" />
+                                </g>
+                            </svg>
+                        <figcaption>Fig. 3 — Sequence + imaging &rarr; targeted edit</figcaption>
+                    </figure>
+                    <div class="dossier__ref">
+                        <span>Project [11]</span>
+                        <span>Multimodal &middot; Biomedical</span>
+                    </div>
+                </div>
+
+                <div data-reveal>
+                    <span class="status">In progress</span>
+                    <h2>Multimodal AI in Gene Editing</h2>
+
+                    <p>Gene editing generates evidence in several forms at once — nucleotide sequence, microscopy
+                        and assay imaging, and a large published literature describing what has already been tried.
+                        Researchers routinely hold all three in mind together. Most computational tools handle one
+                        at a time.</p>
+
+                    <p>This project applies the lab's cross-modal methods to that gap: encoding sequence, image and
+                        text evidence into a shared representation so a model can reason across them the way a
+                        biologist does. It is the same architectural question as our image-to-music and
+                        text-to-comic work — how do you build a space where two very different signals become
+                        comparable — pointed at a domain where being right matters a great deal more.</p>
+
+                    <p>The near-term aim is modest and concrete: support target selection and outcome prediction,
+                        and be explicit about the confidence attached to each. The project sits squarely in the
+                        lab's AI-for-social-good area, alongside the earlier drug&ndash;drug interaction work.</p>
+
+                    <p class="subhead">Research questions</p>
+                    <ol>
+                        <li>Which representation lets sequence, image and literature evidence be compared without
+                            one modality dominating the others?</li>
+                        <li>Does adding imaging and literature actually improve target selection over
+                            sequence-only baselines, or only appear to?</li>
+                        <li>How should a model in this domain express uncertainty so that a biologist can act on
+                            it?</li>
+                        <li>What does responsible evaluation look like when the downstream application is
+                            biological rather than aesthetic?</li>
+                    </ol>
+
+                    <dl class="spec">
+                        <div>
+                            <dt>Status</dt>
+                            <dd><em>In progress</em></dd>
+                        </div>
+                        <div>
+                            <dt>Started</dt>
+                            <dd>Ongoing</dd>
+                        </div>
+                        <div>
+                            <dt>Modalities</dt>
+                            <dd>Sequence + Image + Text</dd>
+                        </div>
+                        <div>
+                            <dt>Areas</dt>
+                            <dd>Multimodal AI &middot; AI for Social Good</dd>
+                        </div>
+                        <div>
+                            <dt>Researchers</dt>
+                            <dd>Sudipta Patil &middot; Gurpreet Singh</dd>
+                        </div>
+                    </dl>
+                </div>
+            </article>
+
+            <!-- ---- [12] International Research Collaboration ---- -->
+            <article class="dossier" id="international">
+                <div class="dossier__figure" data-reveal>
+                    <figure class="build">
+                        <svg viewBox="0 0 480 300" role="img"
+                                aria-label="Diagram: a globe with research sites in different regions linked by arcs">
+                                <path class="fig-hair" d="M24 40 V24 H40 M440 24 h16 v16 M456 260 v16 h-16 M40 276 H24 v-16" />
+                                <text class="fig-label" x="44" y="66">Partners</text>
+                                <text class="fig-label" x="352" y="66">Shared work</text>
+
+                                <!-- globe -->
+                                <g class="fig-line">
+                                    <circle class="f-draw f-draw--long" cx="240" cy="158" r="92" />
+                                    <ellipse class="fig-hair" cx="240" cy="118" rx="78" ry="22" />
+                                    <ellipse class="fig-hair" cx="240" cy="158" rx="92" ry="30" />
+                                    <ellipse class="fig-hair" cx="240" cy="198" rx="78" ry="22" />
+                                    <ellipse class="fig-hair" cx="240" cy="158" rx="32" ry="92" />
+                                    <ellipse class="fig-hair" cx="240" cy="158" rx="66" ry="92" />
+                                    <line class="fig-hair" x1="240" y1="66" x2="240" y2="250" />
+                                </g>
+
+                                <!-- routes -->
+                                <g class="fig-line">
+                                    <path class="f-draw" d="M186 118 Q240 84 298 144" style="animation-delay:.2s" />
+                                    <path class="f-draw" d="M298 144 Q262 186 214 200" style="animation-delay:.35s" />
+                                    <path class="f-draw" d="M214 200 Q176 166 186 118" style="animation-delay:.5s" />
+                                </g>
+
+                                <!-- sites -->
+                                <circle class="cell f-fade" cx="186" cy="118" r="5.5" style="animation-delay:.5s" />
+                                <circle class="cell f-fade" cx="298" cy="144" r="5.5" style="animation-delay:.65s" />
+                                <circle class="cell f-fade" cx="214" cy="200" r="5.5" style="animation-delay:.8s" />
+
+                                <!-- orbiting signal -->
+                                <circle class="net-pulse" cx="240" cy="158" r="92" />
+
+                                <!-- side markers -->
+                                <g class="fig-hair">
+                                    <line x1="44" y1="158" x2="140" y2="158" />
+                                    <line x1="344" y1="158" x2="440" y2="158" />
+                                </g>
+                                <circle class="flow" cx="76" cy="158" r="2.6" style="animation-delay:.1s" />
+                                <circle class="flow" cx="108" cy="158" r="2.6" style="animation-delay:.6s" />
+                                <circle class="flow" cx="376" cy="158" r="2.6" style="animation-delay:.3s" />
+                                <circle class="flow" cx="408" cy="158" r="2.6" style="animation-delay:.8s" />
+                            </svg>
+                        <figcaption>Fig. 4 — Distributed sites, one research programme</figcaption>
+                    </figure>
+                    <div class="dossier__ref">
+                        <span>Project [12]</span>
+                        <span>Cross-disciplinary</span>
+                    </div>
+                </div>
+
+                <div data-reveal>
+                    <span class="status">In progress</span>
+                    <h2>International Research Collaboration</h2>
+
+                    <p>Eight of the lab's members already work from outside India, and this project makes that
+                        distribution the subject rather than a logistical fact. It pairs the lab's AI methods with
+                        research in international business, ESG and media &mdash; the disciplines its members
+                        actually came from &mdash; and runs the work across time zones from the outset.</p>
+
+                    <p>The substantive question is what AI changes about cross-border business and communication:
+                        how organisations report and are held to account, how markets and audiences behave across
+                        cultures, and where automated analysis genuinely helps rather than flattening the
+                        differences that matter. The methodological question is quieter but just as real &mdash;
+                        what a distributed research team needs in order to produce something coherent.</p>
+
+                    <p>Scope and outputs are being defined with the collaborating partners; this entry will be
+                        expanded as they are fixed.</p>
+
+                    <p class="subhead">Research questions</p>
+                    <ol>
+                        <li>What can AI-driven analysis tell us about international business and ESG reporting
+                            that conventional methods miss?</li>
+                        <li>How do media narratives and consumer behaviour differ across markets, and can a model
+                            capture that without erasing it?</li>
+                        <li>Which parts of a cross-border research programme benefit from automation, and which
+                            depend on a person who knows the context?</li>
+                        <li>What working practice lets a distributed team sustain one line of enquiry?</li>
+                    </ol>
+
+                    <dl class="spec">
+                        <div>
+                            <dt>Status</dt>
+                            <dd><em>In progress</em></dd>
+                        </div>
+                        <div>
+                            <dt>Started</dt>
+                            <dd>Ongoing</dd>
+                        </div>
+                        <div>
+                            <dt>Focus</dt>
+                            <dd>International business &middot; ESG &middot; Media</dd>
+                        </div>
+                        <div>
+                            <dt>Areas</dt>
+                            <dd>AI Ethics &amp; Bias &middot; AI for Social Good</dd>
+                        </div>
+                        <div>
+                            <dt>Researchers</dt>
+                            <dd>Ritika Kanojia &middot; Alimpia Roy &middot; Gurpreet Singh</dd>
+                        </div>
+                    </dl>
+                </div>
+            </article>
+        </section>
+
+        <!-- ============ Archive ============ -->
+        <section class="band band--tint">
+            <div class="shell">
+                <div class="band-head" data-reveal>
+                    <div>
+                        <p class="eyebrow eyebrow--plain">02 — Archive</p>
+                        <h2>Completed and closed work.</h2>
+                    </div>
+                    <div class="band-head__side">
+                        <a class="link-quiet" href="publications.html">Resulting papers <span
+                                class="arrow">→</span></a>
+                    </div>
+                </div>
+
+                <div class="archive">
+
+                    <!-- [08] Neural Segmentation -->
+                    <article class="arch-card" data-reveal>
+                        <figure class="build">
+                            <svg viewBox="0 0 360 150" role="img" aria-label="Diagram: a token sequence being split into segments">
+                                <text class="fig-label" x="26" y="30">Sequence</text>
+                                <g>
+                                    <rect class="cell" x="26" y="52" width="20" height="14" style="animation-delay:0s" />
+                                    <rect class="cell" x="50" y="52" width="20" height="14" style="animation-delay:.05s" />
+                                    <rect class="cell" x="74" y="52" width="20" height="14" style="animation-delay:.1s" />
+                                    <rect class="cell" x="106" y="52" width="20" height="14" style="animation-delay:.15s" />
+                                    <rect class="cell" x="130" y="52" width="20" height="14" style="animation-delay:.2s" />
+                                    <rect class="cell" x="154" y="52" width="20" height="14" style="animation-delay:.25s" />
+                                    <rect class="cell" x="186" y="52" width="20" height="14" style="animation-delay:.3s" />
+                                    <rect class="cell" x="210" y="52" width="20" height="14" style="animation-delay:.35s" />
+                                    <rect class="cell" x="242" y="52" width="20" height="14" style="animation-delay:.4s" />
+                                    <rect class="cell" x="266" y="52" width="20" height="14" style="animation-delay:.45s" />
+                                    <rect class="cell" x="290" y="52" width="20" height="14" style="animation-delay:.5s" />
+                                </g>
+                                <g class="fig-line">
+                                    <line class="f-fade" x1="100" y1="42" x2="100" y2="76" style="animation-delay:.2s" />
+                                    <line class="f-fade" x1="180" y1="42" x2="180" y2="76" style="animation-delay:.5s" />
+                                    <line class="f-fade" x1="236" y1="42" x2="236" y2="76" style="animation-delay:.8s" />
+                                </g>
+                                <path class="fig-line f-draw" d="M26 88 v10 h68 v-10" style="animation-delay:.2s" />
+                                <path class="fig-line f-draw" d="M106 88 v10 h68 v-10" style="animation-delay:.5s" />
+                                <path class="fig-line f-draw" d="M186 88 v10 h44 v-10" style="animation-delay:.8s" />
+                                <path class="fig-line f-draw" d="M242 88 v10 h68 v-10" style="animation-delay:1.1s" />
+                                <text class="fig-label" x="26" y="126">Segment boundaries</text>
+                            </svg>
+                        </figure>
+                        <div class="arch-card__body">
+                            <span class="arch-card__index">[08]</span>
+                            <h3>Neural Segmentation for Language Learning Analytics</h3>
+                            <p>Students developed and analysed neural segmentation models to identify and interpret
+                                linguistic patterns, in service of improving personalised language learning
+                                analytics.</p>
+                            <div class="arch-card__meta">
+                                <span>2025.10.25 — 2026.01.10</span>
+                                <span>Completed</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- [07] Text to Audio -->
+                    <article class="arch-card" data-reveal>
+                        <figure class="build">
+                            <svg viewBox="0 0 360 150" role="img" aria-label="Diagram: text lines becoming a sound wave">
+                                <text class="fig-label" x="26" y="30">Text</text>
+                                <text class="fig-label" x="210" y="30">Audio</text>
+                                <g>
+                                    <rect class="type" x="26" y="52" width="96" height="6" style="animation-delay:0s" />
+                                    <rect class="type" x="26" y="68" width="72" height="6" style="animation-delay:.12s" />
+                                    <rect class="type" x="26" y="84" width="88" height="6" style="animation-delay:.24s" />
+                                    <rect class="type" x="26" y="100" width="60" height="6" style="animation-delay:.36s" />
+                                </g>
+                                <line class="fig-hair" x1="138" y1="78" x2="198" y2="78" />
+                                <circle class="flow" cx="150" cy="78" r="2.4" style="animation-delay:.1s" />
+                                <circle class="flow" cx="168" cy="78" r="2.4" style="animation-delay:.5s" />
+                                <circle class="flow" cx="186" cy="78" r="2.4" style="animation-delay:.9s" />
+                                <path class="fig-line f-draw f-draw--long"
+                                    d="M210 78 q10 -30 20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0" />
+                                <line class="fig-hair" x1="210" y1="78" x2="350" y2="78" />
+                            </svg>
+                        </figure>
+                        <div class="arch-card__body">
+                            <span class="arch-card__index">[07]</span>
+                            <h3>Text-to-Audio (T2A) Generation</h3>
+                            <p>A cross-modal project generating audio from textual input across a range of deep
+                                learning techniques including CNNs, aimed at improving semantic understanding and
+                                audio synthesis in text-driven systems.</p>
+                            <div class="arch-card__meta">
+                                <span>2025</span>
+                                <span>Completed</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- [06] Storytelling -->
+                    <article class="arch-card" data-reveal>
+                        <figure class="build">
+                            <svg viewBox="0 0 360 150" role="img" aria-label="Diagram: a branching narrative tree">
+                                <text class="fig-label" x="26" y="30">Narrative branches</text>
+                                <g class="fig-line">
+                                    <path class="f-draw" d="M70 75 C110 75 110 46 150 46" style="animation-delay:0s" />
+                                    <path class="f-draw" d="M70 75 C110 75 110 104 150 104" style="animation-delay:.15s" />
+                                    <path class="f-draw" d="M162 46 C200 46 200 30 238 30" style="animation-delay:.4s" />
+                                    <path class="f-draw" d="M162 46 C200 46 200 62 238 62" style="animation-delay:.55s" />
+                                    <path class="f-draw" d="M162 104 C200 104 200 88 238 88" style="animation-delay:.7s" />
+                                    <path class="f-draw" d="M162 104 C200 104 200 120 238 120" style="animation-delay:.85s" />
+                                </g>
+                                <circle cx="62" cy="75" r="7" class="fig-line" />
+                                <circle cx="156" cy="46" r="5" class="cell f-fade" style="animation-delay:.3s" />
+                                <circle cx="156" cy="104" r="5" class="cell f-fade" style="animation-delay:.45s" />
+                                <circle cx="244" cy="30" r="4" class="cell f-fade" style="animation-delay:.7s" />
+                                <circle cx="244" cy="62" r="4" class="cell f-fade" style="animation-delay:.85s" />
+                                <circle cx="244" cy="88" r="4" class="cell f-fade" style="animation-delay:1s" />
+                                <circle cx="244" cy="120" r="4" class="cell f-fade" style="animation-delay:1.15s" />
+                                <g class="f-fade" style="animation-delay:1.2s">
+                                    <rect class="fig-line" x="286" y="52" width="48" height="46" rx="2" />
+                                    <line class="fig-hair" x1="294" y1="66" x2="326" y2="66" />
+                                    <line class="fig-hair" x1="294" y1="76" x2="318" y2="76" />
+                                    <line class="fig-hair" x1="294" y1="86" x2="322" y2="86" />
+                                </g>
+                            </svg>
+                        </figure>
+                        <div class="arch-card__body">
+                            <span class="arch-card__index">[06]</span>
+                            <h3>AI-Assisted Storytelling Generation</h3>
+                            <p>Integrating narrative structure, creativity and multimodal learning into automated
+                                storytelling systems. Published in the International Journal of Engineering
+                                Development and Research.</p>
+                            <div class="arch-card__meta">
+                                <span>2025</span>
+                                <span>Published</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- [05] Visual to Audio -->
+                    <article class="arch-card" data-reveal>
+                        <figure class="build">
+                            <svg viewBox="0 0 360 150" role="img" aria-label="Diagram: a visual frame emitting sound waves">
+                                <text class="fig-label" x="26" y="30">Vision</text>
+                                <text class="fig-label" x="250" y="30">Sound</text>
+                                <g class="fig-line">
+                                    <rect x="26" y="46" width="90" height="66" rx="2" />
+                                    <circle cx="94" cy="66" r="8" />
+                                    <path d="M26 100 l26 -26 l22 22 l14 -12 l24 16" />
+                                </g>
+                                <line class="scan" x1="26" y1="48" x2="116" y2="48" />
+                                <line class="fig-hair" x1="128" y1="79" x2="182" y2="79" />
+                                <circle class="flow" cx="140" cy="79" r="2.4" style="animation-delay:.2s" />
+                                <circle class="flow" cx="160" cy="79" r="2.4" style="animation-delay:.7s" />
+                                <path class="fig-line" d="M196 62 l16 -14 v62 l-16 -14 h-12 v-20 z" />
+                                <g class="fig-line" fill="none">
+                                    <path class="f-ring" d="M226 55 a34 34 0 0 1 0 48" style="animation-delay:0s" />
+                                    <path class="f-ring" d="M244 43 a52 52 0 0 1 0 72" style="animation-delay:.5s" />
+                                    <path class="f-ring" d="M262 31 a70 70 0 0 1 0 96" style="animation-delay:1s" />
+                                </g>
+                            </svg>
+                        </figure>
+                        <div class="arch-card__body">
+                            <span class="arch-card__index">[05]</span>
+                            <h3>Visual-to-Audio (V2A) Generation</h3>
+                            <p>Generating audio from visual input using computer vision, CNNs, RNNs and Vision
+                                Transformers — models that interpret a visual stimulus and produce a corresponding
+                                audio representation.</p>
+                            <div class="arch-card__meta">
+                                <span>2025</span>
+                                <span>Completed</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- [04] Gender Bias — cancelled -->
+                    <article class="arch-card arch-card--closed" data-reveal>
+                        <figure class="build">
+                            <svg viewBox="0 0 360 150" role="img" aria-label="Diagram: a tilting balance comparing two distributions">
+                                <text class="fig-label" x="26" y="30">Representation</text>
+                                <g class="f-tilt">
+                                    <line class="fig-line" x1="110" y1="60" x2="250" y2="60" />
+                                    <path class="fig-line" d="M110 60 v14 M96 74 h28 M250 60 v14 M236 74 h28" />
+                                </g>
+                                <path class="fig-line" d="M180 60 v46 M156 106 h48" />
+                                <g>
+                                    <rect class="bar" x="40" y="66" width="10" height="40" style="animation-delay:0s" />
+                                    <rect class="bar" x="54" y="56" width="10" height="50" style="animation-delay:.15s" />
+                                    <rect class="bar" x="68" y="76" width="10" height="30" style="animation-delay:.3s" />
+                                    <rect class="bar" x="290" y="86" width="10" height="20" style="animation-delay:.45s" />
+                                    <rect class="bar" x="304" y="70" width="10" height="36" style="animation-delay:.6s" />
+                                    <rect class="bar" x="318" y="82" width="10" height="24" style="animation-delay:.75s" />
+                                </g>
+                                <line class="fig-hair" x1="26" y1="106" x2="334" y2="106" />
+                                <text class="fig-label" x="26" y="132">Discontinued</text>
+                            </svg>
+                        </figure>
+                        <div class="arch-card__body">
+                            <span class="arch-card__index">[04]</span>
+                            <h3>Analyzing Gender Bias in Media Using AI</h3>
+                            <p>A cross-cultural study of representation, language and imagery, combining NLP,
+                                computer vision and ethical frameworks. The project was discontinued before
+                                completion.</p>
+                            <div class="arch-card__meta">
+                                <span>2025.07.21 — 2025.12.25</span>
+                                <span>Cancelled</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- [03] Business Growth -->
+                    <article class="arch-card" data-reveal>
+                        <figure class="build">
+                            <svg viewBox="0 0 360 150" role="img" aria-label="Diagram: a rising bar chart with a trend line">
+                                <text class="fig-label" x="26" y="30">Growth analytics</text>
+                                <line class="fig-hair" x1="26" y1="116" x2="334" y2="116" />
+                                <line class="fig-hair" x1="26" y1="116" x2="26" y2="42" />
+                                <g>
+                                    <rect class="bar" x="48" y="96" width="26" height="20" style="animation-delay:0s" />
+                                    <rect class="bar" x="92" y="86" width="26" height="30" style="animation-delay:.12s" />
+                                    <rect class="bar" x="136" y="72" width="26" height="44" style="animation-delay:.24s" />
+                                    <rect class="bar" x="180" y="80" width="26" height="36" style="animation-delay:.36s" />
+                                    <rect class="bar" x="224" y="60" width="26" height="56" style="animation-delay:.48s" />
+                                    <rect class="bar" x="268" y="48" width="26" height="68" style="animation-delay:.6s" />
+                                </g>
+                                <path class="fig-line f-draw f-draw--long"
+                                    d="M61 96 L105 86 L149 72 L193 80 L237 60 L281 48" style="animation-delay:.4s" />
+                                <circle cx="281" cy="48" r="4" class="cell f-fade" style="animation-delay:1.2s" />
+                            </svg>
+                        </figure>
+                        <div class="arch-card__body">
+                            <span class="arch-card__index">[03]</span>
+                            <h3>Business Growth and Management Research Team</h3>
+                            <p>A team formed to explore the intersection of business growth, management and AI.
+                                Simran Singh, Nahid Rehmani, Pushpa Kumari and Vedha Varshini applied AI-driven
+                                analytics to business strategy and innovation.</p>
+                            <div class="arch-card__meta">
+                                <span>2023 — 2024</span>
+                                <span>Completed</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- [02] Cybersecurity -->
+                    <article class="arch-card" data-reveal>
+                        <figure class="build">
+                            <svg viewBox="0 0 360 150" role="img" aria-label="Diagram: a shield being drawn beside a port scan">
+                                <text class="fig-label" x="26" y="30">Port surface</text>
+                                <path class="fig-line f-draw f-draw--long"
+                                    d="M74 44 h56 v40 q0 30 -28 40 q-28 -10 -28 -40 z" />
+                                <path class="fig-line f-fade" d="M88 82 l10 10 l20 -22" style="animation-delay:.6s" />
+                                <g>
+                                    <rect class="cell" x="188" y="46" width="18" height="18" style="animation-delay:0s" />
+                                    <rect class="cell" x="212" y="46" width="18" height="18" style="animation-delay:.08s" />
+                                    <rect class="cell" x="236" y="46" width="18" height="18" style="animation-delay:.16s" />
+                                    <rect class="cell" x="260" y="46" width="18" height="18" style="animation-delay:.24s" />
+                                    <rect class="cell" x="188" y="70" width="18" height="18" style="animation-delay:.08s" />
+                                    <rect class="f-blink" x="212" y="70" width="18" height="18" fill="currentColor" />
+                                    <rect class="cell" x="236" y="70" width="18" height="18" style="animation-delay:.24s" />
+                                    <rect class="cell" x="260" y="70" width="18" height="18" style="animation-delay:.32s" />
+                                    <rect class="cell" x="188" y="94" width="18" height="18" style="animation-delay:.16s" />
+                                    <rect class="cell" x="212" y="94" width="18" height="18" style="animation-delay:.24s" />
+                                    <rect class="cell" x="236" y="94" width="18" height="18" style="animation-delay:.32s" />
+                                    <rect class="cell" x="260" y="94" width="18" height="18" style="animation-delay:.4s" />
+                                </g>
+                                <rect class="fig-line f-blink" x="208" y="66" width="26" height="26" />
+                                <text class="fig-label" x="292" y="84">:22</text>
+                            </svg>
+                        </figure>
+                        <div class="arch-card__body">
+                            <span class="arch-card__index">[02]</span>
+                            <h3>Cybersecurity and AI: Vulnerabilities in Modern Infrastructure</h3>
+                            <p>Gurpreet Singh and Prof. Saurabh Singh analysed the impact of open SSH ports on
+                                CentOS 9 virtual machines hosted on Mac ARM hardware (CVE-2023-25136), with
+                                recommendations for securing virtualised environments.</p>
+                            <div class="arch-card__meta">
+                                <span>Spring 2024</span>
+                                <span>Completed</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- [01] ChatGPT and Cybersecurity -->
+                    <article class="arch-card" data-reveal>
+                        <figure class="build">
+                            <svg viewBox="0 0 360 150" role="img" aria-label="Diagram: a conversation exchange beside a padlock">
+                                <text class="fig-label" x="26" y="30">Prompt exchange</text>
+                                <g class="f-fade" style="animation-delay:0s">
+                                    <rect class="fig-line" x="26" y="44" width="118" height="30" rx="3" />
+                                    <path class="fig-line" d="M40 74 l-2 10 l12 -10" />
+                                    <line class="fig-hair" x1="36" y1="54" x2="130" y2="54" />
+                                    <line class="fig-hair" x1="36" y1="64" x2="106" y2="64" />
+                                </g>
+                                <g class="f-fade" style="animation-delay:.6s">
+                                    <rect class="fig-line" x="86" y="90" width="118" height="30" rx="3" />
+                                    <path class="fig-line" d="M190 120 l2 10 l-12 -10" />
+                                    <line class="fig-hair" x1="96" y1="100" x2="190" y2="100" />
+                                    <line class="fig-hair" x1="96" y1="110" x2="164" y2="110" />
+                                </g>
+                                <g>
+                                    <path class="fig-line f-draw" d="M262 72 v-12 a18 18 0 0 1 36 0 v12" />
+                                    <rect class="fig-line f-fade" x="252" y="72" width="56" height="42" rx="3"
+                                        style="animation-delay:.9s" />
+                                    <circle class="cell f-fade" cx="280" cy="90" r="4" style="animation-delay:1.1s" />
+                                    <line class="fig-line f-fade" x1="280" y1="94" x2="280" y2="104"
+                                        style="animation-delay:1.1s" />
+                                </g>
+                            </svg>
+                        </figure>
+                        <div class="arch-card__body">
+                            <span class="arch-card__index">[01]</span>
+                            <h3>ChatGPT and Cybersecurity: Implications and Repercussions</h3>
+                            <p>With Prof. Preethi Ananthachari, Gurpreet Singh examined the effect of large language
+                                models on cybersecurity — the opportunities and the risks generative AI introduces
+                                to digital security and privacy. Published in a leading journal.</p>
+                            <div class="arch-card__meta">
+                                <span>2022</span>
+                                <span>Published</span>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ CTA ============ -->
+        <section class="band band--ink">
+            <div class="shell cta">
+                <div data-reveal>
+                    <p class="eyebrow eyebrow--plain">Work with us</p>
+                    <h2>All four projects are taking members.</h2>
+                </div>
+                <div data-reveal>
+                    <p>New members join one of the four running projects on arrival, with a mentor and a defined
+                        scope. If any of them is the kind of problem you want to spend months on, write to us.</p>
+                    <div class="cta__actions">
+                        <a class="btn btn--light" href="join-us.html">How to apply <span class="arrow">→</span></a>
+                        <a class="btn btn--light" href="research-areas.html">Research areas</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ============ Footer ============ -->
+    <footer class="site-footer">
+        <div class="shell">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="footer-brand__name">CAAI</div>
+                    <p>Center for Applied Artificial Intelligence — a guided research lab operating under
+                        The Korean Academy.</p>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Research</h4>
+                    <ul>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="research-areas.html">Areas</a></li>
+                        <li><a href="publications.html">Publications</a></li>
+                        <li><a href="resources.html">Datasets &amp; Code</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Lab</h4>
+                    <ul>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="members.html">People</a></li>
+                        <li><a href="news.html">News &amp; Events</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="mailto:admission@thekoreancad.com">admission@thekoreancad.com</a></li>
+                        <li><a href="join-us.html">Apply to the lab</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-base">
+                <span>© 2025 Center for Applied Artificial Intelligence</span>
+                <span>All rights reserved</span>
+            </div>
         </div>
+    </footer>
 
-        <div class="project-card">
-          <div class="project-image">
-            <img src="project_waveform.png" alt="Audio Waveform Visualization">
-          </div>
-          <div class="project-content">
-            <div class="project-title">[7] Text-to-Audio (T2A) Generation under CAAI</div>
-            <div class="project-meta">2025</div>
-            <div class="project-description">
-              This cross-modal research project explores the generation of audio from textual inputs using a variety of
-              models and deep learning techniques, including convolutional neural networks (CNNs). The study aims to
-              improve semantic understanding and audio synthesis in text-driven audio generation systems.
-            </div>
-          </div>
-        </div>
-
-        <div class="project-card">
-          <div class="project-image">
-            <img src="project_neural.png" alt="Neural Network Visualization">
-          </div>
-          <div class="project-content">
-            <div class="project-title">[6] AI-Assisted Storytelling Generation under CAAI</div>
-            <div class="project-meta">2025</div>
-            <div class="project-description">
-              This cross-modal research project explores AI-assisted storytelling generation using a range of models and
-              deep learning techniques, including convolutional neural networks (CNNs). The study focuses on integrating
-              narrative structure, creativity, and multimodal learning to enhance automated storytelling systems.
-            </div>
-          </div>
-        </div>
-
-        <div class="project-card">
-          <div class="project-image">
-            <img src="project_waveform.png" alt="Visual-to-Audio Visualization">
-          </div>
-          <div class="project-content">
-            <div class="project-title">[5] Visual-to-Audio (V2A) Generation under CAAI</div>
-            <div class="project-meta">2025</div>
-            <div class="project-description">
-              This cross-modal research project explores the generation of audio from visual inputs by leveraging
-              techniques in computer vision, CNNs, RNNs, and Vision Transformers (ViT). Initiated under CAAI, the study
-              aims to advance cross-modality by developing models capable of interpreting visual stimuli and generating
-              corresponding audio representations.
-            </div>
-          </div>
-        </div>
-
-        <div class="project-card" style="opacity: 0.6;">
-          <div class="project-image">
-            <img src="project_nlp.png" alt="Gender Bias Analysis" style="filter: grayscale(100%);">
-          </div>
-          <div class="project-content">
-            <div class="project-title" style="text-decoration: line-through;">[4] Analyzing Gender Bias in Media Using
-              AI: A Cross-Cultural Study of Representation, Language, and Imagery</div>
-            <div class="project-meta">2025.7.21 - 2025.12.25</div>
-            <div class="project-description">
-              This flagship project investigates gender bias in media content across cultures by leveraging natural
-              language processing, computer vision, and ethical frameworks. The study aims to uncover patterns of
-              representation and language, and to develop AI tools that promote fairness and inclusivity in media
-              analysis. (Discontinued/Cancelled)
-            </div>
-          </div>
-        </div>
-
-        <div class="project-card">
-          <div class="project-image">
-            <img src="project_business.png" alt="Business Growth Analysis">
-          </div>
-          <div class="project-content">
-            <div class="project-title">[3] Business Growth and Management Research Team Formation</div>
-            <div class="project-meta">2023 - 2024 (Completed)</div>
-            <div class="project-description">
-              In 2023, a research team was formed to explore the intersection of business growth, management, and AI.
-              Members Simran Singh, Nahid Rehmani, Pushpa Kumari, and Vedha Varshini worked on projects that applied
-              AI-driven analytics to optimize business strategies and foster innovation across industries.
-            </div>
-          </div>
-        </div>
-
-        <div class="project-card">
-          <div class="project-image">
-            <img src="project_security.png" alt="Cybersecurity Shield">
-          </div>
-          <div class="project-content">
-            <div class="project-title">[2] Cybersecurity and AI: Assessing Vulnerabilities in Modern Infrastructure
-            </div>
-            <div class="project-meta">Spring 2024</div>
-            <div class="project-description">
-              Gurpreet Singh and Prof. Saurabh Singh conducted an in-depth analysis of the vulnerabilities and impacts
-              of open SSH ports on CENTOS 9 virtual machines hosted on Mac ARM computers (CVE-2023-25136). The research
-              provides practical recommendations for securing cloud and virtualized environments in the age of AI-driven
-              cyber threats.
-            </div>
-          </div>
-        </div>
-
-        <div class="project-card">
-          <div class="project-image">
-            <img src="project_security.png" alt="ChatGPT Security">
-          </div>
-          <div class="project-content">
-            <div class="project-title">[1] ChatGPT and Cybersecurity: Implications and Repercussions</div>
-            <div class="project-meta">2022</div>
-            <div class="project-description">
-              In collaboration with Prof. Preethi Ananthachari, Gurpreet Singh explored the impact of large language
-              models like ChatGPT on cybersecurity. The project, published in a leading journal, discusses both the
-              opportunities and risks posed by generative AI in the context of digital security and privacy.
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <footer>
-    <div class="container">
-      <p>&copy; 2025 Center for Applied Artificial Intelligence (CAAI). All rights reserved. | <a
-          href="mailto:admission@thekoreancad.com" style="color: #bbb; text-decoration: underline;">Contact Us</a></p>
-    </div>
-  </footer>
-
+    <script src="landing.js"></script>
 </body>
 
 </html>

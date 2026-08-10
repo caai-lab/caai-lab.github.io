@@ -4,109 +4,648 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CAAI: Research Areas</title>
+    <title>Research Areas — CAAI</title>
+    <meta name="description"
+        content="CAAI works across multimodal AI, ethics and bias, generative models and AI for social good — and welcomes students from any academic background to bring their own field to the lab.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Lato:wght@300;400;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..500&family=Inter:wght@400;500&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="landing.css">
+    <link rel="stylesheet" href="pages.css">
 </head>
 
-<body>
+<body class="page">
 
-    <header>
-        <div class="container">
-            <div class="header-content">
-                <div class="logo-section">
-                    <img src="caai cropped.jpg" alt="CAAI Logo">
-                    <div class="title-section">
-                        <h1>CAAI</h1>
-                        <p>Center for Applied Artificial Intelligence</p>
-                    </div>
-                </div>
-                <button class="menu-toggle" aria-label="Toggle navigation">&#9776;</button>
-                <nav>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li>
-                            <a href="#">About ▾</a>
-                            <ul class="dropdown-menu">
-                                <li><a href="about.html">About the Lab</a></li>
-                                <li><a href="join-us.html">Join Us</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#" class="active">Research ▾</a>
-                            <ul class="dropdown-menu">
-                                <li><a href="projects.html">Research Projects</a></li>
-                                <li><a href="research-areas.html" class="active">Research Areas</a></li>
-                                <li><a href="resources.html">Datasets & Code</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#">People ▾</a>
-                            <ul class="dropdown-menu">
-                                <li><a href="members.html">Current Team</a></li>
-                                <li><a href="members.html#alumni">Alumni</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#">Happenings ▾</a>
-                            <ul class="dropdown-menu">
-                                <li><a href="news.html">News & Events</a></li>
-                                <li><a href="gallery.html">Photo Gallery</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="publications.html">Publications</a></li>
-                    </ul>
-                </nav>
-            </div>
+    <!-- ============ Header ============ -->
+    <header class="site-header" id="site-header">
+        <div class="shell header-inner">
+            <a class="brand" href="index.html">
+                <img class="brand__mark" src="caai cropped.jpg" alt="">
+                <span>
+                    <span class="brand__name">CAAI</span>
+                    <span class="brand__sub">Center for Applied Artificial Intelligence</span>
+                </span>
+            </a>
+
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                <span></span><span></span>
+            </button>
+
+            <nav class="nav" id="nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li>
+                        <a href="about.html">About <span class="caret">▼</span></a>
+                        <ul class="submenu">
+                            <li><a href="about.html">About the Lab</a></li>
+                            <li><a href="join-us.html">Join Us</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="projects.html" class="is-active">Research <span class="caret">▼</span></a>
+                        <ul class="submenu">
+                            <li><a href="projects.html">Research Projects</a></li>
+                            <li><a href="research-areas.html">Research Areas</a></li>
+                            <li><a href="resources.html">Datasets &amp; Code</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="members.html">People <span class="caret">▼</span></a>
+                        <ul class="submenu">
+                            <li><a href="members.html">Current Team</a></li>
+                            <li><a href="members.html#alumni">Alumni</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="news.html">Happenings <span class="caret">▼</span></a>
+                        <ul class="submenu">
+                            <li><a href="news.html">News &amp; Events</a></li>
+                            <li><a href="gallery.html">Photo Gallery</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="publications.html">Publications</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
 
-    <div class="page-intro">
-        <div class="container">
-            <h2>Research Areas</h2>
-            <p>Our lab focuses on several key pillars of Artificial Intelligence.</p>
-        </div>
-    </div>
+    <main>
 
-    <section>
-        <div class="container">
-            <div class="about-content">
-                <div class="about-section">
-                    <h3>Multimodal AI</h3>
-                    <p>Merging vision, text, and audio to create systems that understand the world as humans do.
-                        Examples include Visual Question Answering (VQA) and Image Captioning.</p>
+        <!-- ============ Masthead ============ -->
+        <section class="masthead">
+            <div class="shell masthead__inner">
+                <div data-reveal>
+                    <p class="eyebrow eyebrow--plain">Research</p>
+                    <h1>Four pillars, and room for <em>yours</em>.</h1>
                 </div>
-                <div class="about-section">
-                    <h3>AI Ethics & Bias</h3>
-                    <p>Investigating fairness, accountability, and transparency in machine learning models to prevent
-                        societal harm and ensure equitable outcomes.</p>
-                </div>
-                <div class="about-section">
-                    <h3>Generative Models</h3>
-                    <p>Exploring the creative potential of AI through Large Language Models (LLMs) and diffusion models
-                        for generating text, images, and code.</p>
-                </div>
-                <div class="about-section">
-                    <h3>AI for Social Good</h3>
-                    <p>Applying advanced AI techniques to solve pressing global challenges in healthcare, education, and
-                        environmental sustainability.</p>
+                <p class="masthead__lede" data-reveal>
+                    The lab works across four areas of artificial intelligence — and takes students from any
+                    academic background who want to bring their own field into one of them.
+                </p>
+            </div>
+        </section>
+
+        <!-- ============ Pillars ============ -->
+        <section class="shell">
+
+            <div class="prose" style="border-bottom: 0; padding-bottom: 0;">
+                <p class="prose__label" data-reveal>01 — Areas</p>
+                <div data-reveal>
+                    <h2>Where the work sits.</h2>
+                    <p>These four areas are not separate departments. Most projects in the lab touch two or three
+                        of them at once — a generative model is only interesting here if someone is also asking who
+                        it works for and what it is good for.</p>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 Center for Applied Artificial Intelligence (CAAI). All rights reserved. | <a
-                    href="mailto:admission@thekoreancad.com" style="color: #bbb; text-decoration: underline;">Contact
-                    Us</a></p>
+            <!-- ---- 01 Multimodal AI ---- -->
+            <article class="area-detail" id="multimodal">
+                <div class="area-detail__side" data-reveal>
+                    <span class="area-detail__num">Area 01</span>
+                    <figure class="area-figure">
+                        <svg viewBox="0 0 280 180" role="img"
+                            aria-label="Diagram: image, text and audio streams converging into one representation">
+                            <text class="fig-label" x="18" y="20">Modalities</text>
+
+                            <!-- image source -->
+                            <g>
+                                <rect class="cell" x="18" y="32" width="12" height="12" style="animation-delay:0s" />
+                                <rect class="cell" x="33" y="32" width="12" height="12" style="animation-delay:.06s" />
+                                <rect class="cell" x="48" y="32" width="12" height="12" style="animation-delay:.12s" />
+                                <rect class="cell" x="18" y="47" width="12" height="12" style="animation-delay:.06s" />
+                                <rect class="cell" x="33" y="47" width="12" height="12" style="animation-delay:.12s" />
+                                <rect class="cell" x="48" y="47" width="12" height="12" style="animation-delay:.18s" />
+                            </g>
+                            <!-- text source -->
+                            <g>
+                                <rect class="type" x="18" y="83" width="44" height="5" style="animation-delay:.1s" />
+                                <rect class="type" x="18" y="93" width="32" height="5" style="animation-delay:.22s" />
+                                <rect class="type" x="18" y="103" width="40" height="5" style="animation-delay:.34s" />
+                            </g>
+                            <!-- audio source -->
+                            <g>
+                                <rect class="bar" x="18" y="128" width="6" height="26" style="animation-delay:0s" />
+                                <rect class="bar" x="28" y="128" width="6" height="26" style="animation-delay:.1s" />
+                                <rect class="bar" x="38" y="128" width="6" height="26" style="animation-delay:.2s" />
+                                <rect class="bar" x="48" y="128" width="6" height="26" style="animation-delay:.3s" />
+                                <rect class="bar" x="58" y="128" width="6" height="26" style="animation-delay:.4s" />
+                            </g>
+
+                            <!-- convergence -->
+                            <g class="fig-line">
+                                <path class="f-draw" d="M74 46 C130 46 150 90 186 90" style="animation-delay:.1s" />
+                                <path class="f-draw" d="M74 95 C130 95 150 90 186 90" style="animation-delay:.3s" />
+                                <path class="f-draw" d="M74 140 C130 140 150 90 186 90" style="animation-delay:.5s" />
+                            </g>
+
+                            <circle cx="200" cy="90" r="16" class="fig-line f-fade" style="animation-delay:.7s" />
+                            <circle cx="200" cy="90" r="5" class="cell f-fade" style="animation-delay:.9s" />
+                            <text class="fig-label" x="228" y="94">Shared</text>
+                        </svg>
+                    </figure>
+                </div>
+
+                <div data-reveal>
+                    <h2>Multimodal AI</h2>
+                    <p>People do not experience the world one channel at a time. We read a face and a tone of voice
+                        together; we understand a photograph partly through the caption sitting under it. Multimodal
+                        AI is the attempt to build systems that do the same — models that hold vision, text and
+                        audio in one representation rather than treating each as a separate problem.</p>
+                    <p>This is the lab's centre of gravity. Most of our projects are, underneath, an exercise in
+                        getting two modalities into a shared space and then generating one from the other: images
+                        into music, text into sequential images, visual stimuli into audio.</p>
+
+                    <p class="subhead">In practice</p>
+                    <ul>
+                        <li><strong>Visual question answering.</strong> Answering questions about an image, which
+                            requires grounding language in what is actually visible.</li>
+                        <li><strong>Image captioning.</strong> Producing description that is specific to the image
+                            rather than plausible for any image.</li>
+                        <li><strong>Cross-modal alignment.</strong> Learning embedding spaces where related content
+                            in different modalities lands in the same neighbourhood.</li>
+                        <li><strong>Cross-modal generation.</strong> Conditioning a decoder in one modality on an
+                            encoder in another — the shape of three of the four current projects.</li>
+                    </ul>
+
+                    <div class="tags">
+                        <span class="tag">Vision–Language Models</span>
+                        <span class="tag">Vision Transformers</span>
+                        <span class="tag">CNNs</span>
+                        <span class="tag">Contrastive learning</span>
+                        <span class="tag">Embedding alignment</span>
+                    </div>
+
+                    <div class="related">
+                        <a class="link-quiet" href="projects.html#image-to-music">Image-to-Music <span
+                                class="arrow">→</span></a>
+                        <a class="link-quiet" href="projects.html#text-to-comic">Text-to-Comic <span
+                                class="arrow">→</span></a>
+                        <a class="link-quiet" href="projects.html#gene-editing">Gene Editing <span
+                                class="arrow">→</span></a>
+                        <a class="link-quiet" href="publications.html">VLM survey <span class="arrow">→</span></a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- ---- 02 Ethics ---- -->
+            <article class="area-detail" id="ethics">
+                <div class="area-detail__side" data-reveal>
+                    <span class="area-detail__num">Area 02</span>
+                    <figure class="area-figure">
+                        <svg viewBox="0 0 280 180" role="img"
+                            aria-label="Diagram: two group distributions with the gap between them measured">
+                            <text class="fig-label" x="18" y="20">Group A</text>
+                            <text class="fig-label" x="172" y="20">Group B</text>
+
+                            <g>
+                                <rect class="bar" x="20" y="86" width="14" height="46" style="animation-delay:0s" />
+                                <rect class="bar" x="38" y="70" width="14" height="62" style="animation-delay:.1s" />
+                                <rect class="bar" x="56" y="58" width="14" height="74" style="animation-delay:.2s" />
+                                <rect class="bar" x="74" y="76" width="14" height="56" style="animation-delay:.3s" />
+                                <rect class="bar" x="92" y="98" width="14" height="34" style="animation-delay:.4s" />
+                            </g>
+                            <g>
+                                <rect class="bar" x="166" y="106" width="14" height="26" style="animation-delay:.2s" />
+                                <rect class="bar" x="184" y="94" width="14" height="38" style="animation-delay:.3s" />
+                                <rect class="bar" x="202" y="86" width="14" height="46" style="animation-delay:.4s" />
+                                <rect class="bar" x="220" y="100" width="14" height="32" style="animation-delay:.5s" />
+                                <rect class="bar" x="238" y="112" width="14" height="20" style="animation-delay:.6s" />
+                            </g>
+
+                            <line class="fig-hair" x1="16" y1="132" x2="264" y2="132" />
+
+                            <!-- means -->
+                            <line class="fig-line f-fade" x1="63" y1="46" x2="63" y2="132" style="animation-delay:.6s"
+                                stroke-dasharray="3 4" />
+                            <line class="fig-line f-fade" x1="209" y1="46" x2="209" y2="132" style="animation-delay:.8s"
+                                stroke-dasharray="3 4" />
+
+                            <!-- measured gap -->
+                            <path class="fig-line f-draw f-draw--long" d="M63 40 h146 M63 34 v12 M209 34 v12"
+                                style="animation-delay:.9s" />
+                            <text class="fig-label" x="118" y="28">Disparity</text>
+                        </svg>
+                    </figure>
+                </div>
+
+                <div data-reveal>
+                    <h2>AI Ethics &amp; Bias</h2>
+                    <p>A model that performs well on average can still fail badly and consistently for a particular
+                        group of people. Aggregate accuracy hides this by design. This area is about the measurement
+                        work that surfaces those failures, and the design choices that stop a system shipping with
+                        them intact.</p>
+                    <p>We treat fairness, accountability and transparency as engineering requirements rather than a
+                        closing paragraph. That means disaggregated evaluation, documented datasets, and being
+                        specific about who a model is likely to disadvantage before anyone claims a result.</p>
+
+                    <p class="subhead">In practice</p>
+                    <ul>
+                        <li><strong>Disaggregated evaluation.</strong> Reporting performance per group, not only in
+                            aggregate, and treating the gap as a headline number.</li>
+                        <li><strong>Representation analysis.</strong> Auditing what is present and absent in training
+                            data, and in the media that data is drawn from.</li>
+                        <li><strong>Transparency.</strong> Documenting data provenance, model limitations and known
+                            failure modes alongside results.</li>
+                        <li><strong>Generative harms.</strong> What generative systems reproduce about people when
+                            nobody has asked them to.</li>
+                    </ul>
+
+                    <div class="tags">
+                        <span class="tag">Fairness metrics</span>
+                        <span class="tag">Dataset auditing</span>
+                        <span class="tag">Model cards</span>
+                        <span class="tag">Cross-cultural analysis</span>
+                        <span class="tag">Accountability</span>
+                    </div>
+
+                    <div class="related">
+                        <a class="link-quiet" href="projects.html#international">International collaboration <span
+                                class="arrow">→</span></a>
+                        <a class="link-quiet" href="projects.html">Media bias study <span class="arrow">→</span></a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- ---- 03 Generative ---- -->
+            <article class="area-detail" id="generative">
+                <div class="area-detail__side" data-reveal>
+                    <span class="area-detail__num">Area 03</span>
+                    <figure class="area-figure">
+                        <svg viewBox="0 0 280 180" role="img"
+                            aria-label="Diagram: scattered noise resolving into ordered structure">
+                            <text class="fig-label" x="18" y="20">Noise</text>
+                            <text class="fig-label" x="176" y="20">Sample</text>
+
+                            <g fill="currentColor">
+                                <circle class="f-blink" cx="26" cy="52" r="2.6" style="animation-delay:0s" />
+                                <circle class="f-blink" cx="52" cy="38" r="2.6" style="animation-delay:.2s" />
+                                <circle class="f-blink" cx="74" cy="62" r="2.6" style="animation-delay:.4s" />
+                                <circle class="f-blink" cx="34" cy="82" r="2.6" style="animation-delay:.6s" />
+                                <circle class="f-blink" cx="62" cy="96" r="2.6" style="animation-delay:.8s" />
+                                <circle class="f-blink" cx="22" cy="118" r="2.6" style="animation-delay:1s" />
+                                <circle class="f-blink" cx="48" cy="134" r="2.6" style="animation-delay:1.2s" />
+                                <circle class="f-blink" cx="78" cy="112" r="2.6" style="animation-delay:1.4s" />
+                                <circle class="f-blink" cx="88" cy="82" r="2.6" style="animation-delay:1.6s" />
+                                <circle class="f-blink" cx="40" cy="60" r="2.6" style="animation-delay:1.8s" />
+                            </g>
+
+                            <line class="fig-hair" x1="104" y1="90" x2="160" y2="90" />
+                            <circle class="flow" cx="116" cy="90" r="2.4" style="animation-delay:.1s" />
+                            <circle class="flow" cx="134" cy="90" r="2.4" style="animation-delay:.5s" />
+                            <circle class="flow" cx="152" cy="90" r="2.4" style="animation-delay:.9s" />
+
+                            <g class="fig-line">
+                                <rect class="f-draw f-draw--long" x="176" y="44" width="86" height="92" rx="2" />
+                                <path class="f-draw" d="M176 118 l26 -30 l22 22 l16 -14 l22 22" style="animation-delay:.3s" />
+                                <circle class="f-fade" cx="238" cy="66" r="8" style="animation-delay:.9s" />
+                            </g>
+                        </svg>
+                    </figure>
+                </div>
+
+                <div data-reveal>
+                    <h2>Generative Models</h2>
+                    <p>Large language models and diffusion systems changed what a small lab can attempt. A team of
+                        two students can now build something that produces text, images, audio or code — which moves
+                        the interesting research away from "can it generate" and towards control, faithfulness and
+                        consistency.</p>
+                    <p>That is where our questions sit. Not whether a model can produce a plausible panel, but
+                        whether the character in it is the same person as in the previous panel. Not whether it can
+                        produce pleasant music, but whether the music has anything to do with the image it was given.</p>
+
+                    <p class="subhead">In practice</p>
+                    <ul>
+                        <li><strong>Conditional generation.</strong> Steering output with an input from another
+                            modality, and measuring whether the conditioning actually took.</li>
+                        <li><strong>Consistency across sequences.</strong> Holding identity, style and continuity
+                            steady over many generated outputs.</li>
+                        <li><strong>Architecture study.</strong> Comparing CNNs, RNNs, transformers and diffusion
+                            approaches on the same task rather than assuming the newest wins.</li>
+                        <li><strong>Evaluation design.</strong> Building protocols that separate output quality from
+                            appropriateness to the input.</li>
+                    </ul>
+
+                    <div class="tags">
+                        <span class="tag">LLMs</span>
+                        <span class="tag">Diffusion models</span>
+                        <span class="tag">Transformers</span>
+                        <span class="tag">RNNs</span>
+                        <span class="tag">Conditioning</span>
+                        <span class="tag">Human evaluation</span>
+                    </div>
+
+                    <div class="related">
+                        <a class="link-quiet" href="projects.html#text-to-comic">Text-to-Comic <span
+                                class="arrow">→</span></a>
+                        <a class="link-quiet" href="projects.html">Storytelling &amp; T2A <span
+                                class="arrow">→</span></a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- ---- 04 Social good ---- -->
+            <article class="area-detail" id="social-good">
+                <div class="area-detail__side" data-reveal>
+                    <span class="area-detail__num">Area 04</span>
+                    <figure class="area-figure">
+                        <svg viewBox="0 0 280 180" role="img"
+                            aria-label="Diagram: a central method connecting out to applied domains">
+                            <text class="fig-label" x="18" y="20">Applied domains</text>
+
+                            <g class="fig-line">
+                                <path class="f-draw" d="M140 90 L74 48" style="animation-delay:0s" />
+                                <path class="f-draw" d="M140 90 L64 92" style="animation-delay:.15s" />
+                                <path class="f-draw" d="M140 90 L78 138" style="animation-delay:.3s" />
+                                <path class="f-draw" d="M140 90 L206 48" style="animation-delay:.45s" />
+                                <path class="f-draw" d="M140 90 L216 92" style="animation-delay:.6s" />
+                                <path class="f-draw" d="M140 90 L202 138" style="animation-delay:.75s" />
+                            </g>
+
+                            <circle cx="140" cy="90" r="14" class="fig-line" />
+                            <circle cx="140" cy="90" r="4" class="cell" />
+
+                            <g class="f-fade" style="animation-delay:.4s">
+                                <circle cx="64" cy="44" r="11" class="fig-line" />
+                                <path class="fig-line" d="M64 39 v10 M59 44 h10" />
+                            </g>
+                            <g class="f-fade" style="animation-delay:.55s">
+                                <circle cx="54" cy="92" r="11" class="fig-line" />
+                                <path class="fig-line" d="M49 88 h10 M49 92 h10 M49 96 h7" />
+                            </g>
+                            <g class="f-fade" style="animation-delay:.7s">
+                                <circle cx="68" cy="142" r="11" class="fig-line" />
+                                <path class="fig-line" d="M68 148 c-8 -6 -8 -14 0 -14 c8 0 8 8 0 14" />
+                            </g>
+                            <g class="f-fade" style="animation-delay:.85s">
+                                <circle cx="216" cy="44" r="11" class="fig-line" />
+                                <path class="fig-line" d="M211 48 l4 -8 l4 5 l3 -3" />
+                            </g>
+                            <g class="f-fade" style="animation-delay:1s">
+                                <circle cx="226" cy="92" r="11" class="fig-line" />
+                                <circle cx="226" cy="92" r="4" class="fig-line" />
+                            </g>
+                            <g class="f-fade" style="animation-delay:1.15s">
+                                <circle cx="212" cy="142" r="11" class="fig-line" />
+                                <path class="fig-line" d="M207 145 v-7 M212 145 v-11 M217 145 v-4" />
+                            </g>
+                        </svg>
+                    </figure>
+                </div>
+
+                <div data-reveal>
+                    <h2>AI for Social Good</h2>
+                    <p>The same techniques that generate a comic panel can extract drug interactions from clinical
+                        literature. This area is about pointing the lab's methods at problems where a better model
+                        produces a materially better outcome for someone — in healthcare, education and
+                        environmental work.</p>
+                    <p>It is also where the lab's cross-disciplinary intake pays off most directly. A model built to
+                        analyse medical text is only as good as the domain knowledge shaping what counts as a
+                        correct answer, and that knowledge usually comes from a member who studied something other
+                        than computer science.</p>
+
+                    <p class="subhead">In practice</p>
+                    <ul>
+                        <li><strong>Healthcare.</strong> Information extraction from biomedical literature — the
+                            lab's drug–drug interaction work sits here.</li>
+                        <li><strong>Education.</strong> Language learning analytics, and models that adapt to how an
+                            individual learner is actually progressing.</li>
+                        <li><strong>Environment.</strong> Applying vision and sequence models to sustainability and
+                            monitoring problems.</li>
+                        <li><strong>Security.</strong> Understanding what generative AI changes about the threat
+                            landscape, and what it changes about defence.</li>
+                    </ul>
+
+                    <div class="tags">
+                        <span class="tag">Information extraction</span>
+                        <span class="tag">Biomedical NLP</span>
+                        <span class="tag">Learning analytics</span>
+                        <span class="tag">Applied ML</span>
+                    </div>
+
+                    <div class="related">
+                        <a class="link-quiet" href="publications.html">Drug–drug interaction paper <span
+                                class="arrow">→</span></a>
+                        <a class="link-quiet" href="projects.html#gene-editing">Multimodal gene editing <span
+                                class="arrow">→</span></a>
+                        <a class="link-quiet" href="projects.html">Language learning analytics <span
+                                class="arrow">→</span></a>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <!-- ============ Methods ============ -->
+        <section class="band band--tint">
+            <div class="shell">
+                <div class="band-head" data-reveal>
+                    <div>
+                        <p class="eyebrow eyebrow--plain">02 — Methods</p>
+                        <h2>What runs underneath all four.</h2>
+                    </div>
+                </div>
+
+                <div class="pillars" data-reveal>
+                    <article class="pillar">
+                        <span class="pillar__num">Vision</span>
+                        <h3>CNNs &amp; ViT</h3>
+                        <p>Convolutional networks and Vision Transformers for encoding images and video into
+                            representations other models can use.</p>
+                    </article>
+                    <article class="pillar">
+                        <span class="pillar__num">Language</span>
+                        <h3>Transformers &amp; LLMs</h3>
+                        <p>Sequence models for understanding, extraction and generation — from token classification
+                            to open-ended text.</p>
+                    </article>
+                    <article class="pillar">
+                        <span class="pillar__num">Generation</span>
+                        <h3>Diffusion &amp; RNNs</h3>
+                        <p>Iterative denoising for images and audio, recurrent architectures where sequence order
+                            carries the meaning.</p>
+                    </article>
+                    <article class="pillar">
+                        <span class="pillar__num">Practice</span>
+                        <h3>Python, PyTorch, TensorFlow</h3>
+                        <p>The working stack. Members implement from papers, run experiments and keep results
+                            reproducible.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ Your field × AI ============ -->
+        <section class="shell">
+            <div class="prose" style="border-bottom: 0; padding-bottom: 0;">
+                <p class="prose__label" data-reveal>03 — Any background</p>
+                <div data-reveal>
+                    <h2>You do not need a computer science degree.</h2>
+                    <p>Students from every academic background are welcome here, and the lab is deliberately built
+                        that way. Artificial intelligence is a set of methods, not a subject — the questions worth
+                        asking usually come from somewhere else. A linguist knows what a meaningful segment boundary
+                        is. A medical student knows which extracted interaction is clinically significant. A
+                        designer knows when a generated page has stopped reading as a page.</p>
+                    <p>What you bring is the domain. We teach the AI. Members arriving without a programming
+                        background start with the implementation fundamentals under a mentor and join an active
+                        project from the beginning, rather than waiting until they feel qualified — which, in
+                        research, never quite happens.</p>
+                    <p>Several of the lab's published papers came from members whose degree was in something other
+                        than computer science. If your field has data, text, images, sound or human behaviour in it,
+                        there is a project here.</p>
+                </div>
+            </div>
+
+            <div class="prose" style="padding-top: clamp(32px, 4vw, 52px);">
+                <p class="prose__label" data-reveal>Your field × AI</p>
+                <div data-reveal>
+                    <div class="cross">
+                        <div class="cross__row">
+                            <div class="cross__field">Languages &amp; Linguistics</div>
+                            <div class="cross__what">Segmentation, morphology and learner-error analysis — deciding
+                                what a model should treat as a unit of language, and what counts as progress in
+                                learning one.</div>
+                            <div class="cross__ref">Project [08]</div>
+                        </div>
+
+                        <div class="cross__row">
+                            <div class="cross__field">Medicine &amp; Life Sciences</div>
+                            <div class="cross__what">Extracting structured knowledge from biomedical literature,
+                                and judging which extracted relations are actually clinically meaningful.</div>
+                            <div class="cross__ref">SSRN · bioRxiv</div>
+                        </div>
+
+                        <div class="cross__row">
+                            <div class="cross__field">Business &amp; Management</div>
+                            <div class="cross__what">AI-driven analytics for strategy, growth and operations —
+                                framing the decision before choosing the model.</div>
+                            <div class="cross__ref">Project [03]</div>
+                        </div>
+
+                        <div class="cross__row">
+                            <div class="cross__field">Media &amp; Communication</div>
+                            <div class="cross__what">Representation and narrative at scale: what patterns appear
+                                across a corpus of media, and what a generative system reproduces from it.</div>
+                            <div class="cross__ref">Projects [04] [06]</div>
+                        </div>
+
+                        <div class="cross__row">
+                            <div class="cross__field">Art, Music &amp; Design</div>
+                            <div class="cross__what">Cross-modal generation — image to music, script to comic page.
+                                Compositional judgement is the part a model cannot supply for itself.</div>
+                            <div class="cross__ref">Projects [09] [10]</div>
+                        </div>
+
+                        <div class="cross__row">
+                            <div class="cross__field">Education</div>
+                            <div class="cross__what">Learning analytics and personalisation — modelling how a
+                                student progresses, and what an intervention should look like.</div>
+                            <div class="cross__ref">Project [08]</div>
+                        </div>
+
+                        <div class="cross__row">
+                            <div class="cross__field">Security &amp; Systems</div>
+                            <div class="cross__what">Vulnerability analysis in virtualised infrastructure, and what
+                                large language models change about both attack and defence.</div>
+                            <div class="cross__ref">Projects [01] [02]</div>
+                        </div>
+
+                        <div class="cross__row">
+                            <div class="cross__field">Psychology &amp; Social Science</div>
+                            <div class="cross__what">Designing the human evaluation studies that decide whether a
+                                generated output is any good, and interpreting what the results mean.</div>
+                            <div class="cross__ref">All areas</div>
+                        </div>
+                    </div>
+
+                    <div class="notes" style="margin-top: 44px;">
+                        <div class="note">
+                            <span class="note__tag">What we ask</span>
+                            <h3>Willingness, not credentials.</h3>
+                            <p>You should be prepared to learn Python and to stay with an experiment past the first
+                                failed run. Prior machine learning experience helps but is not a filter — the
+                                mentorship exists precisely to close that gap.</p>
+                        </div>
+                        <div class="note">
+                            <span class="note__tag">What you get</span>
+                            <h3>A question of your own.</h3>
+                            <p>If you arrive with a problem from your field, we will work with you to shape it into
+                                something answerable and put a team around it. That is how several of the lab's
+                                projects started.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ CTA ============ -->
+        <section class="band band--ink">
+            <div class="shell cta">
+                <div data-reveal>
+                    <p class="eyebrow eyebrow--plain">Bring your field</p>
+                    <h2>Tell us what you'd want to study.</h2>
+                </div>
+                <div data-reveal>
+                    <p>Write to us with your background and the question you keep coming back to. If it can be
+                        approached with the methods above, we will tell you honestly — and if it can't, we will tell
+                        you that too.</p>
+                    <div class="cta__actions">
+                        <a class="btn btn--light" href="join-us.html">How to apply <span class="arrow">→</span></a>
+                        <a class="btn btn--light" href="projects.html">Current projects</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ============ Footer ============ -->
+    <footer class="site-footer">
+        <div class="shell">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="footer-brand__name">CAAI</div>
+                    <p>Center for Applied Artificial Intelligence — a guided research lab operating under
+                        The Korean Academy.</p>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Research</h4>
+                    <ul>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="research-areas.html">Areas</a></li>
+                        <li><a href="publications.html">Publications</a></li>
+                        <li><a href="resources.html">Datasets &amp; Code</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Lab</h4>
+                    <ul>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="members.html">People</a></li>
+                        <li><a href="news.html">News &amp; Events</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="mailto:admission@thekoreancad.com">admission@thekoreancad.com</a></li>
+                        <li><a href="join-us.html">Apply to the lab</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-base">
+                <span>© 2025 Center for Applied Artificial Intelligence</span>
+                <span>All rights reserved</span>
+            </div>
         </div>
     </footer>
 
+    <script src="landing.js"></script>
 </body>
 
 </html>

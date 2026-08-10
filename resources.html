@@ -4,99 +4,937 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CAAI: Resources</title>
+    <title>Datasets &amp; Code — CAAI</title>
+    <meta name="description"
+        content="CAAI's own releases, plus a curated library of the standard datasets in vision, language, audio, multimodal AI and fairness research — with links to download.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Lato:wght@300;400;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..500&family=Inter:wght@400;500&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="landing.css">
+    <link rel="stylesheet" href="pages.css">
 </head>
 
-<body>
+<body class="page">
 
-    <header>
-        <div class="container">
-            <div class="header-content">
-                <div class="logo-section">
-                    <img src="caai cropped.jpg" alt="CAAI Logo">
-                    <div class="title-section">
-                        <h1>CAAI</h1>
-                        <p>Center for Applied Artificial Intelligence</p>
-                    </div>
-                </div>
-                <button class="menu-toggle" aria-label="Toggle navigation">&#9776;</button>
-                <nav>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li>
-                            <a href="#">About ▾</a>
-                            <ul class="dropdown-menu">
-                                <li><a href="about.html">About the Lab</a></li>
-                                <li><a href="join-us.html">Join Us</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#">Research ▾</a>
-                            <ul class="dropdown-menu">
-                                <li><a href="projects.html">Research Projects</a></li>
-                                <li><a href="research-areas.html">Research Areas</a></li>
-                                <li><a href="resources.html" class="active">Datasets & Code</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#">People ▾</a>
-                            <ul class="dropdown-menu">
-                                <li><a href="members.html">Current Team</a></li>
-                                <li><a href="members.html#alumni">Alumni</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#">Happenings ▾</a>
-                            <ul class="dropdown-menu">
-                                <li><a href="news.html">News & Events</a></li>
-                                <li><a href="gallery.html">Photo Gallery</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="publications.html">Publications</a></li>
-                    </ul>
-                </nav>
-            </div>
+    <!-- ============ Header ============ -->
+    <header class="site-header" id="site-header">
+        <div class="shell header-inner">
+            <a class="brand" href="index.html">
+                <img class="brand__mark" src="caai cropped.jpg" alt="">
+                <span>
+                    <span class="brand__name">CAAI</span>
+                    <span class="brand__sub">Center for Applied Artificial Intelligence</span>
+                </span>
+            </a>
+
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                <span></span><span></span>
+            </button>
+
+            <nav class="nav" id="nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li>
+                        <a href="about.html">About <span class="caret">▼</span></a>
+                        <ul class="submenu">
+                            <li><a href="about.html">About the Lab</a></li>
+                            <li><a href="join-us.html">Join Us</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="projects.html" class="is-active">Research <span class="caret">▼</span></a>
+                        <ul class="submenu">
+                            <li><a href="projects.html">Research Projects</a></li>
+                            <li><a href="research-areas.html">Research Areas</a></li>
+                            <li><a href="resources.html">Datasets &amp; Code</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="members.html">People <span class="caret">▼</span></a>
+                        <ul class="submenu">
+                            <li><a href="members.html">Current Team</a></li>
+                            <li><a href="members.html#alumni">Alumni</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="news.html">Happenings <span class="caret">▼</span></a>
+                        <ul class="submenu">
+                            <li><a href="news.html">News &amp; Events</a></li>
+                            <li><a href="gallery.html">Photo Gallery</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="publications.html">Publications</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
 
-    <div class="page-intro">
-        <div class="container">
-            <h2>Resources</h2>
-            <p>Datasets, codebases, and other useful materials for the community.</p>
-        </div>
-    </div>
+    <main>
 
-    <section>
-        <div class="container">
-            <div class="about-content">
-                <div class="about-section">
-                    <h3>Public Datasets</h3>
-                    <p>We believe in open science. Our lab regularly releases datasets for public use. <br><em>(Coming
-                            Soon)</em></p>
+        <!-- ============ Masthead ============ -->
+        <section class="masthead">
+            <div class="shell masthead__inner">
+                <div data-reveal>
+                    <p class="eyebrow eyebrow--plain">Research</p>
+                    <h1>Datasets &amp; <em>code</em>.</h1>
                 </div>
-                <div class="about-section">
-                    <h3>Code Repositories</h3>
-                    <p>Implementation code for our published papers can be found on our <a href="#"
-                            style="color: var(--harvard-crimson);">GitHub Organization</a>.</p>
+                <p class="masthead__lede" data-reveal>
+                    What the lab has released so far, and a working library of the datasets our members actually
+                    use — organised by area, with links to the source.
+                </p>
+            </div>
+        </section>
+
+        <!-- ============ From the lab ============ -->
+        <section class="shell">
+            <div class="prose">
+                <p class="prose__label" data-reveal>01 — From the lab</p>
+                <div data-reveal>
+                    <h2>One release so far.</h2>
+                    <p>We are not going to overstate this. CAAI has not released large-scale datasets — we are a
+                        small lab and most of our output to date has been papers rather than corpora. One dataset
+                        is public, and more will follow from the projects currently running.</p>
+
+                    <div class="release">
+                        <span class="release__tag">Dataset · Zenodo · July 2025</span>
+                        <h3>Synthetic Image Dataset of Five Object Classes Generated Using Stable Diffusion XL</h3>
+                        <p>A synthetic image corpus across five object classes, generated with Stable Diffusion XL
+                            and released openly for use in classification, augmentation and synthetic-data
+                            experiments.</p>
+                        <div class="release__meta">
+                            <span>Gurpreet Singh</span>
+                            <span>DOI 10.5281/zenodo.16414387</span>
+                        </div>
+                        <div class="prose__actions">
+                            <a class="link-quiet" href="https://doi.org/10.5281/zenodo.16414387" target="_blank"
+                                rel="noopener">Download from Zenodo <span class="arrow">→</span></a>
+                        </div>
+                    </div>
+
+                    <p class="subhead">In preparation</p>
+                    <ul>
+                        <li><strong>Aligned image–music pairs.</strong> Being assembled for the image-to-music
+                            project, together with the listening-study protocol used to evaluate it.</li>
+                        <li><strong>Script-to-panel annotations.</strong> Narrative beats and panel layouts from the
+                            text-to-comic project, including character-consistency labels.</li>
+                    </ul>
+                    <p style="margin-top: 22px;">Neither is public yet. When they are, they will be released with a
+                        DOI, a licence and a datasheet describing how they were built and where they should not be
+                        used.</p>
+
+                    <div class="prose__actions">
+                        <a class="link-quiet" href="https://github.com/caai-lab" target="_blank" rel="noopener">
+                            Code on GitHub <span class="arrow">→</span></a>
+                        <a class="link-quiet" href="publications.html">Papers <span class="arrow">→</span></a>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 Center for Applied Artificial Intelligence (CAAI). All rights reserved. | <a
-                    href="mailto:admission@thekoreancad.com" style="color: #bbb; text-decoration: underline;">Contact
-                    Us</a></p>
+        <!-- ============ Dataset library ============ -->
+        <section class="band band--tint">
+            <div class="shell">
+                <div class="band-head" data-reveal>
+                    <div>
+                        <p class="eyebrow eyebrow--plain">02 — Dataset library</p>
+                        <h2>The standard corpora, by area.</h2>
+                    </div>
+                    <div class="band-head__side">
+                        <a class="link-quiet" href="research-areas.html">Our research areas <span
+                                class="arrow">→</span></a>
+                    </div>
+                </div>
+
+                <p class="body-text" style="max-width: 66ch; margin-bottom: 20px;" data-reveal>
+                    These are the datasets a new member is most likely to be pointed at in their first month.
+                    Licences vary — several require registration or an agreement before download, and a few are
+                    restricted to credentialed researchers. Check the terms on each source before you use one in a
+                    paper.
+                </p>
+
+                <!-- ---- Vision ---- -->
+                <div class="shelf" data-reveal>
+                    <div class="shelf__head">
+                        <h3>Computer Vision</h3>
+                        <span class="shelf__note">Classification · Detection · Segmentation</span>
+                    </div>
+
+                    <a class="ds-row" href="https://www.image-net.org/" target="_blank" rel="noopener">
+                        <div>
+                            <div class="ds-name">ImageNet</div>
+                            <span class="ds-org">Stanford / Princeton</span>
+                        </div>
+                        <div class="ds-desc">14M+ labelled images across 20k categories. The benchmark that started
+                            modern deep learning; ILSVRC-2012 remains the standard pretraining set.</div>
+                        <span class="ds-go">Download <span class="arrow">↗</span></span>
+                    </a>
+
+                    <a class="ds-row" href="https://cocodataset.org/" target="_blank" rel="noopener">
+                        <div>
+                            <div class="ds-name">MS COCO</div>
+                            <span class="ds-org">Microsoft</span>
+                        </div>
+                        <div class="ds-desc">330k images with object segmentation, keypoints and five captions each
+                            — the default for detection, segmentation and captioning at once.</div>
+                        <span class="ds-go">Download <span class="arrow">↗</span></span>
+                    </a>
+
+                    <a class="ds-row" href="https://storage.googleapis.com/openimages/web/index.html" target="_blank"
+                        rel="noopener">
+                        <div>
+                            <div class="ds-name">Open Images V7</div>
+                            <span class="ds-org">Google</span>
+                        </div>
+                        <div class="ds-desc">9M images with box, segmentation, relationship and localised narrative
+                            annotations. The largest openly licensed detection set.</div>
+                        <span class="ds-go">Download <span class="arrow">↗</span></span>
+                    </a>
+
+                    <a class="ds-row" href="https://groups.csail.mit.edu/vision/datasets/ADE20K/" target="_blank"
+                        rel="noopener">
+                        <div>
+                            <div class="ds-name">ADE20K</div>
+                            <span class="ds-org">MIT CSAIL</span>
+                        </div>
+                        <div class="ds-desc">Scene parsing with dense pixel-level annotation over 150 semantic
+                            categories. The reference set for semantic segmentation.</div>
+                        <span class="ds-go">Download <span class="arrow">↗</span></span>
+                    </a>
+
+                    <a class="ds-row" href="https://www.cityscapes-dataset.com/" target="_blank" rel="noopener">
+                        <div>
+                            <div class="ds-name">Cityscapes</div>
+                            <span class="ds-org">Daimler / TU Darmstadt</span>
+                        </div>
+                        <div class="ds-desc">Urban street scenes from 50 cities with fine pixel annotation. Standard
+                            for autonomous-driving perception. Registration required.</div>
+                        <span class="ds-go">Register <span class="arrow">↗</span></span>
+                    </a>
+
+                    <a class="ds-row" href="https://www.cs.toronto.edu/~kriz/cifar.html" target="_blank" rel="noopener">
+                        <div>
+                            <div class="ds-name">CIFAR-10 / CIFAR-100</div>
+                            <span class="ds-org">University of Toronto</span>
+                        </div>
+                        <div class="ds-desc">60k 32×32 images in 10 or 100 classes. Small enough to iterate on a
+                            laptop — where most members run their first training loop.</div>
+                        <span class="ds-go">Download <span class="arrow">↗</span></span>
+                    </a>
+
+                    <a class="ds-row" href="https://huggingface.co/datasets/ylecun/mnist" target="_blank"
+                        rel="noopener">
+                        <div>
+                            <div class="ds-name">MNIST</div>
+                            <span class="ds-org">LeCun et al. · Hugging Face mirror</span>
+                        </div>
+                        <div class="ds-desc">70k handwritten digits. Solved long ago, still the fastest way to check
+                            that a pipeline works end to end before you scale it.</div>
+                        <span class="ds-go">Download <span class="arrow">↗</span></span>
+                    </a>
+
+                    <a class="ds-row" href="https://github.com/zalandoresearch/fashion-mnist" target="_blank"
+                        rel="noopener">
+                        <div>
+                            <div class="ds-name">Fashion-MNIST</div>
+                            <span class="ds-org">Zalando Research</span>
+                        </div>
+                        <div class="ds-desc">A drop-in MNIST replacement with clothing categories — same format,
+                            meaningfully harder.</div>
+                        <span class="ds-go">Download <span class="arrow">↗</span></span>
+                    </a>
+
+                    <a class="ds-row" href="https://mmlab.ie.cuhk.edu.hk/projects/CelebA.html" target="_blank"
+                        rel="noopener">
+                        <div>
+                            <div class="ds-name">CelebA</div>
+                            <span class="ds-org">CUHK MMLab</span>
+                        </div>
+                        <div class="ds-desc">200k celebrity faces with 40 attribute labels. Widely used for
+                            generative work — and worth reading the fairness critiques before you do.</div>
+                        <span class="ds-go">Download <span class="arrow">↗</span></span>
+                    </a>
+                </div>
+
+                <!-- ---- Vision-language ---- -->
+                <div class="shelf" data-reveal>
+                    <div class="shelf__head">
+                        <h3>Vision–Language &amp; Multimodal</h3>
+                        <span class="shelf__note">Our primary area</span>
+                    </div>
+
+                    <a class="ds-row" href="https://laion.ai/blog/laion-5b/" target="_blank" rel="noopener">
+                        <div>
+                            <div class="ds-name">LAION-5B</div>
+                            <span class="ds-org">LAION</span>
+                        </div>
+                        <div class="ds-desc">5.85 billion image–text pairs scraped from the open web. The training
+                            substrate behind most open text-to-image models. Read the safety notes first.</div>
+                        <span class="ds-go">Access <span class="arrow">↗</span></span>
+                    </a>
+
+                    <a class="ds-row" href="https://ai.google.com/research/ConceptualCaptions/" target="_blank"
+                        rel="noopener">
+                        <div>
+                            <div class="ds-name">Conceptual Captions</div>
+                            <span class="ds-org">Google Research</span>
+                        </div>
+                        <div class="ds-desc">3.3M (12M in CC12M) image–caption pairs harvested and cleaned from alt
+                            text. A standard vision–language pretraining corpus.</div>
+                        <span class="ds-go">Download <span class="arrow">↗</span></span>
+                    </a>
+
+                    <a class="ds-row" href="https://homes.cs.washington.edu/~ranjay/visualgenome/" target="_blank"
+                        rel="noopener">
+                        <div>
+                            <div class="ds-name">Visual Genome</div>
+                            <span class="ds-org">Stanford</span>
+                        </div>
+                        <div class="ds-desc">108k images with dense region descriptions, objects, attributes and
+                            scene graphs. The go-to for grounded relational reasoning.</div>
+                        <span class="ds-go">Download <span class="arrow">↗</span></span>
+                    </a>
+
+                    <a class="ds-row" href="https://visualqa.org/" target="_blank" rel="noopener">
+                        <div>
+                            <div class="ds-name">VQA v2.0</div>
+                            <span class="ds-org">Virginia Tech / Georgia Tech</span>
+                        </div>
+                        <div class="ds-desc">1.1M questions over COCO images, balanced so that language priors alone
+                            cannot answer them. The reference visual question answering benchmark.</div>
+                        <span class="ds-go">Download <span class="arrow">↗</span></span>
+                    </a>
+
+                    <a class="ds-row" href="https://shannon.cs.illinois.edu/DenotationGraph/" target="_blank"
+                        rel="noopener">
+                        <div>
+                            <div class="ds-name">Flickr30k</div>
+                            <span class="ds-org">UIUC</span>
+                        </div>
+                        <div class="ds-desc">31k images with five crowd-sourced captions each. Small, clean, and
+                            standard for image–text retrieval evaluation.</div>
+                        <span class="ds-go">Request <span class="arrow">↗</span></span>
+                    </a>
+
+                    <a class="ds-row" href="https://www.di.ens.fr/willow/research/howto100m/" target="_blank"
+                        rel="noopener">
+                        <div>
+                            <div class="ds-name">HowTo100M</div>
+                            <span class="ds-org">Inria / ENS</span>
+                        </div>
+                        <div class="ds-desc">136M video clips paired with narration from instructional videos.
+                            Video–language pretraining at scale.</div>
+                        <span class="ds-go">Download <span class="arrow">↗</span></span>
+                    </a>
+                </div>
+
+                <!-- ---- Audio & music ---- -->
+                <div class="shelf" data-reveal>
+                    <div class="shelf__head">
+                        <h3>Audio &amp; Music</h3>
+                        <span class="shelf__note">Image-to-music · T2A · V2A</span>
+                    </div>
+
+                    <a class="ds-row" href="https://research.google.com/audioset/" target="_blank" rel="noopener">
+                        <div>
+                            <div class="ds-name">AudioSet</div>
+                            <span class="ds-org">Google Research</span>
+                        </div>
+                        <div class="ds-desc">2M+ human-labelled 10-second clips across 632 audio event classes. The
+                            ImageNet of audio classification.</div>
+                        <span class="ds-go">Download <span class="arrow">↗</span></span>
+                    </a>
+
+                    <a class="ds-row" href="https://huggingface.co/datasets/google/MusicCaps" target="_blank"
+                        rel="noopener">
+                        <div>
+                            <div class="ds-name">MusicCaps</div>
+                            <span class="ds-org">Google · Hugging Face</span>
+                        </div>
+                        <div class="ds-desc">5.5k music clips with rich free-text descriptions written by musicians.
+                            The benchmark for text-conditioned music generation.</div>
+                        <span class="ds-go">Download <span class="arrow">↗</span></span>
+                    </a>
+
+                    <a class="ds-row" href="https://github.com/mdeff/fma" target="_blank" rel="noopener">
+                        <div>
+                            <div class="ds-name">FMA — Free Music Archive</div>
+                            <span class="ds-org">EPFL</span>
+                        </div>
+                        <div class="ds-desc">106k tracks with genre hierarchy and audio features, openly licensed.
+                            Rare in music research: legally clean full audio.</div>
+                        <span class="ds-go">Download <span class="arrow">↗</span></span>
+                    </a>
+
+                    <a class="ds-row" href="https://magenta.withgoogle.com/datasets/maestro" target="_blank"
+                        rel="noopener">
+                        <div>
+                            <div class="ds-name">MAESTRO</div>
+                            <span class="ds-org">Google Magenta</span>
+                        </div>
+                        <div class="ds-desc">200 hours of virtuosic piano performance with aligned MIDI and audio.
+                            The cleanest symbolic–audio alignment available.</div>
+                        <span class="ds-go">Download <span class="arrow">↗</span></span>
+                    </a>
+
+                    <a class="ds-row" href="https://magenta.withgoogle.com/datasets/nsynth" target="_blank"
+                        rel="noopener">
+                        <div>
+                            <div class="ds-name">NSynth</div>
+                            <span class="ds-org">Google Magenta</span>
+                        </div>
+                        <div class="ds-desc">305k annotated musical notes from 1k instruments — pitch, timbre and
+                            envelope labelled. Built for neural audio synthesis.</div>
+                        <span class="ds-go">Download <span class="arrow">↗</span></span>
+                    </a>
+
+                    <a class="ds-row" href="https://audiocaps.github.io/" target="_blank" rel="noopener">
+                        <div>
+                            <div class="ds-name">AudioCaps</div>
+                            <span class="ds-org">Seoul National University</span>
+                        </div>
+                        <div class="ds-desc">46k audio clips with natural language captions, drawn from AudioSet.
+                            The standard audio captioning and text-to-audio benchmark.</div>
+                        <span class="ds-go">Download <span class="arrow">↗</span></span>
+                    </a>
+
+                    <a class="ds-row" href="https://www.openslr.org/12" target="_blank" rel="noopener">
+                        <div>
+                            <div class="ds-name">LibriSpeech</div>
+                            <span class="ds-org">OpenSLR</span>
+                        </div>
+                        <div class="ds-desc">1000 hours of read English speech from audiobooks. The default speech
+                            recognition benchmark.</div>
+                        <span class="ds-go">Download <span class="arrow">↗</span></span>
+                    </a>
+
+                    <a class="ds-row" href="https://commonvoice.mozilla.org/" target="_blank" rel="noopener">
+                        <div>
+                            <div class="ds-name">Common Voice</div>
+                            <span class="ds-org">Mozilla</span>
+                        </div>
+                        <div class="ds-desc">Crowd-sourced speech in over 100 languages, CC0 licensed. The most
+                            practical multilingual speech corpus for small labs.</div>
+                        <span class="ds-go">Download <span class="arrow">↗</span></span>
+                    </a>
+
+                    <a class="ds-row" href="https://github.com/karolpiczak/ESC-50" target="_blank" rel="noopener">
+                        <div>
+                            <div class="ds-name">ESC-50</div>
+                            <span class="ds-org">Piczak</span>
+                        </div>
+                        <div class="ds-desc">2000 labelled environmental sound clips in 50 classes. Tiny, clean, and
+                            ideal for a first audio classification experiment.</div>
+                        <span class="ds-go">Download <span class="arrow">↗</span></span>
+                    </a>
+                </div>
+
+                <!-- ---- Language ---- -->
+                <div class="shelf" data-reveal>
+                    <div class="shelf__head">
+                        <h3>Natural Language</h3>
+                        <span class="shelf__note">Benchmarks · Corpora · Pretraining</span>
+                    </div>
+
+                    <a class="ds-row" href="https://gluebenchmark.com/" target="_blank" rel="noopener">
+                        <div>
+                            <div class="ds-name">GLUE</div>
+                            <span class="ds-org">NYU et al.</span>
+                        </div>
+                        <div class="ds-desc">Nine sentence-understanding tasks under one evaluation. Still the first
+                            sanity check for a new language model.</div>
+                        <span class="ds-go">Download <span class="arrow">↗</span></span>
+                    </a>
+
+                    <a class="ds-row" href="https://super.gluebenchmark.com/" target="_blank" rel="noopener">
+                        <div>
+                            <div class="ds-name">SuperGLUE</div>
+                            <span class="ds-org">NYU et al.</span>
+                        </div>
+                        <div class="ds-desc">The harder successor to GLUE, built after models saturated the
+                            original. Reasoning and coreference heavy.</div>
+                        <span class="ds-go">Download <span class="arrow">↗</span></span>
+                    </a>
+
+                    <a class="ds-row" href="https://rajpurkar.github.io/SQuAD-explorer/" target="_blank"
+                        rel="noopener">
+                        <div>
+                            <div class="ds-name">SQuAD 2.0</div>
+                            <span class="ds-org">Stanford</span>
+                        </div>
+                        <div class="ds-desc">100k+ questions over Wikipedia passages, plus 50k unanswerable ones
+                            designed to catch models that guess.</div>
+                        <span class="ds-go">Download <span class="arrow">↗</span></span>
+                    </a>
+
+                    <a class="ds-row" href="https://github.com/hendrycks/test" target="_blank" rel="noopener">
+                        <div>
+                            <div class="ds-name">MMLU</div>
+                            <span class="ds-org">Hendrycks et al.</span>
+                        </div>
+                        <div class="ds-desc">Multiple-choice questions across 57 academic subjects. The most cited
+                            general-knowledge benchmark for large language models.</div>
+                        <span class="ds-go">Download <span class="arrow">↗</span></span>
+                    </a>
+
+                    <a class="ds-row" href="https://pile.eleuther.ai/" target="_blank" rel="noopener">
+                        <div>
+                            <div class="ds-name">The Pile</div>
+                            <span class="ds-org">EleutherAI</span>
+                        </div>
+                        <div class="ds-desc">825 GiB of diverse English text from 22 sources, assembled specifically
+                            for language model pretraining.</div>
+                        <span class="ds-go">Download <span class="arrow">↗</span></span>
+                    </a>
+
+                    <a class="ds-row" href="https://commoncrawl.org/" target="_blank" rel="noopener">
+                        <div>
+                            <div class="ds-name">Common Crawl</div>
+                            <span class="ds-org">Common Crawl Foundation</span>
+                        </div>
+                        <div class="ds-desc">Petabytes of web crawl data, updated monthly and free to use. The raw
+                            material behind C4 and most large pretraining corpora.</div>
+                        <span class="ds-go">Access <span class="arrow">↗</span></span>
+                    </a>
+
+                    <a class="ds-row" href="https://huggingface.co/datasets/Salesforce/wikitext" target="_blank"
+                        rel="noopener">
+                        <div>
+                            <div class="ds-name">WikiText-103</div>
+                            <span class="ds-org">Salesforce · Hugging Face</span>
+                        </div>
+                        <div class="ds-desc">100M tokens of verified Wikipedia articles. Small enough to train a
+                            language model on modest hardware.</div>
+                        <span class="ds-go">Download <span class="arrow">↗</span></span>
+                    </a>
+
+                    <a class="ds-row" href="https://ai.stanford.edu/~amaas/data/sentiment/" target="_blank"
+                        rel="noopener">
+                        <div>
+                            <div class="ds-name">IMDb Movie Reviews</div>
+                            <span class="ds-org">Stanford</span>
+                        </div>
+                        <div class="ds-desc">50k polarised reviews for binary sentiment classification. The standard
+                            first text-classification exercise.</div>
+                        <span class="ds-go">Download <span class="arrow">↗</span></span>
+                    </a>
+                </div>
+
+                <!-- ---- Comics & narrative ---- -->
+                <div class="shelf" data-reveal>
+                    <div class="shelf__head">
+                        <h3>Comics &amp; Visual Narrative</h3>
+                        <span class="shelf__note">Text-to-comic project</span>
+                    </div>
+
+                    <a class="ds-row" href="http://www.manga109.org/en/" target="_blank" rel="noopener">
+                        <div>
+                            <div class="ds-name">Manga109</div>
+                            <span class="ds-org">University of Tokyo</span>
+                        </div>
+                        <div class="ds-desc">109 professionally drawn manga volumes annotated with frames, faces,
+                            bodies and text regions. Academic use, application required.</div>
+                        <span class="ds-go">Request <span class="arrow">↗</span></span>
+                    </a>
+
+                    <a class="ds-row" href="https://obj.umiacs.umd.edu/comics/index.html" target="_blank"
+                        rel="noopener">
+                        <div>
+                            <div class="ds-name">COMICS</div>
+                            <span class="ds-org">University of Maryland</span>
+                        </div>
+                        <div class="ds-desc">1.2M panels from Golden Age comics with transcribed text boxes, plus
+                            closure-based narrative tasks. Directly relevant to panel-sequence modelling.</div>
+                        <span class="ds-go">Download <span class="arrow">↗</span></span>
+                    </a>
+
+                    <a class="ds-row" href="https://visionandlanguage.net/VIST/" target="_blank" rel="noopener">
+                        <div>
+                            <div class="ds-name">VIST — Visual Storytelling</div>
+                            <span class="ds-org">Microsoft Research</span>
+                        </div>
+                        <div class="ds-desc">Photo sequences paired with narrative text rather than isolated
+                            captions. The closest public analogue to script-to-panel alignment.</div>
+                        <span class="ds-go">Download <span class="arrow">↗</span></span>
+                    </a>
+
+                    <a class="ds-row" href="https://ebdtheque.univ-lr.fr/" target="_blank" rel="noopener">
+                        <div>
+                            <div class="ds-name">eBDtheque</div>
+                            <span class="ds-org">University of La Rochelle</span>
+                        </div>
+                        <div class="ds-desc">Comic pages annotated with panels, balloons, text and characters across
+                            French, American and Japanese styles.</div>
+                        <span class="ds-go">Request <span class="arrow">↗</span></span>
+                    </a>
+                </div>
+
+                <!-- ---- Fairness ---- -->
+                <div class="shelf" data-reveal>
+                    <div class="shelf__head">
+                        <h3>Fairness &amp; Bias Evaluation</h3>
+                        <span class="shelf__note">Ethics area</span>
+                    </div>
+
+                    <a class="ds-row" href="https://github.com/moinnadeem/StereoSet" target="_blank" rel="noopener">
+                        <div>
+                            <div class="ds-name">StereoSet</div>
+                            <span class="ds-org">MIT</span>
+                        </div>
+                        <div class="ds-desc">Measures stereotypical bias in language models across gender,
+                            profession, race and religion, while controlling for language modelling ability.</div>
+                        <span class="ds-go">Download <span class="arrow">↗</span></span>
+                    </a>
+
+                    <a class="ds-row" href="https://github.com/nyu-mll/crows-pairs" target="_blank" rel="noopener">
+                        <div>
+                            <div class="ds-name">CrowS-Pairs</div>
+                            <span class="ds-org">NYU</span>
+                        </div>
+                        <div class="ds-desc">1508 minimal sentence pairs covering nine bias types, used to probe
+                            what a masked language model prefers.</div>
+                        <span class="ds-go">Download <span class="arrow">↗</span></span>
+                    </a>
+
+                    <a class="ds-row" href="https://github.com/uclanlp/corefBias" target="_blank" rel="noopener">
+                        <div>
+                            <div class="ds-name">WinoBias</div>
+                            <span class="ds-org">UCLA NLP</span>
+                        </div>
+                        <div class="ds-desc">Coreference sentences designed so that occupational gender stereotypes
+                            and correct resolution point in opposite directions.</div>
+                        <span class="ds-go">Download <span class="arrow">↗</span></span>
+                    </a>
+
+                    <a class="ds-row" href="https://github.com/joojs/fairface" target="_blank" rel="noopener">
+                        <div>
+                            <div class="ds-name">FairFace</div>
+                            <span class="ds-org">UCLA</span>
+                        </div>
+                        <div class="ds-desc">108k face images balanced across seven race groups — built as a
+                            corrective to the skew in earlier face datasets.</div>
+                        <span class="ds-go">Download <span class="arrow">↗</span></span>
+                    </a>
+                </div>
+
+                <!-- ---- Biomedical ---- -->
+                <div class="shelf" data-reveal>
+                    <div class="shelf__head">
+                        <h3>Biomedical &amp; Clinical</h3>
+                        <span class="shelf__note">AI for social good</span>
+                    </div>
+
+                    <a class="ds-row" href="https://huggingface.co/datasets/bigbio/ddi_corpus" target="_blank"
+                        rel="noopener">
+                        <div>
+                            <div class="ds-name">DDI Corpus</div>
+                            <span class="ds-org">SemEval · BigBIO mirror</span>
+                        </div>
+                        <div class="ds-desc">Annotated drug–drug interactions from DrugBank and MEDLINE. The corpus
+                            behind the lab's own DDI extraction paper.</div>
+                        <span class="ds-go">Download <span class="arrow">↗</span></span>
+                    </a>
+
+                    <a class="ds-row" href="https://www.ncbi.nlm.nih.gov/pmc/tools/openftlist/" target="_blank"
+                        rel="noopener">
+                        <div>
+                            <div class="ds-name">PMC Open Access Subset</div>
+                            <span class="ds-org">NIH / NCBI</span>
+                        </div>
+                        <div class="ds-desc">Millions of full-text biomedical articles licensed for reuse, including
+                            bulk download. The base corpus for biomedical NLP.</div>
+                        <span class="ds-go">Download <span class="arrow">↗</span></span>
+                    </a>
+
+                    <a class="ds-row" href="https://physionet.org/content/mimiciv/" target="_blank" rel="noopener">
+                        <div>
+                            <div class="ds-name">MIMIC-IV</div>
+                            <span class="ds-org">MIT Lab for Computational Physiology</span>
+                        </div>
+                        <div class="ds-desc">De-identified critical care records from a US hospital. Credentialed
+                            access only — training and a data use agreement are required.</div>
+                        <span class="ds-go">Credentialed <span class="arrow">↗</span></span>
+                    </a>
+
+                    <a class="ds-row" href="https://go.drugbank.com/" target="_blank" rel="noopener">
+                        <div>
+                            <div class="ds-name">DrugBank</div>
+                            <span class="ds-org">University of Alberta</span>
+                        </div>
+                        <div class="ds-desc">Curated drug, target and interaction data. Free for academic use with
+                            registration; commercial use is licensed separately.</div>
+                        <span class="ds-go">Register <span class="arrow">↗</span></span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ Where to look ============ -->
+        <section class="shell">
+            <div class="prose">
+                <p class="prose__label" data-reveal>03 — Where to look</p>
+                <div data-reveal>
+                    <h2>Finding a dataset nobody handed you.</h2>
+                    <p>Most research questions do not have a purpose-built corpus waiting for them. These are the
+                        indexes worth searching before you conclude one does not exist — and before you spend a
+                        term building your own.</p>
+
+                    <div class="shelf" style="margin-top: 30px;">
+                        <div class="shelf__head">
+                            <h3>Hubs &amp; search</h3>
+                            <span class="shelf__note">Start here</span>
+                        </div>
+
+                        <a class="ds-row" href="https://huggingface.co/datasets" target="_blank" rel="noopener">
+                            <div>
+                                <div class="ds-name">Hugging Face Datasets</div>
+                                <span class="ds-org">Hugging Face</span>
+                            </div>
+                            <div class="ds-desc">Hundreds of thousands of datasets, loadable in one line of Python.
+                                The first place to look for anything.</div>
+                            <span class="ds-go">Browse <span class="arrow">↗</span></span>
+                        </a>
+
+                        <a class="ds-row" href="https://datasetsearch.research.google.com/" target="_blank"
+                            rel="noopener">
+                            <div>
+                                <div class="ds-name">Google Dataset Search</div>
+                                <span class="ds-org">Google</span>
+                            </div>
+                            <div class="ds-desc">Indexes dataset metadata across the open web, including
+                                repositories no ML hub has picked up.</div>
+                            <span class="ds-go">Search <span class="arrow">↗</span></span>
+                        </a>
+
+                        <a class="ds-row" href="https://www.kaggle.com/datasets" target="_blank" rel="noopener">
+                            <div>
+                                <div class="ds-name">Kaggle Datasets</div>
+                                <span class="ds-org">Kaggle</span>
+                            </div>
+                            <div class="ds-desc">Community-uploaded data with notebooks attached. Quality varies
+                                wildly — check provenance before citing anything from here.</div>
+                            <span class="ds-go">Browse <span class="arrow">↗</span></span>
+                        </a>
+
+                        <a class="ds-row" href="https://zenodo.org/" target="_blank" rel="noopener">
+                            <div>
+                                <div class="ds-name">Zenodo</div>
+                                <span class="ds-org">CERN</span>
+                            </div>
+                            <div class="ds-desc">Open research repository that mints a DOI for anything you deposit.
+                                Where our own dataset lives, and where yours should.</div>
+                            <span class="ds-go">Browse <span class="arrow">↗</span></span>
+                        </a>
+
+                        <a class="ds-row" href="https://archive.ics.uci.edu/" target="_blank" rel="noopener">
+                            <div>
+                                <div class="ds-name">UCI Machine Learning Repository</div>
+                                <span class="ds-org">UC Irvine</span>
+                            </div>
+                            <div class="ds-desc">The oldest ML dataset archive, running since 1987. Small, tabular,
+                                well-documented classics.</div>
+                            <span class="ds-go">Browse <span class="arrow">↗</span></span>
+                        </a>
+
+                        <a class="ds-row" href="https://www.openslr.org/" target="_blank" rel="noopener">
+                            <div>
+                                <div class="ds-name">OpenSLR</div>
+                                <span class="ds-org">Open Speech and Language Resources</span>
+                            </div>
+                            <div class="ds-desc">Speech corpora, lexicons and language resources across many
+                                languages, free to download.</div>
+                            <span class="ds-go">Browse <span class="arrow">↗</span></span>
+                        </a>
+
+                        <a class="ds-row" href="https://data.gov.in/" target="_blank" rel="noopener">
+                            <div>
+                                <div class="ds-name">data.gov.in</div>
+                                <span class="ds-org">Government of India</span>
+                            </div>
+                            <div class="ds-desc">Open government data across health, education, agriculture and
+                                transport — useful for applied and social-good projects.</div>
+                            <span class="ds-go">Browse <span class="arrow">↗</span></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ Tools ============ -->
+        <section class="band band--tint">
+            <div class="shell">
+                <div class="band-head" data-reveal>
+                    <div>
+                        <p class="eyebrow eyebrow--plain">04 — Working stack</p>
+                        <h2>What members actually run.</h2>
+                    </div>
+                </div>
+
+                <div class="tools" data-reveal>
+                    <div class="tool">
+                        <h4>PyTorch</h4>
+                        <p>The lab's default framework. Nearly every project here is written against it.</p>
+                        <a href="https://pytorch.org/" target="_blank" rel="noopener">pytorch.org ↗</a>
+                    </div>
+                    <div class="tool">
+                        <h4>TensorFlow</h4>
+                        <p>Used where an existing implementation or pretrained checkpoint calls for it.</p>
+                        <a href="https://www.tensorflow.org/" target="_blank" rel="noopener">tensorflow.org ↗</a>
+                    </div>
+                    <div class="tool">
+                        <h4>Transformers</h4>
+                        <p>Pretrained language, vision and multimodal models with a consistent interface.</p>
+                        <a href="https://huggingface.co/docs/transformers" target="_blank"
+                            rel="noopener">huggingface.co ↗</a>
+                    </div>
+                    <div class="tool">
+                        <h4>Diffusers</h4>
+                        <p>Diffusion pipelines for image and audio generation — the basis of our synthetic data
+                            work.</p>
+                        <a href="https://huggingface.co/docs/diffusers" target="_blank" rel="noopener">huggingface.co
+                            ↗</a>
+                    </div>
+                    <div class="tool">
+                        <h4>Datasets</h4>
+                        <p>Loading, streaming and preprocessing corpora too large to hold in memory.</p>
+                        <a href="https://huggingface.co/docs/datasets" target="_blank" rel="noopener">huggingface.co
+                            ↗</a>
+                    </div>
+                    <div class="tool">
+                        <h4>scikit-learn</h4>
+                        <p>Baselines, classical models and evaluation metrics. Always run the baseline first.</p>
+                        <a href="https://scikit-learn.org/" target="_blank" rel="noopener">scikit-learn.org ↗</a>
+                    </div>
+                    <div class="tool">
+                        <h4>Weights &amp; Biases</h4>
+                        <p>Experiment tracking, so that a result from three weeks ago can still be reproduced.</p>
+                        <a href="https://wandb.ai/site" target="_blank" rel="noopener">wandb.ai ↗</a>
+                    </div>
+                    <div class="tool">
+                        <h4>Google Colab</h4>
+                        <p>Free GPU access for members without local hardware. Where most first experiments run.</p>
+                        <a href="https://colab.research.google.com/" target="_blank" rel="noopener">colab.research ↗</a>
+                    </div>
+                    <div class="tool">
+                        <h4>arXiv</h4>
+                        <p>Where the papers you are implementing live, and where preprints go first.</p>
+                        <a href="https://arxiv.org/" target="_blank" rel="noopener">arxiv.org ↗</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ Using data well ============ -->
+        <section class="shell">
+            <div class="prose" style="border-bottom: 0;">
+                <p class="prose__label" data-reveal>05 — Before you download</p>
+                <div data-reveal>
+                    <h2>Three things that get papers rejected.</h2>
+                    <div class="notes">
+                        <div class="note">
+                            <span class="note__tag">Licensing</span>
+                            <h3>Check the terms first.</h3>
+                            <p>"Publicly available" is not the same as "free to use however you like". Several
+                                datasets above permit academic research only, some require a signed agreement, and
+                                a few forbid redistribution of derived data entirely. Read the licence before the
+                                first experiment, not before submission.</p>
+                        </div>
+                        <div class="note">
+                            <span class="note__tag">Citation</span>
+                            <h3>Cite the dataset paper.</h3>
+                            <p>Every dataset here has an accompanying publication, and its authors are counting on
+                                that citation the same way you will count on yours. Cite the corpus, the version
+                                and the split you used — vague provenance is a reviewer's first complaint.</p>
+                        </div>
+                        <div class="note">
+                            <span class="note__tag">Ethics</span>
+                            <h3>Know who is in your data.</h3>
+                            <p>Web-scraped corpora contain people who never agreed to be there, and their skew
+                                becomes your model's behaviour. Report what your data covers and what it misses.
+                                This is not a formality here — it is one of our four research areas.</p>
+                        </div>
+                        <div class="note">
+                            <span class="note__tag">Releasing</span>
+                            <h3>Publish yours properly.</h3>
+                            <p>If a project produces a dataset, it gets a DOI, an explicit licence and a datasheet
+                                covering collection method, intended use and known limitations. That is the standard
+                                the lab holds its own releases to.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ CTA ============ -->
+        <section class="band band--ink">
+            <div class="shell cta">
+                <div data-reveal>
+                    <p class="eyebrow eyebrow--plain">Missing something?</p>
+                    <h2>Tell us what should be on this list.</h2>
+                </div>
+                <div data-reveal>
+                    <p>If you work with a corpus in your field that belongs here — especially outside vision and
+                        English-language NLP — send it to us and we will add it. The list is meant to be useful,
+                        not complete.</p>
+                    <div class="cta__actions">
+                        <a class="btn btn--light" href="mailto:admission@thekoreancad.com">Suggest a dataset <span
+                                class="arrow">→</span></a>
+                        <a class="btn btn--light" href="publications.html">Our publications</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ============ Footer ============ -->
+    <footer class="site-footer">
+        <div class="shell">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="footer-brand__name">CAAI</div>
+                    <p>Center for Applied Artificial Intelligence — a guided research lab operating under
+                        The Korean Academy.</p>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Research</h4>
+                    <ul>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="research-areas.html">Areas</a></li>
+                        <li><a href="publications.html">Publications</a></li>
+                        <li><a href="resources.html">Datasets &amp; Code</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Lab</h4>
+                    <ul>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="members.html">People</a></li>
+                        <li><a href="news.html">News &amp; Events</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="mailto:admission@thekoreancad.com">admission@thekoreancad.com</a></li>
+                        <li><a href="join-us.html">Apply to the lab</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-base">
+                <span>© 2025 Center for Applied Artificial Intelligence</span>
+                <span>All rights reserved</span>
+            </div>
         </div>
     </footer>
 
+    <script src="landing.js"></script>
 </body>
 
 </html>

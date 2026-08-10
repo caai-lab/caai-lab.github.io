@@ -4,143 +4,267 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CAAI: Join Us</title>
+    <title>Join the Lab — CAAI</title>
+    <meta name="description"
+        content="CAAI is accepting graduate research assistants and undergraduate research interns. Requirements, process and registration.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Lato:wght@300;400;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..500&family=Inter:wght@400;500&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="landing.css">
+    <link rel="stylesheet" href="pages.css">
 </head>
 
-<body>
+<body class="page">
 
-    <header>
-        <div class="container">
-            <div class="header-content">
-                <div class="logo-section">
-                    <img src="caai cropped.jpg" alt="CAAI Logo">
-                    <div class="title-section">
-                        <h1>CAAI</h1>
-                        <p>Center for Applied Artificial Intelligence</p>
-                    </div>
-                </div>
-                <button class="menu-toggle" aria-label="Toggle navigation">&#9776;</button>
-                <nav>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li>
-                            <a href="#" class="active">About ▾</a>
-                            <ul class="dropdown-menu">
-                                <li><a href="about.html">About the Lab</a></li>
-                                <li><a href="join-us.html" class="active">Join Us</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#">Research ▾</a>
-                            <ul class="dropdown-menu">
-                                <li><a href="projects.html">Research Projects</a></li>
-                                <li><a href="research-areas.html">Research Areas</a></li>
-                                <li><a href="resources.html">Datasets & Code</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#">People ▾</a>
-                            <ul class="dropdown-menu">
-                                <li><a href="members.html">Current Team</a></li>
-                                <li><a href="members.html#alumni">Alumni</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#">Happenings ▾</a>
-                            <ul class="dropdown-menu">
-                                <li><a href="news.html">News & Events</a></li>
-                                <li><a href="gallery.html">Photo Gallery</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="publications.html">Publications</a></li>
-                    </ul>
-                </nav>
-            </div>
+    <!-- ============ Header ============ -->
+    <header class="site-header" id="site-header">
+        <div class="shell header-inner">
+            <a class="brand" href="index.html">
+                <img class="brand__mark" src="caai cropped.jpg" alt="">
+                <span>
+                    <span class="brand__name">CAAI</span>
+                    <span class="brand__sub">Center for Applied Artificial Intelligence</span>
+                </span>
+            </a>
+
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                <span></span><span></span>
+            </button>
+
+            <nav class="nav" id="nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li>
+                        <a href="about.html" class="is-active">About <span class="caret">▼</span></a>
+                        <ul class="submenu">
+                            <li><a href="about.html">About the Lab</a></li>
+                            <li><a href="join-us.html">Join Us</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="projects.html">Research <span class="caret">▼</span></a>
+                        <ul class="submenu">
+                            <li><a href="projects.html">Research Projects</a></li>
+                            <li><a href="research-areas.html">Research Areas</a></li>
+                            <li><a href="resources.html">Datasets &amp; Code</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="members.html">People <span class="caret">▼</span></a>
+                        <ul class="submenu">
+                            <li><a href="members.html">Current Team</a></li>
+                            <li><a href="members.html#alumni">Alumni</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="news.html">Happenings <span class="caret">▼</span></a>
+                        <ul class="submenu">
+                            <li><a href="news.html">News &amp; Events</a></li>
+                            <li><a href="gallery.html">Photo Gallery</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="publications.html">Publications</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
 
-    <div class="page-intro">
-        <div class="container">
-            <h2>Join the Lab</h2>
-            <p>We are always looking for motivated students and researchers to join our team.</p>
-        </div>
-    </div>
+    <main>
 
-    <section>
-        <div class="container">
-            <div class="notice-card">
-                <div class="notice-header">
-                    <h3>Open Positions – Fall 2025</h3>
-                    <span class="notice-badge">Recruiting</span>
+        <!-- ============ Masthead ============ -->
+        <section class="masthead">
+            <div class="shell masthead__inner">
+                <div data-reveal>
+                    <p class="eyebrow eyebrow--plain">Join Us</p>
+                    <h1>Bring a question. Leave with a <em>paper</em>.</h1>
                 </div>
-                <p>CAAI is accepting new members for the upcoming academic term. Openings available for:</p>
-                <ul>
-                    <li><strong>Graduate Research Assistants (PhD/Masters)</strong>: For students with a strong
-                        background in Machine Learning.</li>
-                    <li><strong>Undergraduate Research Interns</strong>: For juniors/seniors with Python experience and
-                        a passion for AI.</li>
-                </ul>
-                <p>Candidates should demonstrate strong programming skills (Python, PyTorch/TensorFlow) and research
-                    aptitude.</p>
-                <div style="margin-top: 20px;">
-                    <a href="mailto:gurpreetsinghmcse@gmail.com" class="btn"
-                        style="background: var(--harvard-crimson); color: white; padding: 10px 20px; text-decoration: none; border-radius: 4px; display: inline-block;">Apply
-                        Now</a>
+                <p class="masthead__lede" data-reveal>
+                    We are always looking for motivated students and researchers. Members join an active project
+                    from day one and work it through to a submission.
+                </p>
+            </div>
+        </section>
+
+        <!-- ============ Open positions ============ -->
+        <section class="shell">
+            <div class="prose">
+                <p class="prose__label" data-reveal>01 — Open Positions</p>
+                <div data-reveal>
+                    <h2>Recruiting for Fall 2025.</h2>
+                    <p>CAAI is accepting new members for the upcoming academic term. Two tracks are open, and both
+                        place you on a live project rather than a training exercise.</p>
+
+                    <div class="positions">
+                        <article class="position">
+                            <span class="position__tag">Track 01</span>
+                            <h3>Graduate Research Assistants</h3>
+                            <p>PhD and Masters students with a strong background in machine learning, taking
+                                ownership of a project's method and evaluation.</p>
+                        </article>
+
+                        <article class="position">
+                            <span class="position__tag">Track 02</span>
+                            <h3>Undergraduate Research Interns</h3>
+                            <p>Juniors and seniors with Python experience and a genuine interest in AI, working
+                                alongside a mentor on implementation and experiments.</p>
+                        </article>
+                    </div>
                 </div>
             </div>
 
-            <div style="margin-top: 40px;">
-                <h3>How to Apply</h3>
-                <div style="margin-top: 20px;">
-  <p style="margin: 0 0 10px; font-weight: 700; color: var(--harvard-crimson);">
-    Registration Fee: ₹6,000
-  </p>
-
-  <div
-    class="razorpay-embed-btn"
-    data-url="https://pages.razorpay.com/pl_SN8jMTsLWJFvKE/view"
-    data-text="Register Now - ₹6,000"
-    data-color="#528FF0"
-    data-size="large"
-  >
-    <script>
-      (function () {
-        var d = document;
-        var x = !d.getElementById("razorpay-embed-btn-js");
-        if (x) {
-          var s = d.createElement("script");
-          s.defer = true;
-          s.id = "razorpay-embed-btn-js";
-          s.src = "https://cdn.razorpay.com/static/embed_btn/bundle.js";
-          d.body.appendChild(s);
-        } else {
-          var rzp = window["__rzp__"];
-          rzp && rzp.init && rzp.init();
-        }
-      })();
-    </script>
-  </div>
-</div>
-
-                </ol>
+            <!-- ============ What we look for ============ -->
+            <div class="prose">
+                <p class="prose__label" data-reveal>02 — What we look for</p>
+                <div data-reveal>
+                    <h2>Programming ability and research patience.</h2>
+                    <ul>
+                        <li><strong>Python, fluently.</strong> You should be comfortable writing and debugging your
+                            own code, not only running someone else's notebook.</li>
+                        <li><strong>PyTorch or TensorFlow.</strong> Enough familiarity to implement a method from a
+                            paper and train it.</li>
+                        <li><strong>Research aptitude.</strong> Reading papers carefully, forming a question, and
+                            staying with an experiment when the first three runs fail.</li>
+                        <li><strong>Follow-through.</strong> Projects run for months. We care more about members who
+                            finish than members who start fast.</li>
+                    </ul>
+                </div>
             </div>
-        </div>
-    </section>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 Center for Applied Artificial Intelligence (CAAI). All rights reserved. | <a
-                    href="mailto:admission@thekoreancad.com" style="color: #bbb; text-decoration: underline;">Contact
-                    Us</a></p>
+            <!-- ============ Process ============ -->
+            <div class="prose">
+                <p class="prose__label" data-reveal>03 — How to apply</p>
+                <div data-reveal>
+                    <h2>Three steps.</h2>
+
+                    <div class="steps">
+                        <div class="step">
+                            <div>
+                                <h3>Read the openings</h3>
+                                <p>Decide which track fits you, and look through the current projects so you know
+                                    what you would be joining.</p>
+                            </div>
+                        </div>
+
+                        <div class="step">
+                            <div>
+                                <h3>Write to us</h3>
+                                <p>Send your background, your programming experience and what you want to work on.
+                                    Anything you have already built or written helps.</p>
+                                <div class="prose__actions">
+                                    <a class="link-quiet" href="mailto:gurpreetsinghmcse@gmail.com">
+                                        gurpreetsinghmcse@gmail.com <span class="arrow">→</span></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="step">
+                            <div>
+                                <h3>Complete registration</h3>
+                                <p>Accepted members confirm their place with the registration fee, then get assigned
+                                    to a project and a mentor.</p>
+
+                                <div class="fee">
+                                    <div>
+                                        <div class="fee__label">Registration fee</div>
+                                        <div class="fee__amount">₹6,000</div>
+                                    </div>
+
+                                    <div class="razorpay-embed-btn" data-url="https://pages.razorpay.com/pl_SN8jMTsLWJFvKE/view"
+                                        data-text="Register now" data-color="#16130F" data-size="large">
+                                        <script>
+                                            (function () {
+                                                var d = document;
+                                                var x = !d.getElementById("razorpay-embed-btn-js");
+                                                if (x) {
+                                                    var s = d.createElement("script");
+                                                    s.defer = true;
+                                                    s.id = "razorpay-embed-btn-js";
+                                                    s.src = "https://cdn.razorpay.com/static/embed_btn/bundle.js";
+                                                    d.body.appendChild(s);
+                                                } else {
+                                                    var rzp = window["__rzp__"];
+                                                    rzp && rzp.init && rzp.init();
+                                                }
+                                            })();
+                                        </script>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ CTA ============ -->
+        <section class="band band--ink">
+            <div class="shell cta">
+                <div data-reveal>
+                    <p class="eyebrow eyebrow--plain">Questions</p>
+                    <h2>Not sure you're ready?</h2>
+                </div>
+                <div data-reveal>
+                    <p>Most of our members weren't when they started — that is the point of a guided lab. Read what
+                        the lab does and who is in it, then write to us anyway.</p>
+                    <div class="cta__actions">
+                        <a class="btn btn--light" href="about.html">About the lab <span class="arrow">→</span></a>
+                        <a class="btn btn--light" href="mailto:admission@thekoreancad.com">General enquiries</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ============ Footer ============ -->
+    <footer class="site-footer">
+        <div class="shell">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="footer-brand__name">CAAI</div>
+                    <p>Center for Applied Artificial Intelligence — a guided research lab operating under
+                        The Korean Academy.</p>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Research</h4>
+                    <ul>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="research-areas.html">Areas</a></li>
+                        <li><a href="publications.html">Publications</a></li>
+                        <li><a href="resources.html">Datasets &amp; Code</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Lab</h4>
+                    <ul>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="members.html">People</a></li>
+                        <li><a href="news.html">News &amp; Events</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="mailto:admission@thekoreancad.com">admission@thekoreancad.com</a></li>
+                        <li><a href="mailto:gurpreetsinghmcse@gmail.com">Applications</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-base">
+                <span>© 2025 Center for Applied Artificial Intelligence</span>
+                <span>All rights reserved</span>
+            </div>
         </div>
     </footer>
 
+    <script src="landing.js"></script>
 </body>
 
 </html>

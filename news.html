@@ -4,131 +4,443 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CAAI: News From the Lab</title>
+    <title>News &amp; Events — CAAI</title>
+    <meta name="description"
+        content="CAAI news: lab founder Gurpreet Singh has a paper accepted at an IEEE-organised International Conference 2026 under his university affiliation, nineteen new researchers join, and a live feed of AI research news.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://api.rss2json.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Lato:wght@300;400;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..500&family=Inter:wght@400;500&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="landing.css">
+    <link rel="stylesheet" href="pages.css">
 </head>
 
-<body>
+<body class="page">
 
-    <header>
-        <div class="container">
-            <div class="header-content">
-                <div class="logo-section">
-                    <img src="caai cropped.jpg" alt="CAAI Logo">
-                    <div class="title-section">
-                        <h1>CAAI</h1>
-                        <p>Center for Applied Artificial Intelligence</p>
-                    </div>
-                </div>
-                <button class="menu-toggle" aria-label="Toggle navigation">&#9776;</button>
-                <nav>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li>
-                            <a href="#">About ▾</a>
-                            <ul class="dropdown-menu">
-                                <li><a href="about.html">About the Lab</a></li>
-                                <li><a href="join-us.html">Join Us</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#">Research ▾</a>
-                            <ul class="dropdown-menu">
-                                <li><a href="projects.html">Research Projects</a></li>
-                                <li><a href="research-areas.html">Research Areas</a></li>
-                                <li><a href="resources.html">Datasets & Code</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#">People ▾</a>
-                            <ul class="dropdown-menu">
-                                <li><a href="members.html">Current Team</a></li>
-                                <li><a href="members.html#alumni">Alumni</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#" class="active">Happenings ▾</a>
-                            <ul class="dropdown-menu">
-                                <li><a href="news.html" class="active">News & Events</a></li>
-                                <li><a href="gallery.html">Photo Gallery</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="publications.html">Publications</a></li>
-                    </ul>
-                </nav>
-            </div>
+    <!-- ============ Header ============ -->
+    <header class="site-header" id="site-header">
+        <div class="shell header-inner">
+            <a class="brand" href="index.html">
+                <img class="brand__mark" src="caai cropped.jpg" alt="">
+                <span>
+                    <span class="brand__name">CAAI</span>
+                    <span class="brand__sub">Center for Applied Artificial Intelligence</span>
+                </span>
+            </a>
+
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                <span></span><span></span>
+            </button>
+
+            <nav class="nav" id="nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li>
+                        <a href="about.html">About <span class="caret">▼</span></a>
+                        <ul class="submenu">
+                            <li><a href="about.html">About the Lab</a></li>
+                            <li><a href="join-us.html">Join Us</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="projects.html">Research <span class="caret">▼</span></a>
+                        <ul class="submenu">
+                            <li><a href="projects.html">Research Projects</a></li>
+                            <li><a href="research-areas.html">Research Areas</a></li>
+                            <li><a href="resources.html">Datasets &amp; Code</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="members.html">People <span class="caret">▼</span></a>
+                        <ul class="submenu">
+                            <li><a href="members.html">Current Team</a></li>
+                            <li><a href="members.html#alumni">Alumni</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="news.html" class="is-active">Happenings <span class="caret">▼</span></a>
+                        <ul class="submenu">
+                            <li><a href="news.html">News &amp; Events</a></li>
+                            <li><a href="gallery.html">Photo Gallery</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="publications.html">Publications</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
 
-    <div class="page-intro">
-        <div class="container">
-            <h2>News From the Lab</h2>
-            <p>Latest updates, conference attendances, and publications.</p>
-        </div>
-    </div>
+    <main>
 
-    <section>
-        <div class="container">
-            <h3 class="section-subtitle">Lab Updates</h3>
-            <div class="news-list">
-                <div class="news-item">
-                    <div class="news-date">Dec 2025</div>
-                    <div class="news-content">Team members attended <strong>The European AI Conference 2025</strong>.
+        <!-- ============ Ticker ============ -->
+        <div class="marquee" aria-hidden="true" style="border-top: 0;">
+            <div class="marquee__track">
+                <div class="marquee__group">
+                    <span>Breaking</span><span>Gurpreet Singh — paper accepted, IEEE International Conference
+                        2026</span><span>Scopus indexed</span><span>19 researchers joined 9 August</span>
+                    <span>4 projects running</span>
+                </div>
+                <div class="marquee__group">
+                    <span>Breaking</span><span>Gurpreet Singh — paper accepted, IEEE International Conference
+                        2026</span><span>Scopus indexed</span><span>19 researchers joined 9 August</span>
+                    <span>4 projects running</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============ Lead story ============ -->
+        <section class="band band--ink lead-story">
+            <div class="shell">
+                <div class="story" data-reveal>
+                    <div>
+                        <span class="story__flag">Breaking · 10 August 2026</span>
+
+                        <h2>Gurpreet Singh’s paper accepted at IEEE International Conference <em>2026</em>.</h2>
+
+                        <p><strong>Gurpreet Singh</strong>, founder and research mentor of CAAI, has had a paper
+                            accepted for the International Conference 2026 organised by the IEEE. The proceedings
+                            are indexed in Scopus.</p>
+
+                        <p>The paper is his own work and is published under his university affiliation, not the
+                            lab’s — CAAI claims no credit for it. We are marking it here because he is a member of
+                            this lab, and because it is the standard of work the people he mentors are being pointed
+                            towards.</p>
+
+                        <dl class="story__meta">
+                            <div>
+                                <dt>Author</dt>
+                                <dd>Gurpreet Singh</dd>
+                            </div>
+                            <div>
+                                <dt>Venue</dt>
+                                <dd>International Conference 2026 · IEEE</dd>
+                            </div>
+                            <div>
+                                <dt>Affiliation</dt>
+                                <dd>Author’s university</dd>
+                            </div>
+                            <div>
+                                <dt>Indexing</dt>
+                                <dd>Scopus</dd>
+                            </div>
+                        </dl>
+
+                        <div class="cta__actions" style="margin-top: 32px;">
+                            <a class="btn btn--light" href="publications.html">All publications <span
+                                    class="arrow">→</span></a>
+                            <a class="btn btn--light"
+                                href="https://scholar.google.com/citations?user=5OrupV0AAAAJ&amp;hl=ko" target="_blank"
+                                rel="noopener">Google Scholar</a>
+                        </div>
+                    </div>
+
+                    <figure class="seal fig-invert">
+                        <svg viewBox="0 0 300 300" role="img" aria-label="Acceptance seal">
+                            <defs>
+                                <path id="sealArc"
+                                    d="M150 150 m -104 0 a 104 104 0 1 1 208 0 a 104 104 0 1 1 -208 0" />
+                            </defs>
+
+                            <!-- burst -->
+                            <g class="seal-burst" style="transform-box: fill-box; transform-origin: center;">
+                                <path d="M150 8 v18 M150 274 v18 M8 150 h18 M274 150 h18
+                                         M50 50 l13 13 M237 237 l13 13 M250 50 l-13 13 M63 237 l-13 13" />
+                            </g>
+
+                            <circle class="seal-ring seal-ring--dashed" cx="150" cy="150" r="132" />
+                            <circle class="seal-ring" cx="150" cy="150" r="118" />
+
+                            <text class="seal-text">
+                                <textPath href="#sealArc" startOffset="25%" text-anchor="middle">
+                                    IEEE · International Conference 2026
+                                </textPath>
+                            </text>
+                            <text class="seal-text">
+                                <textPath href="#sealArc" startOffset="75%" text-anchor="middle">
+                                    Scopus Indexed
+                                </textPath>
+                            </text>
+
+                            <g class="seal-stamp">
+                                <circle class="seal-body" cx="150" cy="150" r="84" />
+                                <path class="seal-check" d="M118 152 l20 21 l45 -48" />
+                                <text class="seal-word" x="150" y="118" text-anchor="middle">Accepted</text>
+                                <text class="seal-sub" x="150" y="206" text-anchor="middle">Individual Author</text>
+                            </g>
+                        </svg>
+                    </figure>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ Masthead ============ -->
+        <section class="masthead">
+            <div class="shell masthead__inner">
+                <div data-reveal>
+                    <p class="eyebrow eyebrow--plain">Happenings</p>
+                    <h1>News &amp; <em>events</em>.</h1>
+                </div>
+                <p class="masthead__lede" data-reveal>
+                    What the lab is doing, who has just joined, and what the wider field published this week.
+                </p>
+            </div>
+        </section>
+
+        <!-- ============ New cohort ============ -->
+        <section class="shell">
+            <div class="prose">
+                <p class="prose__label" data-reveal>9 August 2026</p>
+                <div data-reveal>
+                    <h2>Nineteen researchers join the lab.</h2>
+                    <p>On 9 August 2026 CAAI welcomed its largest single intake — nineteen new researchers, arriving
+                        from journalism, molecular biology, finance, logistics, psychology, law, media and design.
+                        Each is being matched to a project, and the fields below are what they came here to work
+                        on.</p>
+                    <p>It is the clearest illustration yet of how the lab is meant to work: artificial intelligence
+                        is the method, and the questions come from everywhere else.</p>
+
+                    <div class="joined">
+                        <div class="joined__row">
+                            <div class="joined__name">Ritika Kanojia</div>
+                            <div class="joined__field">AI, journalism, media culture and psychology, fashion and
+                                textile innovation</div>
+                        </div>
+                        <div class="joined__row">
+                            <div class="joined__name">Sudipta Patil</div>
+                            <div class="joined__field">Gene editing</div>
+                        </div>
+                        <div class="joined__row">
+                            <div class="joined__name">Anjali</div>
+                            <div class="joined__field">Field to be announced</div>
+                        </div>
+                        <div class="joined__row">
+                            <div class="joined__name">Rupinder Kaur</div>
+                            <div class="joined__field">Marketing and social media — entertainment and beauty</div>
+                        </div>
+                        <div class="joined__row">
+                            <div class="joined__name">Purnima Rajak</div>
+                            <div class="joined__field">AI-driven business and marketing</div>
+                        </div>
+                        <div class="joined__row">
+                            <div class="joined__name">Fathima Hisana</div>
+                            <div class="joined__field">AI in accounting, financial technology, business analytics
+                            </div>
+                        </div>
+                        <div class="joined__row">
+                            <div class="joined__name">Vanshika Tambe</div>
+                            <div class="joined__field">AI in healthcare and drug discovery</div>
+                        </div>
+                        <div class="joined__row">
+                            <div class="joined__name">Muskan Kumari</div>
+                            <div class="joined__field">Business, strategic management, supply chain and logistics
+                            </div>
+                        </div>
+                        <div class="joined__row">
+                            <div class="joined__name">Sneha</div>
+                            <div class="joined__field">International business, global trade, cross-cultural
+                                management</div>
+                        </div>
+                        <div class="joined__row">
+                            <div class="joined__name">Anvi Panjwani</div>
+                            <div class="joined__field">AI, machine learning, data science, statistical analysis</div>
+                        </div>
+                        <div class="joined__row">
+                            <div class="joined__name">Madiha</div>
+                            <div class="joined__field">Speech and language processing, media psychology and culture
+                            </div>
+                        </div>
+                        <div class="joined__row">
+                            <div class="joined__name">Jyoti</div>
+                            <div class="joined__field">Field to be announced</div>
+                        </div>
+                        <div class="joined__row">
+                            <div class="joined__name">Jiya Vishal Kumar</div>
+                            <div class="joined__field">AI, creative technologies, human–computer interaction, UX</div>
+                        </div>
+                        <div class="joined__row">
+                            <div class="joined__name">Muskan Pal</div>
+                            <div class="joined__field">AI in financial markets, algorithmic trading, FinTech</div>
+                        </div>
+                        <div class="joined__row">
+                            <div class="joined__name">Chaitri Gautam</div>
+                            <div class="joined__field">Industrial and organisational psychology</div>
+                        </div>
+                        <div class="joined__row">
+                            <div class="joined__name">Prachi</div>
+                            <div class="joined__field">International trade and economics law, Korean culture studies
+                            </div>
+                        </div>
+                        <div class="joined__row">
+                            <div class="joined__name">Sri Devi</div>
+                            <div class="joined__field">AI in logistics, supply chain management, port operations</div>
+                        </div>
+                        <div class="joined__row">
+                            <div class="joined__name">Niharika</div>
+                            <div class="joined__field">Supply chain, operations, AI in business operations,
+                                international trade</div>
+                        </div>
+                        <div class="joined__row">
+                            <div class="joined__name">Khushi</div>
+                            <div class="joined__field">International business, global markets, digital marketing</div>
+                        </div>
+                    </div>
+
+                    <div class="prose__actions">
+                        <a class="link-quiet" href="members.html">Meet the team <span class="arrow">→</span></a>
+                        <a class="link-quiet" href="join-us.html">Join the next intake <span
+                                class="arrow">→</span></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ Lab updates ============ -->
+        <section class="band band--tint">
+            <div class="shell">
+                <div class="band-head" data-reveal>
+                    <div>
+                        <p class="eyebrow eyebrow--plain">Earlier</p>
+                        <h2>From the lab.</h2>
+                    </div>
+                    <div class="band-head__side">
+                        <a class="link-quiet" href="publications.html">Publications <span class="arrow">→</span></a>
                     </div>
                 </div>
 
-                <div class="news-item">
-                    <div class="news-date">Dec 2025</div>
-                    <div class="news-content">Team attended <strong>SECON International – 4th Annual International ISC2
-                            Chapter Conference</strong>.</div>
+                <div data-reveal>
+                    <div class="entry">
+                        <div class="entry__date">December 2025</div>
+                        <div class="entry__title">Team members attended The European AI Conference 2025.</div>
+                    </div>
+
+                    <div class="entry">
+                        <div class="entry__date">December 2025</div>
+                        <div class="entry__title">Team attended SECON International — 4th Annual International ISC2
+                            Chapter Conference.</div>
+                    </div>
+
+                    <div class="entry">
+                        <div class="entry__date">November 2025</div>
+                        <div class="entry__title">Gurpreet Singh attended the International Conference on Platform
+                            and AI Society in Asia.</div>
+                    </div>
+
+                    <div class="entry">
+                        <div class="entry__date">2025</div>
+                        <div class="entry__title">Research paper published: “Tracing the Evolution of Artificial
+                            Intelligence: A Review of Tools, Frameworks, and Technologies (1950–2025)”.</div>
+                        <div class="entry__note">World Journal of Applied Mathematics and Statistics</div>
+                    </div>
+
+                    <div class="entry">
+                        <div class="entry__date">2025</div>
+                        <div class="entry__title">Lamia Qamar presented “Comparative Study of Convolutional Neural
+                            Networks for Deepfake Video Detection on Social Media” at ICA2S 2025.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ Live AI feed ============ -->
+        <section class="shell">
+            <div class="prose" style="border-bottom: 0;">
+                <p class="prose__label" data-reveal>Wider field</p>
+                <div data-reveal>
+                    <h2>AI intelligence feed.</h2>
+                    <p>Headlines pulled live from the research labs our members read. Text only, cached for the
+                        session, and fetched when you reach it — so the page does not wait on it.</p>
+
+                    <div class="feed-head">
+                        <h3>Latest from the field</h3>
+                        <span class="feed-status" id="feed-status">Idle</span>
+                    </div>
+
+                    <div id="ai-feed">
+                        <div class="skel"><span></span><span></span><span></span></div>
+                        <div class="skel"><span></span><span></span><span></span></div>
+                        <div class="skel"><span></span><span></span><span></span></div>
+                        <div class="skel"><span></span><span></span><span></span></div>
+                        <div class="skel"><span></span><span></span><span></span></div>
+                    </div>
+
+                    <p class="body-text" style="margin-top: 26px; font-size: 13.5px; color: var(--ink-3);">
+                        Sources: OpenAI, Google DeepMind, Google AI and Berkeley AI Research. Headlines belong to
+                        their publishers and link back to the original.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ CTA ============ -->
+        <section class="band band--ink">
+            <div class="shell cta">
+                <div data-reveal>
+                    <p class="eyebrow eyebrow--plain">Next</p>
+                    <h2>The intake after this one.</h2>
+                </div>
+                <div data-reveal>
+                    <p>Nineteen people joined on a single day in August. The lab takes members each term, from any
+                        discipline, and puts them on a live project with a mentor from the start.</p>
+                    <div class="cta__actions">
+                        <a class="btn btn--light" href="join-us.html">How to apply <span class="arrow">→</span></a>
+                        <a class="btn btn--light" href="gallery.html">Photo gallery</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ============ Footer ============ -->
+    <footer class="site-footer">
+        <div class="shell">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="footer-brand__name">CAAI</div>
+                    <p>Center for Applied Artificial Intelligence — a guided research lab operating under
+                        The Korean Academy.</p>
                 </div>
 
-                <div class="news-item">
-                    <div class="news-date">Nov 2025</div>
-                    <div class="news-content">Gurpreet Singh attended <strong>International Conference on Platform and
-                            AI Society in Asia</strong>.</div>
+                <div class="footer-col">
+                    <h4>Research</h4>
+                    <ul>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="research-areas.html">Areas</a></li>
+                        <li><a href="publications.html">Publications</a></li>
+                        <li><a href="resources.html">Datasets &amp; Code</a></li>
+                    </ul>
                 </div>
 
-                <div class="news-item">
-                    <div class="news-date">2025</div>
-                    <div class="news-content">Research paper published: <strong>"Tracing the Evolution of Artificial
-                            Intelligence: A Review of Tools, Frameworks, and Technologies (1950–2025)"</strong> in World
-                        Journal of Applied Mathematics and Statistics.</div>
+                <div class="footer-col">
+                    <h4>Lab</h4>
+                    <ul>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="members.html">People</a></li>
+                        <li><a href="news.html">News &amp; Events</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                    </ul>
                 </div>
 
-                <div class="news-item">
-                    <div class="news-date">2025</div>
-                    <div class="news-content">Lamia Qamar presented <strong>"Comparative Study of Convolutional Neural
-                            Networks for Deepfake Video Detection on Social Media"</strong> at ICA2S 2025.</div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="mailto:admission@thekoreancad.com">admission@thekoreancad.com</a></li>
+                        <li><a href="join-us.html">Apply to the lab</a></li>
+                    </ul>
                 </div>
             </div>
 
-            <hr class="section-divider">
-
-            <h3 class="section-subtitle">AI Intelligence Feed (Live)</h3>
-            <div class="news-list" id="auto-news">
-                <div class="loading-news">
-                    <div class="spinner"></div>
-                    <p>Fetching latest AI breakthroughs...</p>
-                </div>
+            <div class="footer-base">
+                <span>© 2025 Center for Applied Artificial Intelligence</span>
+                <span>All rights reserved</span>
             </div>
-        </div>
-    </section>
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 Center for Applied Artificial Intelligence (CAAI). All rights reserved. | <a
-                    href="mailto:admission@thekoreancad.com" style="color: #bbb; text-decoration: underline;">Contact
-                    Us</a></p>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="landing.js"></script>
+    <script src="news.js" defer></script>
 </body>
 
 </html>

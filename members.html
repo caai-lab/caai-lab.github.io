@@ -4,579 +4,1026 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CAAI: Center for Applied Artificial Intelligence - Members</title>
+    <title>People — CAAI</title>
+    <meta name="description"
+        content="The researchers of CAAI — a lab spanning eight countries, with alumni admitted to funded postgraduate study in South Korea.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Lato:wght@300;400;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..500&family=Inter:wght@400;500&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="landing.css">
+    <link rel="stylesheet" href="pages.css">
 </head>
 
-<body>
+<body class="page">
 
-    <header>
-        <div class="container">
-            <div class="header-content">
-                <div class="logo-section">
-                    <img src="caai cropped.jpg" alt="CAAI Logo">
-                    <div class="title-section">
-                        <h1>CAAI</h1>
-                        <p>Center for Applied Artificial Intelligence</p>
-                    </div>
-                </div>
-                <button class="menu-toggle" aria-label="Toggle navigation">&#9776;</button>
-                <nav>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li>
-                            <a href="#">About ▾</a>
-                            <ul class="dropdown-menu">
-                                <li><a href="about.html">About the Lab</a></li>
-                                <li><a href="join-us.html">Join Us</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#">Research ▾</a>
-                            <ul class="dropdown-menu">
-                                <li><a href="projects.html">Research Projects</a></li>
-                                <li><a href="research-areas.html">Research Areas</a></li>
-                                <li><a href="resources.html">Datasets & Code</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#" class="active">People ▾</a>
-                            <ul class="dropdown-menu">
-                                <li><a href="members.html" class="active">Current Team</a></li>
-                                <li><a href="members.html#alumni">Alumni</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#">Happenings ▾</a>
-                            <ul class="dropdown-menu">
-                                <li><a href="news.html">News & Events</a></li>
-                                <li><a href="gallery.html">Photo Gallery</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="publications.html">Publications</a></li>
-                    </ul>
-                </nav>
-                </nav>
-            </div>
+    <!-- ============ Header ============ -->
+    <header class="site-header" id="site-header">
+        <div class="shell header-inner">
+            <a class="brand" href="index.html">
+                <img class="brand__mark" src="caai cropped.jpg" alt="">
+                <span>
+                    <span class="brand__name">CAAI</span>
+                    <span class="brand__sub">Center for Applied Artificial Intelligence</span>
+                </span>
+            </a>
+
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                <span></span><span></span>
+            </button>
+
+            <nav class="nav" id="nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li>
+                        <a href="about.html">About <span class="caret">▼</span></a>
+                        <ul class="submenu">
+                            <li><a href="about.html">About the Lab</a></li>
+                            <li><a href="join-us.html">Join Us</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="projects.html">Research <span class="caret">▼</span></a>
+                        <ul class="submenu">
+                            <li><a href="projects.html">Research Projects</a></li>
+                            <li><a href="research-areas.html">Research Areas</a></li>
+                            <li><a href="resources.html">Datasets &amp; Code</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="members.html" class="is-active">People <span class="caret">▼</span></a>
+                        <ul class="submenu">
+                            <li><a href="members.html">Current Team</a></li>
+                            <li><a href="members.html#alumni">Alumni</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="news.html">Happenings <span class="caret">▼</span></a>
+                        <ul class="submenu">
+                            <li><a href="news.html">News &amp; Events</a></li>
+                            <li><a href="gallery.html">Photo Gallery</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="publications.html">Publications</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
 
-    <div class="page-intro">
-        <div class="container">
-            <h2>Our Team</h2>
-            <p>A diverse group of researchers dedicated to advancing artificial intelligence across disciplines.</p>
-        </div>
-    </div>
+    <main>
 
-    <section>
-        <div class="container">
-            <div class="section-header">
-                <h2>Research Leadership</h2>
+        <!-- ============ Masthead ============ -->
+        <section class="masthead">
+            <div class="shell masthead__inner">
+                <div data-reveal>
+                    <p class="eyebrow eyebrow--plain">People</p>
+                    <h1>Fifty-four researchers, eight <em>countries</em>.</h1>
+                </div>
+                <p class="masthead__lede" data-reveal>
+                    The lab is deliberately international and deliberately cross-disciplinary. Members arrive from
+                    computer science, law, media, business, biology and design — and leave with published work.
+                </p>
             </div>
+        </section>
 
-            <div class="member-grid">
-                <!-- Research Head -->
-                <div class="member-card">
-                    <img src="Gurpreet1.png" alt="Gurpreet Singh">
-                    <div class="member-info">
-                        <h3>Gurpreet Singh</h3>
-                        <div class="member-role">Founder & Research Mentor – KORA</div>
-                        <div class="member-details">
-                            <p><strong>Research Interests:</strong> Advanced Statistics, Multimodal Content Generation,
-                                Computer Vision, Cybersecurity.</p>
-                            <p><a href="mailto:gurpreetsinghmcse@gmail.com">Email</a> | <a
-                                    href="https://scholar.google.com/citations?user=5OrupV0AAAAJ&hl=ko">Google
-                                    Scholar</a></p>
-                            <div class="member-badge active">Active Project: Text to Audio Generation</div>
-                        </div>
+        <!-- ============ Figures ============ -->
+        <section class="band" style="padding-bottom: 0;">
+            <div class="shell">
+                <div class="figures" data-reveal>
+                    <div class="figure">
+                        <span class="figure__num">31</span>
+                        <div class="figure__label">Current researchers</div>
+                    </div>
+                    <div class="figure">
+                        <span class="figure__num">08</span>
+                        <div class="figure__label">Countries represented</div>
+                    </div>
+                    <div class="figure">
+                        <span class="figure__num">23</span>
+                        <div class="figure__label">Alumni</div>
+                    </div>
+                    <div class="figure">
+                        <span class="figure__num">02</span>
+                        <div class="figure__label">Scholars to South Korea</div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section>
-        <div class="container">
-            <div class="section-header">
-                <h2>Researchers</h2>
-            </div>
-
-            
-                <div class="member-grid">
-                    <div class="member-card">
-                    <img src="Grace Britney Lozada Salinas.jpeg" alt="Grace Britney Lozada Salinas">
-                    <div class="member-info">
-                        <h3>Grace Britney Lozada Salinas</h3>
-                        <div class="member-role">Researcher</div>
-                        <div class="member-details">
-                            <p>Ecuador</p>
-                            <p><strong>Interests:</strong>Digital Society, Creative and Cultural Industries, Educational Innovation, Global Studies, Social Innovation, Sustainability and Human–Environment Systems</p>
-                            <div class="member-badge active">Active Project: TBA</div>
+        <!-- ============ Leadership ============ -->
+        <section class="shell">
+            <div class="prose">
+                <p class="prose__label" data-reveal>01 — Leadership</p>
+                <div data-reveal>
+                    <div class="lead">
+                        <div class="lead__portrait">
+                            <img src="Gurpreet1.png" alt="Gurpreet Singh">
                         </div>
-                    </div>
-                </div>
+                        <div>
+                            <span class="lead__role">Founder &amp; Research Mentor — KORA</span>
+                            <h2>Gurpreet Singh</h2>
+                            <p>Founder of the lab and mentor on every project running inside it. His own work spans
+                                multimodal content generation, computer vision and cybersecurity, with published
+                                surveys of vision–language foundation models and a review tracing the evolution of
+                                AI tooling from 1950 to 2025.</p>
+                            <p>He currently supervises both active projects and co-authors with members rather than
+                                for them — every paper on the publications page carries a student name beside his.</p>
 
-                
-                <div class="member-card">
-                    <img src="Professional Photograph.JPG" alt="Sandhya Palaniappan">
-                    <div class="member-info">
-                        <h3>Sandhya Palaniappan</h3>
-                        <div class="member-role">Researcher</div>
-                        <div class="member-details">
-                            <p>Coventry University  Coventry, United Kingdom</p>
-                            <p><strong>Interests:</strong>Agentic AI Systems, Applied Mathematics, Scientific Computing, Evaluation Science, Probabilistic Machine Learning, Causal Inference, Computational Physics, Numerical Methods (Stability and Convergence), Law and Criminology (Evidence and Evaluation, Decision Integrity, and Trustworthy Systems)</p>
-                            <div class="member-badge active">Active Project: TBA</div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Joy -->
-                <div class="member-card">
-                    <img src="Joy.jpg" alt="Joy Racheal Emiaka">
-                    <div class="member-info">
-                        <h3>Joy Racheal Emiaka</h3>
-                        <div class="member-role">Researcher</div>
-                        <div class="member-details">
-                            <p>Nigeria</p>
-                            <p><strong>Interests:</strong> Machine Learning, ANNs, BCI, Neuro-inspired AI.</p>
-                            <div class="member-badge active">Active Project: Neural Segmentation</div>
-                        </div>
-                    </div>
-                </div>
+                            <div class="tags">
+                                <span class="tag">Advanced Statistics</span>
+                                <span class="tag">Multimodal Generation</span>
+                                <span class="tag">Computer Vision</span>
+                                <span class="tag">Cybersecurity</span>
+                            </div>
 
-                <!-- Aya -->
-                <div class="member-card">
-                    <img src="Aya Khanyile.jpg" alt="Aya Khanyile">
-                    <div class="member-info">
-                        <h3>Aya Khanyile</h3>
-                        <div class="member-role">Researcher</div>
-                        <div class="member-details">
-                            <p>South Africa</p>
-                            <p><strong>Interests:</strong> AI for Computer Vision and Law.</p>
-                            <div class="member-badge active">Active Project: Text to Audio</div>
-                        </div>
-                    </div>
-                </div>
+                            <div class="prose__actions">
+                                <a class="link-quiet" href="mailto:gurpreetsinghmcse@gmail.com">Email <span
+                                        class="arrow">→</span></a>
+                                <a class="link-quiet"
+                                    href="https://scholar.google.com/citations?user=5OrupV0AAAAJ&amp;hl=ko"
+                                    target="_blank" rel="noopener">Google Scholar <span class="arrow">→</span></a>
+                            </div>
 
-                <!-- Lamia -->
-                <div class="member-card">
-                    <img src="Lamia Qamar.jpg" alt="Lamia Qamar">
-                    <div class="member-info">
-                        <h3>Lamia Qamar</h3>
-                        <div class="member-role">Researcher</div>
-                        <div class="member-details">
-                            <p>United Arab Emirates</p>
-                            <p><strong>Interests:</strong> Computer Vision, Machine Learning.</p>
-                            <div class="member-badge active">Active Project: Text to Audio</div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Nicholas -->
-                <div class="member-card">
-                    <img src="Nicholas.jpg" alt="Nicholas Valentino Volta">
-                    <div class="member-info">
-                        <h3>Nicholas Valentino Volta</h3>
-                        <div class="member-role">Researcher</div>
-                        <div class="member-details">
-                            <p>United States</p>
-                            <p><strong>Interests:</strong> AI, Machine Learning, and Law.</p>
-                            <div class="member-badge active">Active Project: Text to Audio</div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Amruta -->
-                <div class="member-card">
-                    <img src="Amruta.png" alt="Amruta Velamuri">
-                    <div class="member-info">
-                        <h3>Amruta Velamuri</h3>
-                        <div class="member-role">Researcher</div>
-                        <div class="member-details">
-                            <p>United States</p>
-                            <p><strong>Interests:</strong> AI, Machine Learning, Biology.</p>
-                            <div class="member-badge active">Active Project: Text to Audio</div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Nahid -->
-                <div class="member-card">
-                    <img src="IMG_6673.JPG" alt="Nahid Rehmani">
-                    <div class="member-info">
-                        <h3>Nahid Rehmani</h3>
-                        <div class="member-role">Researcher</div>
-                        <div class="member-details">
-                            <p>South Korea</p>
-                            <p><strong>Interests:</strong> Marketing, Media, Entertainment Industry.</p>
-                            <div class="member-badge">No Active Project</div>
-                        </div>
-                    </div>
-                </div>
-
-                
-                <div class="member-card">
-                    <img src="Mahak.jpeg" alt="Megha">
-                    <div class="member-info">
-                        <h3>Mahak</h3>
-                        <div class="member-role">Researcher</div>
-                        <div class="member-details">
-                            <p>India</p>
-                            <p><strong>Interests:</strong>TBA</p>
-                            <div class="member-badge active">TBA</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="member-card">
-                    <img src="daxta.jpeg" alt="Megha">
-                    <div class="member-info">
-                        <h3>Daxta Pandey</h3>
-                        <div class="member-role">Researcher</div>
-                        <div class="member-details">
-                            <p>India</p>
-                            <p><strong>Interests:</strong>UI/UX Design & Digital Marketing</p>
-                            <div class="member-badge active">TBA</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="member-card">
-                    <img src="Megha.jpg" alt="Megha">
-                    <div class="member-info">
-                        <h3>Megha</h3>
-                        <div class="member-role">Researcher</div>
-                        <div class="member-details">
-                            <p>India</p>
-                            <p><strong>Interests:</strong>UI/UX Design & Digital Marketing</p>
-                            <div class="member-badge active">TBA</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="member-card">
-                    <img src="Rupam.jpeg" alt="Rupam">
-                    <div class="member-info">
-                        <h3>Rupam</h3>
-                        <div class="member-role">Researcher</div>
-                        <div class="member-details">
-                            <p>India</p>
-                            <p><strong>Interests:</strong>Cultural Heritage</p>
-                            <div class="member-badge active">TBA</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="member-card">
-                    <img src="Piyush.jpg" alt="Piyush">
-                    <div class="member-info">
-                        <h3>Piyush</h3>
-                        <div class="member-role">Researcher</div>
-                        <div class="member-details">
-                            <p>India</p>
-                            <p><strong>Interests:</strong>Animation for Computer Vision, Modeling</p>
-                            <div class="member-badge active">TBA</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="member-card">
-                    <img src="Sabiya.jpg" alt="Sabiya">
-                    <div class="member-info">
-                        <h3>Sabiya</h3>
-                        <div class="member-role">Researcher</div>
-                        <div class="member-details">
-                            <p>India</p>
-                            <p><strong>Interests:</strong>TBA</p>
-                            <div class="member-badge active">TBA</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="member-card">
-                    <img src="Mukhthikka.jpg" alt="Mukhthikka">
-                    <div class="member-info">
-                        <h3>Mukhthikka</h3>
-                        <div class="member-role">Researcher</div>
-                        <div class="member-details">
-                            <p>India</p>
-                            <p><strong>Interests:</strong>Artificial Intelligence for Computer Vision</p>
-                            <div class="member-badge active">TBA</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="member-card">
-                    <img src="Roy.jpeg" alt="Alimpia Roy">
-                    <div class="member-info">
-                        <h3>Alimpia Roy</h3>
-                        <div class="member-role">Researcher</div>
-                        <div class="member-details">
-                            <p>India</p>
-                            <p><strong>Interests:</strong>International Business & ESG</p>
-                            <div class="member-badge active">TBA</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="member-card">
-                    <img src="Purva.jpeg" alt="Purva. Mundada">
-                    <div class="member-info">
-                        <h3>Purva. Mundada</h3>
-                        <div class="member-role">Researcher</div>
-                        <div class="member-details">
-                            <p>India</p>
-                            <p><strong>Interests:</strong>Human Resource management (HRM), AI in HRM</p>
-                            <div class="member-badge active">TBA</div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Trina -->
-                <div class="member-card">
-                    <img src="Trina.jpg" alt="Trina Banerjee">
-                    <div class="member-info">
-                        <h3>Trina Banerjee</h3>
-                        <div class="member-role">Researcher</div>
-                        <div class="member-details">
-                            <p>India</p>
-                            <p><strong>Interests:</strong> Sustainable AI, Privacy.</p>
-                            <div class="member-badge active">Active Project: Neural Segmentation</div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Sonakshi -->
-                <div class="member-card">
-                    <img src="Sonakshi.jpg" alt="Sonakshi Shrivastava">
-                    <div class="member-info">
-                        <h3>Sonakshi Shrivastava</h3>
-                        <div class="member-role">Researcher</div>
-                        <div class="member-details">
-                            <p>India</p>
-                            <p><strong>Interests:</strong> Language, AI, Education Technology.</p>
+                            <div style="margin-top: 26px; display: flex; flex-wrap: wrap; gap: 10px;">
+                                <span class="chip chip--live">Image-to-Music</span>
+                                <span class="chip chip--live">Text-to-Comic</span>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section>
-        <div class="container">
-            <div class="section-header">
-                <h2>Alumni</h2>
+        <!-- ============ Collaboration network ============ -->
+        <section class="band band--tint">
+            <div class="shell">
+                <div class="band-head" data-reveal>
+                    <div>
+                        <p class="eyebrow eyebrow--plain">02 — Collaboration</p>
+                        <h2>Who works with whom.</h2>
+                    </div>
+                    <div class="band-head__side">
+                        <a class="link-quiet" href="publications.html">The papers <span class="arrow">→</span></a>
+                    </div>
+                </div>
+
+                <p class="body-text" style="max-width: 64ch; margin-bottom: 26px;" data-reveal>
+                    Four groups are running in the lab right now. Gurpreet sits in every one of them &mdash; which
+                    is why all four outlines meet where he stands. Hover a group to isolate it.
+                </p>
+
+                <div class="network" data-reveal>
+                    <svg viewBox="0 0 940 560" role="img"
+                        aria-label="Diagram of the four research groups currently running, all sharing Gurpreet Singh as mentor">
+
+                        <!-- ============ Group 01 — Image-to-Music ============ -->
+                        <g class="net-link">
+                            <g class="net-in" style="animation-delay:.35s">
+                                <rect class="net-hull" x="86" y="66" width="420" height="150" rx="70" />
+                                <text class="net-group" x="88" y="52">Group 01 &middot; Image-to-Music</text>
+                            </g>
+
+                            <path class="net-edge" d="M448 246 C 400 200 300 141 158 141" style="animation-delay:.1s" />
+
+                            <g class="net-in" style="animation-delay:.6s">
+                                <circle class="net-dot" cx="150" cy="141" r="8" />
+                                <text class="net-name" x="150" y="179" text-anchor="middle">Lamia Qamar</text>
+                                <text class="net-sub" x="150" y="197" text-anchor="middle">United Arab Emirates</text>
+                            </g>
+                        </g>
+
+                        <!-- ============ Group 02 — Text-to-Comic ============ -->
+                        <g class="net-link">
+                            <g class="net-in" style="animation-delay:.45s">
+                                <rect class="net-hull" x="430" y="60" width="470" height="270" rx="80" />
+                                <text class="net-group" x="898" y="46" text-anchor="end">Group 02 &middot;
+                                    Text-to-Comic</text>
+                            </g>
+
+                            <path class="net-edge" d="M508 254 L 742 118" style="animation-delay:.2s" />
+                            <path class="net-edge" d="M512 268 L 742 252" style="animation-delay:.3s" />
+                            <path class="net-edge" d="M750 126 V 244" style="animation-delay:.4s" />
+
+                            <g class="net-in" style="animation-delay:.7s">
+                                <circle class="net-dot" cx="750" cy="118" r="8" />
+                                <text class="net-name" x="770" y="114">Trina Banerjee</text>
+                                <text class="net-sub" x="770" y="132">India</text>
+                            </g>
+
+                            <g class="net-in" style="animation-delay:.8s">
+                                <circle class="net-dot" cx="750" cy="252" r="8" />
+                                <text class="net-name" x="770" y="248">Mukhthikka</text>
+                                <text class="net-sub" x="770" y="266">India</text>
+                            </g>
+                        </g>
+
+                        <!-- ============ Group 03 — Gene Editing ============ -->
+                        <g class="net-link">
+                            <g class="net-in" style="animation-delay:.55s">
+                                <rect class="net-hull" x="86" y="300" width="420" height="150" rx="70" />
+                                <text class="net-group" x="88" y="482">Group 03 &middot; Multimodal Gene Editing</text>
+                            </g>
+
+                            <path class="net-edge" d="M448 290 C 400 336 300 375 158 375" style="animation-delay:.25s" />
+
+                            <g class="net-in" style="animation-delay:.9s">
+                                <circle class="net-dot" cx="150" cy="375" r="8" />
+                                <text class="net-name" x="150" y="413" text-anchor="middle">Sudipta Patil</text>
+                                <text class="net-sub" x="150" y="431" text-anchor="middle">Gene editing</text>
+                            </g>
+                        </g>
+
+                        <!-- ============ Group 04 — International Collaboration ============ -->
+                        <g class="net-link">
+                            <g class="net-in" style="animation-delay:.65s">
+                                <rect class="net-hull" x="430" y="228" width="470" height="270" rx="80" />
+                                <text class="net-group" x="898" y="516" text-anchor="end">Group 04 &middot;
+                                    International Collaboration</text>
+                            </g>
+
+                            <path class="net-edge" d="M512 290 L 742 306" style="animation-delay:.35s" />
+                            <path class="net-edge" d="M508 304 L 742 440" style="animation-delay:.45s" />
+                            <path class="net-edge" d="M750 314 V 432" style="animation-delay:.55s" />
+
+                            <g class="net-in" style="animation-delay:1s">
+                                <circle class="net-dot" cx="750" cy="306" r="8" />
+                                <text class="net-name" x="770" y="302">Ritika Kanojia</text>
+                                <text class="net-sub" x="770" y="320">Media &middot; AI</text>
+                            </g>
+
+                            <g class="net-in" style="animation-delay:1.1s">
+                                <circle class="net-dot" cx="750" cy="440" r="8" />
+                                <text class="net-name" x="770" y="436">Alimpia Roy</text>
+                                <text class="net-sub" x="770" y="454">International business &middot; ESG</text>
+                            </g>
+                        </g>
+
+                        <!-- ============ Hub ============ -->
+                        <circle class="net-pulse" cx="470" cy="279" r="36" />
+                        <circle class="net-hub" cx="470" cy="279" r="36" />
+                        <text class="net-hub-label" x="470" y="287" text-anchor="middle">GS</text>
+                    </svg>
+
+                    <div class="net-legend">
+                        <span>4 research groups</span>
+                        <span>6 researchers</span>
+                        <span>4 active projects</span>
+                        <span>1 shared mentor</span>
+                    </div>
+                </div>
+
+                <p class="body-text" style="max-width: 64ch; margin-top: 26px;" data-reveal>
+                    Earlier co-authorships — with Nishaa Ghosh, Sundareswari Thiyagarajan, Alisha Naaz, Asma Syed,
+                    Vantala Akhila, Prof. Saurabh Singh and Prof. Preethi Ananthachari — are listed on the
+                    <a class="link-quiet" href="publications.html" style="display:inline-flex; vertical-align:baseline;">publications
+                        page</a>.
+                </p>
             </div>
+        </section>
 
-            <div class="member-grid">
-                <!-- Sundareswari -->
-                <div class="member-card">
-                    <img src="Sundareswari.png" alt="Sundareswari Thiyagarajan">
-                    <div class="member-info">
-                        <h3>Sundareswari Thiyagarajan</h3>
-                        <div class="member-role">Alumni (2025)</div>
-                        <div class="member-details">
-                            <p>Admitted to Inha University, South Korea</p>
-                            <p><strong>Interests:</strong> AI, Electronic Engineering.</p>
-                        </div>
-                    </div>
-                </div>
+        <!-- ============ Honours / GKS ============ -->
+        <section class="shell">
+            <div class="prose">
+                <p class="prose__label" data-reveal>03 — Honours</p>
+                <div data-reveal>
+                    <h2>Two researchers on to South Korea.</h2>
+                    <p>Both took the route the lab exists to open — funded postgraduate study in Korea, one on a
+                        professor-funded scholarship and one on the Global Korea Scholarship, the Korean
+                        government's most competitive award for international students.</p>
 
-                <!-- Renuka -->
-                <div class="member-card">
-                    <img src="Renuka.png" alt="Renuka">
-                    <div class="member-info">
-                        <h3>Renuka</h3>
-                        <div class="member-role">Researcher (2023-2024)</div>
-                        <div class="member-details">
-                            <p>India</p>
-                            <p><strong>Interests:</strong> AI, Electronic Engineering.</p>
-                        </div>
-                    </div>
-                </div>
+                    <div class="honours">
+                        <article class="honour">
+                            <div class="portrait">
+                                <img src="Sundareswari.png" alt="Sundareswari Thiyagarajan">
+                            </div>
+                            <div>
+                                <span class="honour__award">Professor-funded scholarship</span>
+                                <h3>Sundareswari Thiyagarajan</h3>
+                                <p>Co-authored the lab's drug–drug interaction extraction paper on machine learning
+                                    and transformer-based models, published via SSRN and bioRxiv.</p>
+                                <div class="honour__where">Inha University · South Korea</div>
+                            </div>
+                        </article>
 
-                <!-- Alisha -->
-                <div class="member-card">
-                    <img src="Alisha.jpeg" alt="Alisha Naaz">
-                    <div class="member-info">
-                        <h3>Alisha Naaz</h3>
-                        <div class="member-role">Researcher (Sept 2025)</div>
-                        <div class="member-details">
-                            <p>India</p>
-                            <p><strong>Interests:</strong> Intercultural Communication, Digital Media, Advertising & PR.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Asma -->
-                <div class="member-card">
-                    <img src="Asma.jpeg" alt="Asma">
-                    <div class="member-info">
-                        <h3>Asma</h3>
-                        <div class="member-role">Researcher (Sept 2025)</div>
-                        <div class="member-details">
-                            <p>India</p>
-                            <p><strong>Interests:</strong> Media and Communication.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Akhila -->
-                <div class="member-card">
-                    <img src="Akhila.jpeg" alt="Vantala Akhila">
-                    <div class="member-info">
-                        <h3>Vantala Akhila</h3>
-                        <div class="member-role">Researcher (Sept 2025)</div>
-                        <div class="member-details">
-                            <p>India</p>
-                            <p><strong>Interests:</strong> Computer Science, AI.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Sakshi -->
-                <div class="member-card">
-                    <img src="Sakshi.jpg" alt="Sakshi">
-                    <div class="member-info">
-                        <h3>Sakshi</h3>
-                        <div class="member-role">Researcher (Sept 2025)</div>
-                        <div class="member-details">
-                            <p>India</p>
-                            <p><strong>Interests:</strong> Finance.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- LakshyaKumar -->
-                <div class="member-card">
-                    <img src="Lakshyakumar.jpeg" alt="LakshyaKumar">
-                    <div class="member-info">
-                        <h3>LakshyaKumar</h3>
-                        <div class="member-role">Researcher (July 2025)</div>
-                        <div class="member-details">
-                            <p>India</p>
-                            <p><strong>Interests:</strong> Cross-Modality, Cybersecurity, AI.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Aastha Gautam -->
-                <div class="member-card">
-                    <img src="Astha Gautam.jpeg" alt="Aastha Gautam">
-                    <div class="member-info">
-                        <h3>Aastha Gautam</h3>
-                        <div class="member-role">Team Leader (June 2025)</div>
-                        <div class="member-details">
-                            <p>India</p>
-                            <p><strong>Interests:</strong> Technology and Digital Media.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Jiya Gupta -->
-                <div class="member-card">
-                    <img src="caai cropped.jpg" alt="Jiya Gupta" style="opacity: 0.1; filter: grayscale(100%);">
-                    <div class="member-info">
-                        <h3>Jiya Gupta</h3>
-                        <div class="member-role">Team Leader (June 2025)</div>
-                        <div class="member-details">
-                            <p>India</p>
-                            <p><strong>Interests:</strong> Business and Science.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Ayushi Srivastava -->
-                <div class="member-card">
-                    <img src="caai cropped.jpg" alt="Ayushi Srivastava" style="opacity: 0.1; filter: grayscale(100%);">
-                    <div class="member-info">
-                        <h3>Ayushi Srivastava</h3>
-                        <div class="member-role">Researcher (June 2025)</div>
-                        <div class="member-details">
-                            <p>India</p>
-                            <p><strong>Interests:</strong> Media Studies and Communication.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Pallavi Wagh -->
-                <div class="member-card">
-                    <img src="caai cropped.jpg" alt="Pallavi Wagh" style="opacity: 0.1; filter: grayscale(100%);">
-                    <div class="member-info">
-                        <h3>Pallavi Wagh</h3>
-                        <div class="member-role">Researcher (June 2025)</div>
-                        <div class="member-details">
-                            <p>India</p>
-                            <p><strong>Interests:</strong> Applied Sciences and Sociology.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Prachi Kumari -->
-                <div class="member-card">
-                    <img src="caai cropped.jpg" alt="Prachi Kumari" style="opacity: 0.1; filter: grayscale(100%);">
-                    <div class="member-info">
-                        <h3>Prachi Kumari</h3>
-                        <div class="member-role">Researcher (June 2025)</div>
-                        <div class="member-details">
-                            <p>India</p>
-                            <p><strong>Interests:</strong> Business and Sociology.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Simran -->
-                <div class="member-card">
-                    <img src="caai cropped.jpg" alt="Simran Singh" style="opacity: 0.1; filter: grayscale(100%);">
-                    <div class="member-info">
-                        <h3>Simran Singh</h3>
-                        <div class="member-role">Alumni (2024)</div>
-                        <div class="member-details">
-                            <p>Research Team: Business Growth and Management.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Pushpa -->
-                <div class="member-card">
-                    <img src="caai cropped.jpg" alt="Pushpa Kumari" style="opacity: 0.1; filter: grayscale(100%);">
-                    <div class="member-info">
-                        <h3>Pushpa Kumari</h3>
-                        <div class="member-role">Alumni (2024)</div>
-                        <div class="member-details">
-                            <p>Research Team: Business Growth and Management.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Vedha -->
-                <div class="member-card">
-                    <img src="caai cropped.jpg" alt="Vedha Varshini" style="opacity: 0.1; filter: grayscale(100%);">
-                    <div class="member-info">
-                        <h3>Vedha Varshini</h3>
-                        <div class="member-role">Alumni (2024)</div>
-                        <div class="member-details">
-                            <p>Research Team: Business Growth and Management.</p>
-                        </div>
+                        <article class="honour">
+                            <div class="portrait">
+                                <img src="IMG_6673.JPG" alt="Nahid Rehmani">
+                            </div>
+                            <div>
+                                <span class="honour__award">GKS Scholar</span>
+                                <h3>Nahid Rehmani</h3>
+                                <p>Part of the Business Growth and Management research team, applying AI-driven
+                                    analytics to strategy across marketing, media and the entertainment industry.</p>
+                                <div class="honour__where">South Korea</div>
+                            </div>
+                        </article>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 Center for Applied Artificial Intelligence (CAAI). All rights reserved. | <a
-                    href="mailto:admission@thekoreancad.com" style="color: #bbb; text-decoration: underline;">Contact
-                    Us</a></p>
+        <!-- ============ Global researchers ============ -->
+        <section class="band band--tint">
+            <div class="shell">
+                <div class="band-head" data-reveal>
+                    <div>
+                        <p class="eyebrow eyebrow--plain">04 — Around the world</p>
+                        <h2>Researchers outside India.</h2>
+                    </div>
+                    <div class="band-head__side">
+                        <a class="link-quiet" href="join-us.html">Join from anywhere <span class="arrow">→</span></a>
+                    </div>
+                </div>
+
+                <p class="body-text" style="max-width: 64ch;" data-reveal>
+                    Eight members work from outside India. Not all of them are on an active project at this
+                    moment — research runs in cycles — but they remain members of the lab and part of how it thinks.
+                </p>
+
+                <div class="countries" data-reveal>
+                    <span class="tag">Ecuador</span>
+                    <span class="tag">United Kingdom</span>
+                    <span class="tag">Nigeria</span>
+                    <span class="tag">South Africa</span>
+                    <span class="tag">United Arab Emirates</span>
+                    <span class="tag">United States</span>
+                    <span class="tag">South Korea</span>
+                    <span class="tag">India</span>
+                </div>
+
+                <div class="people" data-reveal>
+
+                    <article class="person">
+                        <div class="portrait"><img src="Grace Britney Lozada Salinas.jpeg"
+                                alt="Grace Britney Lozada Salinas"></div>
+                        <div class="person__body">
+                            <div class="person__name">Grace Britney Lozada Salinas</div>
+                            <div class="person__role">Researcher</div>
+                            <div class="person__place">Ecuador</div>
+                            <p class="person__interests">Digital society, creative and cultural industries,
+                                educational innovation, social innovation, sustainability and human–environment
+                                systems.</p>
+                            <div class="person__foot"><span class="chip">Project TBA</span></div>
+                        </div>
+                    </article>
+
+                    <article class="person">
+                        <div class="portrait"><img src="Professional Photograph.JPG" alt="Sandhya Palaniappan"></div>
+                        <div class="person__body">
+                            <div class="person__name">Sandhya Palaniappan</div>
+                            <div class="person__role">Researcher</div>
+                            <div class="person__place">Coventry University, United Kingdom</div>
+                            <p class="person__interests">Agentic AI systems, applied mathematics, probabilistic
+                                machine learning, causal inference, evaluation science, and law and criminology as
+                                questions of decision integrity.</p>
+                            <div class="person__foot"><span class="chip">Project TBA</span></div>
+                        </div>
+                    </article>
+
+                    <article class="person">
+                        <div class="portrait"><img src="Joy.jpg" alt="Joy Racheal Emiaka"></div>
+                        <div class="person__body">
+                            <div class="person__name">Joy Racheal Emiaka</div>
+                            <div class="person__role">Researcher</div>
+                            <div class="person__place">Nigeria</div>
+                            <p class="person__interests">Machine learning, artificial neural networks,
+                                brain–computer interfaces and neuro-inspired AI.</p>
+                            <div class="person__foot"><span class="chip">Neural Segmentation</span></div>
+                        </div>
+                    </article>
+
+                    <article class="person">
+                        <div class="portrait"><img src="Aya Khanyile.jpg" alt="Aya Khanyile"></div>
+                        <div class="person__body">
+                            <div class="person__name">Aya Khanyile</div>
+                            <div class="person__role">Researcher</div>
+                            <div class="person__place">South Africa</div>
+                            <p class="person__interests">AI for computer vision, and the intersection of machine
+                                learning with law.</p>
+                            <div class="person__foot"><span class="chip">Text-to-Audio</span></div>
+                        </div>
+                    </article>
+
+                    <article class="person">
+                        <div class="portrait"><img src="Lamia Qamar.jpg" alt="Lamia Qamar"></div>
+                        <div class="person__body">
+                            <div class="person__name">Lamia Qamar</div>
+                            <div class="person__role">Researcher</div>
+                            <div class="person__place">United Arab Emirates</div>
+                            <p class="person__interests">Computer vision and machine learning. Presented on CNN
+                                architectures for deepfake video detection at ICA2S 2025.</p>
+                            <div class="person__foot"><span class="chip chip--live">Image-to-Music</span></div>
+                        </div>
+                    </article>
+
+                    <article class="person">
+                        <div class="portrait"><img src="Nicholas.jpg" alt="Nicholas Valentino Volta"></div>
+                        <div class="person__body">
+                            <div class="person__name">Nicholas Valentino Volta</div>
+                            <div class="person__role">Researcher</div>
+                            <div class="person__place">United States</div>
+                            <p class="person__interests">Artificial intelligence, machine learning and law.</p>
+                            <div class="person__foot"><span class="chip">Text-to-Audio</span></div>
+                        </div>
+                    </article>
+
+                    <article class="person">
+                        <div class="portrait"><img src="Amruta.png" alt="Amruta Velamuri"></div>
+                        <div class="person__body">
+                            <div class="person__name">Amruta Velamuri</div>
+                            <div class="person__role">Researcher</div>
+                            <div class="person__place">United States</div>
+                            <p class="person__interests">Artificial intelligence, machine learning and biology.</p>
+                            <div class="person__foot"><span class="chip">Text-to-Audio</span></div>
+                        </div>
+                    </article>
+
+                    <article class="person">
+                        <div class="portrait"><img src="IMG_6673.JPG" alt="Nahid Rehmani"></div>
+                        <div class="person__body">
+                            <div class="person__name">Nahid Rehmani</div>
+                            <div class="person__role">Researcher · GKS Scholar</div>
+                            <div class="person__place">South Korea</div>
+                            <p class="person__interests">Marketing, media and the entertainment industry. Former
+                                member of the Business Growth and Management research team.</p>
+                            <div class="person__foot"><span class="chip">Between projects</span></div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ India ============ -->
+        <section class="shell">
+            <div class="prose">
+                <p class="prose__label" data-reveal>05 — In India</p>
+                <div data-reveal>
+                    <h2>The India cohort.</h2>
+                    <p>Three of the four running projects are staffed from here, alongside the mentor and
+                        members working from abroad.</p>
+
+                    <div class="people">
+                        <article class="person">
+                            <div class="portrait"><img src="Trina.jpg" alt="Trina Banerjee"></div>
+                            <div class="person__body">
+                                <div class="person__name">Trina Banerjee</div>
+                                <div class="person__role">Researcher</div>
+                                <div class="person__place">India</div>
+                                <p class="person__interests">Sustainable AI and privacy. Co-author on the review
+                                    tracing the evolution of artificial intelligence, 1950–2025.</p>
+                                <div class="person__foot"><span class="chip chip--live">Text-to-Comic</span></div>
+                            </div>
+                        </article>
+
+                        <article class="person">
+                            <div class="portrait"><img src="Roy.jpeg" alt="Alimpia Roy"></div>
+                            <div class="person__body">
+                                <div class="person__name">Alimpia Roy</div>
+                                <div class="person__role">Researcher</div>
+                                <div class="person__place">India</div>
+                                <p class="person__interests">International business and ESG.</p>
+                                <div class="person__foot"><span class="chip chip--live">International
+                                        Collaboration</span></div>
+                            </div>
+                        </article>
+
+                        <article class="person">
+                            <div class="portrait"><img src="Mukhthikka.jpg" alt="Mukhthikka"></div>
+                            <div class="person__body">
+                                <div class="person__name">Mukhthikka</div>
+                                <div class="person__role">Researcher</div>
+                                <div class="person__place">India</div>
+                                <p class="person__interests">Artificial intelligence for computer vision.</p>
+                                <div class="person__foot"><span class="chip chip--live">Text-to-Comic</span></div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ Recently joined ============ -->
+        <section class="band band--tint">
+            <div class="shell">
+                <div class="band-head" data-reveal>
+                    <div>
+                        <p class="eyebrow eyebrow--plain">06 — Recently joined</p>
+                        <h2>New to the lab.</h2>
+                    </div>
+                    <div class="band-head__side">
+                        <a class="link-quiet" href="join-us.html">Join them <span class="arrow">&rarr;</span></a>
+                    </div>
+                </div>
+
+                <p class="body-text" style="max-width: 64ch;" data-reveal>
+                    Members who arrived in the most recent intake. Each is being matched to a project — which, in
+                    a lab that takes people from any discipline, means finding the question their own field is
+                    already asking.
+                </p>
+
+                <div class="people" data-reveal>
+
+                    <article class="person">
+                        <div class="portrait"><img src="Ritika.png" alt="Ritika Kanojia"></div>
+                        <div class="person__body">
+                            <div class="person__name">Ritika Kanojia</div>
+                            <div class="person__role">Researcher</div>
+                            <p class="person__interests">Artificial intelligence, journalism, media culture and
+                                psychology, and fashion and textile innovation.</p>
+                            <div class="person__foot"><span class="chip chip--live">International
+                                    Collaboration</span></div>
+                        </div>
+                    </article>
+
+                    <article class="person">
+                        <div class="portrait"><img src="Sudipta.png" alt="Sudipta Patil"></div>
+                        <div class="person__body">
+                            <div class="person__name">Sudipta Patil</div>
+                            <div class="person__role">Researcher</div>
+                            <p class="person__interests">Gene editing.</p>
+                            <div class="person__foot"><span class="chip chip--live">Multimodal Gene
+                                    Editing</span></div>
+                        </div>
+                    </article>
+
+                    <article class="person">
+                        <div class="portrait"><img src="Anjali.png" alt="Anjali" loading="lazy"></div>
+                        <div class="person__body">
+                            <div class="person__name">Anjali</div>
+                            <div class="person__role">Researcher</div>
+                            <p class="person__interests">Research interests to be announced.</p>
+                            <div class="person__foot"><span class="chip">Project TBA</span></div>
+                        </div>
+                    </article>
+
+                    <article class="person">
+                        <div class="portrait"><img src="RupinderKaur.png" alt="Rupinder Kaur" loading="lazy"></div>
+                        <div class="person__body">
+                            <div class="person__name">Rupinder Kaur</div>
+                            <div class="person__role">Researcher</div>
+                            <p class="person__interests">Marketing and social media, with an industry focus on entertainment and beauty.</p>
+                            <div class="person__foot"><span class="chip">Project TBA</span></div>
+                        </div>
+                    </article>
+
+                    <article class="person">
+                        <div class="portrait"><img src="PurnimaRajak.png" alt="Purnima Rajak" loading="lazy"></div>
+                        <div class="person__body">
+                            <div class="person__name">Purnima Rajak</div>
+                            <div class="person__role">Researcher</div>
+                            <p class="person__interests">AI-driven business and marketing.</p>
+                            <div class="person__foot"><span class="chip">Project TBA</span></div>
+                        </div>
+                    </article>
+
+                    <article class="person">
+                        <div class="portrait"><img src="FathimaHisana.png" alt="Fathima Hisana" loading="lazy"></div>
+                        <div class="person__body">
+                            <div class="person__name">Fathima Hisana</div>
+                            <div class="person__role">Researcher</div>
+                            <p class="person__interests">Artificial intelligence in accounting, financial technology and business analytics.</p>
+                            <div class="person__foot"><span class="chip">Project TBA</span></div>
+                        </div>
+                    </article>
+
+                    <article class="person">
+                        <div class="portrait"><img src="VanshikaTambe.png" alt="Vanshika Tambe" loading="lazy"></div>
+                        <div class="person__body">
+                            <div class="person__name">Vanshika Tambe</div>
+                            <div class="person__role">Researcher</div>
+                            <p class="person__interests">AI in healthcare and drug discovery — particularly the use of artificial intelligence in pharmaceutical research, drug development and improving healthcare outcomes.</p>
+                            <div class="person__foot"><span class="chip">Project TBA</span></div>
+                        </div>
+                    </article>
+
+                    <article class="person">
+                        <div class="portrait"><img src="MuskanKumari.png" alt="Muskan Kumari" loading="lazy"></div>
+                        <div class="person__body">
+                            <div class="person__name">Muskan Kumari</div>
+                            <div class="person__role">Researcher</div>
+                            <p class="person__interests">Business, strategic management, supply chain and logistics, and digital transformation.</p>
+                            <div class="person__foot"><span class="chip">Project TBA</span></div>
+                        </div>
+                    </article>
+
+                    <article class="person">
+                        <div class="portrait"><img src="Sneha.png" alt="Sneha" loading="lazy"></div>
+                        <div class="person__body">
+                            <div class="person__name">Sneha</div>
+                            <div class="person__role">Researcher</div>
+                            <p class="person__interests">International business, global trade, cross-cultural management, international marketing and global business strategy, alongside sustainable development, emerging markets, the digital economy, innovation and global studies.</p>
+                            <div class="person__foot"><span class="chip">Project TBA</span></div>
+                        </div>
+                    </article>
+
+                    <article class="person">
+                        <div class="portrait"><img src="AnviPanjwani.png" alt="Anvi Panjwani" loading="lazy"></div>
+                        <div class="person__body">
+                            <div class="person__name">Anvi Panjwani</div>
+                            <div class="person__role">Researcher</div>
+                            <p class="person__interests">Artificial intelligence, machine learning, data science and statistical analysis.</p>
+                            <div class="person__foot"><span class="chip">Project TBA</span></div>
+                        </div>
+                    </article>
+
+                    <article class="person">
+                        <div class="portrait"><img src="Madiha.png" alt="Madiha" loading="lazy"></div>
+                        <div class="person__body">
+                            <div class="person__name">Madiha</div>
+                            <div class="person__role">Researcher</div>
+                            <p class="person__interests">Speech and language processing, media and entertainment, media psychology and culture.</p>
+                            <div class="person__foot"><span class="chip">Project TBA</span></div>
+                        </div>
+                    </article>
+
+                    <article class="person">
+                        <div class="portrait"><img src="Jyoti.png" alt="Jyoti" loading="lazy"></div>
+                        <div class="person__body">
+                            <div class="person__name">Jyoti</div>
+                            <div class="person__role">Researcher</div>
+                            <p class="person__interests">Research interests to be announced.</p>
+                            <div class="person__foot"><span class="chip">Project TBA</span></div>
+                        </div>
+                    </article>
+
+                    <article class="person">
+                        <div class="portrait"><img src="JiyaVishalKumar.png" alt="Jiya Vishal Kumar" loading="lazy"></div>
+                        <div class="person__body">
+                            <div class="person__name">Jiya Vishal Kumar</div>
+                            <div class="person__role">Researcher</div>
+                            <p class="person__interests">Artificial intelligence, creative technologies, human–computer interaction, digital media, user experience and interdisciplinary research.</p>
+                            <div class="person__foot"><span class="chip">Project TBA</span></div>
+                        </div>
+                    </article>
+
+                    <article class="person">
+                        <div class="portrait"><img src="MuskanPal.png" alt="Muskan Pal" loading="lazy"></div>
+                        <div class="person__body">
+                            <div class="person__name">Muskan Pal</div>
+                            <div class="person__role">Researcher</div>
+                            <p class="person__interests">AI applications in financial markets, algorithmic trading, digital banking and FinTech — how artificial intelligence can improve financial decision-making and support innovation in the financial sector.</p>
+                            <div class="person__foot"><span class="chip">Project TBA</span></div>
+                        </div>
+                    </article>
+
+                    <article class="person">
+                        <div class="portrait"><img src="ChaitriGautam.png" alt="Chaitri Gautam" loading="lazy"></div>
+                        <div class="person__body">
+                            <div class="person__name">Chaitri Gautam</div>
+                            <div class="person__role">Researcher</div>
+                            <p class="person__interests">Psychology, specifically industrial and organisational psychology.</p>
+                            <div class="person__foot"><span class="chip">Project TBA</span></div>
+                        </div>
+                    </article>
+
+                    <article class="person">
+                        <div class="portrait"><img src="Prachi.png" alt="Prachi" loading="lazy"></div>
+                        <div class="person__body">
+                            <div class="person__name">Prachi</div>
+                            <div class="person__role">Researcher</div>
+                            <p class="person__interests">Two areas: international trade and economics law, approached from the India–Korea relationship; and Korean culture studies, particularly the folklore of Queen Heo Hwang Ok and King Kim Suro and how the monk Ilyeon gathered and recorded it.</p>
+                            <div class="person__foot"><span class="chip">Project TBA</span></div>
+                        </div>
+                    </article>
+
+                    <article class="person">
+                        <div class="portrait"><img src="SriDevi.png" alt="Sri Devi" loading="lazy"></div>
+                        <div class="person__body">
+                            <div class="person__name">Sri Devi</div>
+                            <div class="person__role">Researcher</div>
+                            <p class="person__interests">AI in logistics, supply chain management and port operations, and AI in the RA lifestyle.</p>
+                            <div class="person__foot"><span class="chip">Project TBA</span></div>
+                        </div>
+                    </article>
+
+                    <article class="person">
+                        <div class="portrait"><img src="Niharika.png" alt="Niharika" loading="lazy"></div>
+                        <div class="person__body">
+                            <div class="person__name">Niharika</div>
+                            <div class="person__role">Researcher</div>
+                            <p class="person__interests">Supply chain management, logistics and operations management, procurement and inventory management, artificial intelligence in business operations, and international trade.</p>
+                            <div class="person__foot"><span class="chip">Project TBA</span></div>
+                        </div>
+                    </article>
+
+                    <article class="person">
+                        <div class="portrait"><img src="Khushi.png" alt="Khushi" loading="lazy"></div>
+                        <div class="person__body">
+                            <div class="person__name">Khushi</div>
+                            <div class="person__role">Researcher</div>
+                            <p class="person__interests">International business and global market expansion, international trade and economic cooperation, cross-cultural business communication, and digital marketing and consumer behaviour.</p>
+                            <div class="person__foot"><span class="chip">Project TBA</span></div>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ Alumni ============ -->
+        <section class="band band--tint" id="alumni">
+            <div class="shell">
+                <div class="band-head" data-reveal>
+                    <div>
+                        <p class="eyebrow eyebrow--plain">07 — Alumni</p>
+                        <h2>Twenty-three researchers who passed through.</h2>
+                    </div>
+                    <div class="band-head__side">
+                        <a class="link-quiet" href="publications.html">What they published <span
+                                class="arrow">→</span></a>
+                    </div>
+                </div>
+
+                <div class="alumni" data-reveal>
+
+                    <article class="alum">
+                        <div class="portrait"><img src="Sundareswari.png" alt="Sundareswari Thiyagarajan"></div>
+                        <div class="alum__body">
+                            <div class="alum__name">Sundareswari Thiyagarajan</div>
+                            <div class="alum__term">Alumni · 2025 · Inha University</div>
+                            <p class="alum__note">Inha University, South Korea. AI and electronic engineering.</p>
+                        </div>
+                    </article>
+
+                    <article class="alum">
+                        <div class="portrait"><img src="Alisha.jpeg" alt="Alisha Naaz"></div>
+                        <div class="alum__body">
+                            <div class="alum__name">Alisha Naaz</div>
+                            <div class="alum__term">Researcher · Sept 2025</div>
+                            <p class="alum__note">Intercultural communication, digital media, advertising and PR.</p>
+                        </div>
+                    </article>
+
+                    <article class="alum">
+                        <div class="portrait"><img src="Asma.jpeg" alt="Asma"></div>
+                        <div class="alum__body">
+                            <div class="alum__name">Asma</div>
+                            <div class="alum__term">Researcher · Sept 2025</div>
+                            <p class="alum__note">Media and communication.</p>
+                        </div>
+                    </article>
+
+                    <article class="alum">
+                        <div class="portrait"><img src="Akhila.jpeg" alt="Vantala Akhila"></div>
+                        <div class="alum__body">
+                            <div class="alum__name">Vantala Akhila</div>
+                            <div class="alum__term">Researcher · Sept 2025</div>
+                            <p class="alum__note">Computer science and artificial intelligence.</p>
+                        </div>
+                    </article>
+
+                    <article class="alum">
+                        <div class="portrait"><img src="Sakshi.jpg" alt="Sakshi"></div>
+                        <div class="alum__body">
+                            <div class="alum__name">Sakshi</div>
+                            <div class="alum__term">Researcher · Sept 2025</div>
+                            <p class="alum__note">Finance.</p>
+                        </div>
+                    </article>
+
+                    <article class="alum">
+                        <div class="portrait"><img src="Lakshyakumar.jpeg" alt="LakshyaKumar"></div>
+                        <div class="alum__body">
+                            <div class="alum__name">LakshyaKumar</div>
+                            <div class="alum__term">Researcher · July 2025</div>
+                            <p class="alum__note">Cross-modality, cybersecurity and AI.</p>
+                        </div>
+                    </article>
+
+                    <article class="alum">
+                        <div class="portrait"><img src="Astha Gautam.jpeg" alt="Aastha Gautam"></div>
+                        <div class="alum__body">
+                            <div class="alum__name">Aastha Gautam</div>
+                            <div class="alum__term">Team Leader · June 2025</div>
+                            <p class="alum__note">Technology and digital media.</p>
+                        </div>
+                    </article>
+
+                    <article class="alum">
+                        <div class="portrait">
+                            <div class="monogram">JG</div>
+                        </div>
+                        <div class="alum__body">
+                            <div class="alum__name">Jiya Gupta</div>
+                            <div class="alum__term">Team Leader · June 2025</div>
+                            <p class="alum__note">Business and science.</p>
+                        </div>
+                    </article>
+
+                    <article class="alum">
+                        <div class="portrait">
+                            <div class="monogram">AS</div>
+                        </div>
+                        <div class="alum__body">
+                            <div class="alum__name">Ayushi Srivastava</div>
+                            <div class="alum__term">Researcher · June 2025</div>
+                            <p class="alum__note">Media studies and communication.</p>
+                        </div>
+                    </article>
+
+                    <article class="alum">
+                        <div class="portrait">
+                            <div class="monogram">PW</div>
+                        </div>
+                        <div class="alum__body">
+                            <div class="alum__name">Pallavi Wagh</div>
+                            <div class="alum__term">Researcher · June 2025</div>
+                            <p class="alum__note">Applied sciences and sociology.</p>
+                        </div>
+                    </article>
+
+                    <article class="alum">
+                        <div class="portrait">
+                            <div class="monogram">PK</div>
+                        </div>
+                        <div class="alum__body">
+                            <div class="alum__name">Prachi Kumari</div>
+                            <div class="alum__term">Researcher · June 2025</div>
+                            <p class="alum__note">Business and sociology.</p>
+                        </div>
+                    </article>
+
+                    <article class="alum">
+                        <div class="portrait"><img src="Mahak.jpeg" alt="Mahak"></div>
+                        <div class="alum__body">
+                            <div class="alum__name">Mahak</div>
+                            <div class="alum__term">Former Researcher</div>
+                        </div>
+                    </article>
+
+                    <article class="alum">
+                        <div class="portrait"><img src="daxta.jpeg" alt="Daxta Pandey"></div>
+                        <div class="alum__body">
+                            <div class="alum__name">Daxta Pandey</div>
+                            <div class="alum__term">Former Researcher</div>
+                            <p class="alum__note">UI/UX design and digital marketing.</p>
+                        </div>
+                    </article>
+
+                    <article class="alum">
+                        <div class="portrait"><img src="Megha.jpg" alt="Megha"></div>
+                        <div class="alum__body">
+                            <div class="alum__name">Megha</div>
+                            <div class="alum__term">Former Researcher</div>
+                            <p class="alum__note">UI/UX design and digital marketing.</p>
+                        </div>
+                    </article>
+
+                    <article class="alum">
+                        <div class="portrait"><img src="Rupam.jpeg" alt="Rupam"></div>
+                        <div class="alum__body">
+                            <div class="alum__name">Rupam</div>
+                            <div class="alum__term">Former Researcher</div>
+                            <p class="alum__note">Cultural heritage.</p>
+                        </div>
+                    </article>
+
+                    <article class="alum">
+                        <div class="portrait"><img src="Piyush.jpg" alt="Piyush"></div>
+                        <div class="alum__body">
+                            <div class="alum__name">Piyush</div>
+                            <div class="alum__term">Former Researcher</div>
+                            <p class="alum__note">Animation for computer vision, modelling.</p>
+                        </div>
+                    </article>
+
+                    <article class="alum">
+                        <div class="portrait"><img src="Sabiya.jpg" alt="Sabiya"></div>
+                        <div class="alum__body">
+                            <div class="alum__name">Sabiya</div>
+                            <div class="alum__term">Former Researcher</div>
+                        </div>
+                    </article>
+
+                    <article class="alum">
+                        <div class="portrait"><img src="Purva.jpeg" alt="Purva Mundada"></div>
+                        <div class="alum__body">
+                            <div class="alum__name">Purva Mundada</div>
+                            <div class="alum__term">Former Researcher</div>
+                            <p class="alum__note">Human resource management and AI in HRM.</p>
+                        </div>
+                    </article>
+
+                    <article class="alum">
+                        <div class="portrait"><img src="Sonakshi.jpg" alt="Sonakshi Shrivastava"></div>
+                        <div class="alum__body">
+                            <div class="alum__name">Sonakshi Shrivastava</div>
+                            <div class="alum__term">Former Researcher</div>
+                            <p class="alum__note">Language, AI and education technology.</p>
+                        </div>
+                    </article>
+
+                    <article class="alum">
+                        <div class="portrait"><img src="Renuka.png" alt="Renuka"></div>
+                        <div class="alum__body">
+                            <div class="alum__name">Renuka</div>
+                            <div class="alum__term">Researcher · 2023–2024</div>
+                            <p class="alum__note">AI and electronic engineering.</p>
+                        </div>
+                    </article>
+
+                    <article class="alum">
+                        <div class="portrait"><img src="Simran.png" alt="Simran Singh"></div>
+                        <div class="alum__body">
+                            <div class="alum__name">Simran Singh</div>
+                            <div class="alum__term">Alumni · 2024</div>
+                            <p class="alum__note">Business Growth and Management research team.</p>
+                        </div>
+                    </article>
+
+                    <article class="alum">
+                        <div class="portrait"><img src="Pushpa.png" alt="Pushpa Kumari"></div>
+                        <div class="alum__body">
+                            <div class="alum__name">Pushpa Kumari</div>
+                            <div class="alum__term">Alumni · 2024</div>
+                            <p class="alum__note">Business Growth and Management research team.</p>
+                        </div>
+                    </article>
+
+                    <article class="alum">
+                        <div class="portrait">
+                            <div class="monogram">VV</div>
+                        </div>
+                        <div class="alum__body">
+                            <div class="alum__name">Vedha Varshini</div>
+                            <div class="alum__term">Alumni · 2024</div>
+                            <p class="alum__note">Business Growth and Management research team.</p>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ CTA ============ -->
+        <section class="band band--ink">
+            <div class="shell cta">
+                <div data-reveal>
+                    <p class="eyebrow eyebrow--plain">Join them</p>
+                    <h2>The next name on this page.</h2>
+                </div>
+                <div data-reveal>
+                    <p>Members here have come from eight countries and a dozen disciplines. Two have gone on to funded
+                        postgraduate study in South Korea. If you want your name beside a paper, this is
+                        where that starts.</p>
+                    <div class="cta__actions">
+                        <a class="btn btn--light" href="join-us.html">How to apply <span class="arrow">→</span></a>
+                        <a class="btn btn--light" href="projects.html">Current projects</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ============ Footer ============ -->
+    <footer class="site-footer">
+        <div class="shell">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="footer-brand__name">CAAI</div>
+                    <p>Center for Applied Artificial Intelligence — a guided research lab operating under
+                        The Korean Academy.</p>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Research</h4>
+                    <ul>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="research-areas.html">Areas</a></li>
+                        <li><a href="publications.html">Publications</a></li>
+                        <li><a href="resources.html">Datasets &amp; Code</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Lab</h4>
+                    <ul>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="members.html">People</a></li>
+                        <li><a href="news.html">News &amp; Events</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="mailto:admission@thekoreancad.com">admission@thekoreancad.com</a></li>
+                        <li><a href="join-us.html">Apply to the lab</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-base">
+                <span>© 2025 Center for Applied Artificial Intelligence</span>
+                <span>All rights reserved</span>
+            </div>
         </div>
     </footer>
 
+    <script src="landing.js"></script>
 </body>
 
 </html>

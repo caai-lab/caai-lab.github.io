@@ -2,233 +2,403 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CAAI: Center for Applied Artificial Intelligence - Publications</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Lato:wght@300;400;700&display=swap"
-    rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publications — CAAI</title>
+    <meta name="description"
+        content="Preprints, journal articles and datasets from CAAI — covering vision–language models, cross-modal generation, biomedical NLP, data analytics and cybersecurity.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..500&family=Inter:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="landing.css">
+    <link rel="stylesheet" href="pages.css">
 </head>
 
-<body>
+<body class="page">
 
-  <header>
-    <div class="container">
-      <div class="header-content">
-        <div class="logo-section">
-          <img src="caai cropped.jpg" alt="CAAI Logo">
-          <div class="title-section">
-            <h1>CAAI</h1>
-            <p>Center for Applied Artificial Intelligence</p>
-          </div>
+    <!-- ============ Header ============ -->
+    <header class="site-header" id="site-header">
+        <div class="shell header-inner">
+            <a class="brand" href="index.html">
+                <img class="brand__mark" src="caai cropped.jpg" alt="">
+                <span>
+                    <span class="brand__name">CAAI</span>
+                    <span class="brand__sub">Center for Applied Artificial Intelligence</span>
+                </span>
+            </a>
+
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                <span></span><span></span>
+            </button>
+
+            <nav class="nav" id="nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li>
+                        <a href="about.html">About <span class="caret">▼</span></a>
+                        <ul class="submenu">
+                            <li><a href="about.html">About the Lab</a></li>
+                            <li><a href="join-us.html">Join Us</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="projects.html">Research <span class="caret">▼</span></a>
+                        <ul class="submenu">
+                            <li><a href="projects.html">Research Projects</a></li>
+                            <li><a href="research-areas.html">Research Areas</a></li>
+                            <li><a href="resources.html">Datasets &amp; Code</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="members.html">People <span class="caret">▼</span></a>
+                        <ul class="submenu">
+                            <li><a href="members.html">Current Team</a></li>
+                            <li><a href="members.html#alumni">Alumni</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="news.html">Happenings <span class="caret">▼</span></a>
+                        <ul class="submenu">
+                            <li><a href="news.html">News &amp; Events</a></li>
+                            <li><a href="gallery.html">Photo Gallery</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="publications.html" class="is-active">Publications</a></li>
+                </ul>
+            </nav>
         </div>
-        <button class="menu-toggle" aria-label="Toggle navigation">&#9776;</button>
-        <nav>
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li>
-              <a href="#">About ▾</a>
-              <ul class="dropdown-menu">
-                <li><a href="about.html">About the Lab</a></li>
-                <li><a href="join-us.html">Join Us</a></li>
-              </ul>
-            </li>
-            <li>
-              <a href="#">Research ▾</a>
-              <ul class="dropdown-menu">
-                <li><a href="projects.html">Research Projects</a></li>
-                <li><a href="research-areas.html">Research Areas</a></li>
-                <li><a href="resources.html">Datasets & Code</a></li>
-              </ul>
-            </li>
-            <li>
-              <a href="#">People ▾</a>
-              <ul class="dropdown-menu">
-                <li><a href="members.html">Current Team</a></li>
-                <li><a href="members.html#alumni">Alumni</a></li>
-              </ul>
-            </li>
-            <li>
-              <a href="#">Happenings ▾</a>
-              <ul class="dropdown-menu">
-                <li><a href="news.html">News & Events</a></li>
-                <li><a href="gallery.html">Photo Gallery</a></li>
-              </ul>
-            </li>
-            <li><a href="publications.html" class="active">Publications</a></li>
-          </ul>
-        </nav>
-      </div>
-    </div>
-  </header>
+    </header>
 
-  <div class="page-intro">
-    <div class="container">
-      <h2>Publications</h2>
-      <p>Disseminating knowledge to the global research community through preprints, journals, and datasets.</p>
-    </div>
-  </div>
+    <main>
 
-  <section>
-    <div class="container">
-      <div class="section-header">
-        <h2>Pre-Prints</h2>
-      </div>
-      <ul class="publication-list">
+        <!-- ============ Masthead ============ -->
+        <section class="masthead">
+            <div class="shell masthead__inner">
+                <div data-reveal>
+                    <p class="eyebrow eyebrow--plain">Output</p>
+                    <h1>What the lab has <em>published</em>.</h1>
+                </div>
+                <p class="masthead__lede" data-reveal>
+                    Preprints, journal articles and datasets. Nearly every entry carries a student name beside the
+                    mentor's — that is the point of the place.
+                </p>
+            </div>
+        </section>
 
-         <li class="publication-item">
-          <div class="publication-content">
-            Gurpreet Singh "Vision–Language Foundation Models and Multimodal Large Language Models: A Comprehensive Survey of Architectures, Benchmarks, and Open Challenges" <em>preprints by MDPI</em>.
-          </div>
-          <div class="publication-links">
-            <a href="#" target="_blank">UNDER REVIEW</a>
-          </div>
-        </li>
+        <!-- ============ Figures ============ -->
+        <section class="band" style="padding-bottom: 0;">
+            <div class="shell">
+                <div class="figures" data-reveal>
+                    <div class="figure">
+                        <span class="figure__num">12</span>
+                        <div class="figure__label">Total outputs</div>
+                    </div>
+                    <div class="figure">
+                        <span class="figure__num">04</span>
+                        <div class="figure__label">Preprints</div>
+                    </div>
+                    <div class="figure">
+                        <span class="figure__num">07</span>
+                        <div class="figure__label">Journal articles</div>
+                    </div>
+                    <div class="figure">
+                        <span class="figure__num">01</span>
+                        <div class="figure__label">Datasets</div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-        <li class="publication-item">
-          <div class="publication-content">
-            Gurpreet Singh, Trina Banerjee, Nishaa Ghosh. "Tracing the Evolution of Artificial Intelligence: A Review of
-            Tools, Frameworks, and Technologies (1950-2025)." <em>arXiv, preprints by MDPI</em>.
-          </div>
-          <div class="publication-links">
-            <a href="https://doi.org/10.20944/preprints202511.0637.v1" target="_blank">DOI:
-              10.20944/preprints202511.0637.v1</a>
-          </div>
-        </li>
+        <!-- ============ Preprints ============ -->
+        <section class="shell">
+            <div class="prose">
+                <p class="prose__label" data-reveal>01 — Preprints</p>
+                <div data-reveal>
+                    <h2>Under review and in circulation.</h2>
 
-        <li class="publication-item">
-          <div class="publication-content">
-            Gurpreet Singh. "A Review of Multimodal Vision-Language Models: Foundations, Applications, and Future
-            Directions." <em>arXiv, preprints by MDPI</em>.
-          </div>
-          <div class="publication-links">
-            <a href="https://www.preprints.org/manuscript/202510.2511" target="_blank">DOI:
-              preprints.org/manuscript/202510.2511</a>
-          </div>
-        </li>
+                    <ul class="pub-list">
+                        <li class="pub">
+                            <span class="pub__index">[01]</span>
+                            <div>
+                                <p class="pub__cite"><strong>Gurpreet Singh</strong>. “Vision–Language Foundation
+                                    Models and Multimodal Large Language Models: A Comprehensive Survey of
+                                    Architectures, Benchmarks, and Open Challenges.” <em>Preprints by MDPI</em>.</p>
+                                <div class="pub__links">
+                                    <span class="pub__badge">Under review</span>
+                                </div>
+                            </div>
+                            <span class="pub__year">2025</span>
+                        </li>
 
-        <li class="publication-item">
-          <div class="publication-content">
-            Gurpreet Singh, Sundareswari Thiyagarajan. "The Multiple Approaches for Drug-Drug Interaction Extraction
-            using Machine learning and transformer based Model." <em>SSRN & bioRxiv</em>.
-          </div>
-          <div class="publication-links">
-            <a href="https://dx.doi.org/10.2139/ssrn.5640432" target="_blank">DOI: 10.2139/ssrn.5640432</a>
-          </div>
-        </li>
-      </ul>
-    </div>
-  </section>
+                        <li class="pub">
+                            <span class="pub__index">[02]</span>
+                            <div>
+                                <p class="pub__cite"><strong>Gurpreet Singh</strong>, <strong>Trina
+                                        Banerjee</strong>, <strong>Nishaa Ghosh</strong>. “Tracing the Evolution of
+                                    Artificial Intelligence: A Review of Tools, Frameworks, and Technologies
+                                    (1950–2025).” <em>arXiv · Preprints by MDPI</em>.</p>
+                                <div class="pub__links">
+                                    <a href="https://doi.org/10.20944/preprints202511.0637.v1" target="_blank"
+                                        rel="noopener">DOI 10.20944/preprints202511.0637.v1 ↗</a>
+                                </div>
+                            </div>
+                            <span class="pub__year">2025</span>
+                        </li>
 
-  <section>
-    <div class="container">
-      <div class="section-header">
-        <h2>Journal Articles</h2>
-      </div>
-      <ul class="publication-list">
-        <li class="publication-item">
-          <div class="publication-content">
-            Alisha Naaz, Asma Syed, Vanatala Akhila, Gurpreet Singh. " AI-Assisted Storytelling: Enhancing Narrative Creation in Digital Media " <em>INTERNATIONAL JOURNAL OF ENGINEERING DEVELOPMENT AND RESEARCH</em>.
-          </div>
-          <div class="publication-links">
-            <a href="https://doi.org/10.56975/ijedr.v14i1.303921" target="_blank">DOI:
-              https://doi.org/10.56975/ijedr.v14i1.303921</a>
-          </div>
-        </li>
-        
-        <li class="publication-item">
-          <div class="publication-content">
-            Gurpreet Singh, Nishaa Ghosh, Trina Banerjee. "Tracing the Evolution of Artificial Intelligence: A Review of
-            Tools, Frameworks, and Technologies (1950–2025)." <em>World Journal of Applied Mathematics and
-              Statistics</em>, 2025.
-          </div>
-          <div class="publication-links">
-            <a href="https://mkscienceset.com/articles_file/296-_article1764312180.pdf" target="_blank">PDF</a>
-          </div>
-        </li>
+                        <li class="pub">
+                            <span class="pub__index">[03]</span>
+                            <div>
+                                <p class="pub__cite"><strong>Gurpreet Singh</strong>. “A Review of Multimodal
+                                    Vision-Language Models: Foundations, Applications, and Future Directions.”
+                                    <em>arXiv · Preprints by MDPI</em>.</p>
+                                <div class="pub__links">
+                                    <a href="https://www.preprints.org/manuscript/202510.2511" target="_blank"
+                                        rel="noopener">preprints.org/202510.2511 ↗</a>
+                                </div>
+                            </div>
+                            <span class="pub__year">2025</span>
+                        </li>
 
-        <li class="publication-item">
-          <div class="publication-content">
-            Gurpreet Singh. "Generative AI in Cybersecurity: Challenges, Limitations, and Future Directions."
-            <em>Journal of Information, Security and Data Science</em>.
-          </div>
-          <div class="publication-links">
-            <span>[ UNDER REVIEW ]</span>
-          </div>
-        </li>
+                        <li class="pub">
+                            <span class="pub__index">[04]</span>
+                            <div>
+                                <p class="pub__cite"><strong>Gurpreet Singh</strong>, <strong>Sundareswari
+                                        Thiyagarajan</strong>. “The Multiple Approaches for Drug–Drug Interaction
+                                    Extraction using Machine Learning and Transformer-Based Models.” <em>SSRN ·
+                                        bioRxiv</em>.</p>
+                                <div class="pub__links">
+                                    <a href="https://dx.doi.org/10.2139/ssrn.5640432" target="_blank"
+                                        rel="noopener">DOI 10.2139/ssrn.5640432 ↗</a>
+                                </div>
+                            </div>
+                            <span class="pub__year">2025</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
 
-        <li class="publication-item">
-          <div class="publication-content">
-            Gurpreet Singh, Prof. Preethi Ananthachari. "Repercussion of ChatGPT in Cybersecurity." <em>International
-              Journal of Research Publication and Reviews</em>, vol. 4 (2), pp. 1429-1430, 2022.
-          </div>
-          <div class="publication-links">
-            <a href="https://ijrpr.com/uploads/V4ISSUE2/IJRPR10064.pdf" target="_blank">PDF</a>
-          </div>
-        </li>
+        <!-- ============ Journal articles ============ -->
+        <section class="band band--tint">
+            <div class="shell">
+                <div class="band-head" data-reveal>
+                    <div>
+                        <p class="eyebrow eyebrow--plain">02 — Journal Articles</p>
+                        <h2>Peer-reviewed and published.</h2>
+                    </div>
+                    <div class="band-head__side">
+                        <a class="link-quiet"
+                            href="https://scholar.google.com/citations?user=5OrupV0AAAAJ&amp;hl=ko" target="_blank"
+                            rel="noopener">Google Scholar <span class="arrow">→</span></a>
+                    </div>
+                </div>
 
-        <li class="publication-item">
-          <div class="publication-content">
-            Gurpreet Singh, Prof. Saurabh Singh. "Assessing the Vulnerabilities and Impacts of Open SSH Ports on CENTOS
-            9 Virtual Machines Hosted on Mac ARM Computers (CVE-2023-25136)." <em>Journal IDPR</em>, Spring 2024.
-          </div>
-          <div class="publication-links">
-            <a href="https://doi.org/10.55524/ijirem.2024.11.4.5" target="_blank">DOI</a>
-            <a href="https://www.researchgate.net/publication/383033326_ASSESSING_THE_VULNERABILITIES_AND_IMPACTS_OF_OPEN_SSH_PORTS_ON_CENTOS_9_VIRTUAL_MACHINES_HOSTED_ON_MAC_ARM_COMPUTERS_CVE-2023-_25136"
-              target="_blank">ResearchGate</a>
-          </div>
-        </li>
+                <ul class="pub-list" data-reveal>
+                    <li class="pub">
+                        <span class="pub__index">[01]</span>
+                        <div>
+                            <p class="pub__cite"><strong>Alisha Naaz</strong>, <strong>Asma Syed</strong>,
+                                <strong>Vantala Akhila</strong>, <strong>Gurpreet Singh</strong>. “AI-Assisted
+                                Storytelling: Enhancing Narrative Creation in Digital Media.” <em>International
+                                    Journal of Engineering Development and Research</em>.</p>
+                            <div class="pub__links">
+                                <a href="https://doi.org/10.56975/ijedr.v14i1.303921" target="_blank"
+                                    rel="noopener">DOI 10.56975/ijedr.v14i1.303921 ↗</a>
+                            </div>
+                        </div>
+                        <span class="pub__year">2025</span>
+                    </li>
 
-        <li class="publication-item">
-          <div class="publication-content">
-            Nuzhat Rehmani. "Research article published under The Korean Academy, marking an early academic milestone
-            aligned with CAAI’s vision." <em>The Korean Academy</em>, 2023.8.
-          </div>
-        </li>
+                    <li class="pub">
+                        <span class="pub__index">[02]</span>
+                        <div>
+                            <p class="pub__cite"><strong>Gurpreet Singh</strong>, <strong>Nishaa Ghosh</strong>,
+                                <strong>Trina Banerjee</strong>. “Tracing the Evolution of Artificial Intelligence:
+                                A Review of Tools, Frameworks, and Technologies (1950–2025).” <em>World Journal of
+                                    Applied Mathematics and Statistics</em>.</p>
+                            <div class="pub__links">
+                                <a href="https://mkscienceset.com/articles_file/296-_article1764312180.pdf"
+                                    target="_blank" rel="noopener">PDF ↗</a>
+                            </div>
+                        </div>
+                        <span class="pub__year">2025</span>
+                    </li>
 
-        <li class="publication-item">
-          <div class="publication-content">
-            Gurpreet Singh, S Singh, N Rehmani, P Kumari, SV Varshini. "The Role of Data Analytics in Driving Business
-            Innovation and Economic Growth - A Comparative Study Across Industries." <em>International Journal of
-              Innovative Research in Engineering and Management</em>, Fall 2024.
-          </div>
-          <div class="publication-links">
-            <a href="https://doi.org/10.55524/ijirem.2024.11.4.5" target="_blank">DOI</a>
-          </div>
-        </li>
-      </ul>
-    </div>
-  </section>
+                    <li class="pub">
+                        <span class="pub__index">[03]</span>
+                        <div>
+                            <p class="pub__cite"><strong>Gurpreet Singh</strong>. “Generative AI in Cybersecurity:
+                                Challenges, Limitations, and Future Directions.” <em>Journal of Information,
+                                    Security and Data Science</em>.</p>
+                            <div class="pub__links">
+                                <span class="pub__badge">Under review</span>
+                            </div>
+                        </div>
+                        <span class="pub__year">2025</span>
+                    </li>
 
-  <section>
-    <div class="container">
-      <div class="section-header">
-        <h2>Datasets</h2>
-      </div>
-      <ul class="publication-list">
-        <li class="publication-item">
-          <div class="publication-content">
-            Gurpreet Singh. "Synthetic Image Dataset of Five Object Classes Generated Using Stable Diffusion XL."
-            <em>Zenodo</em>, July 2025.
-          </div>
-          <div class="publication-links">
-            <a href="https://doi.org/10.5281/zenodo.16414387" target="_blank">DOI</a>
-          </div>
-        </li>
-      </ul>
-    </div>
-  </section>
+                    <li class="pub">
+                        <span class="pub__index">[04]</span>
+                        <div>
+                            <p class="pub__cite"><strong>Gurpreet Singh</strong>, S. Singh, <strong>N.
+                                    Rehmani</strong>, <strong>P. Kumari</strong>, <strong>S. V. Varshini</strong>.
+                                “The Role of Data Analytics in Driving Business Innovation and Economic Growth — A
+                                Comparative Study Across Industries.” <em>International Journal of Innovative
+                                    Research in Engineering and Management</em>.</p>
+                            <div class="pub__links">
+                                <a href="https://doi.org/10.55524/ijirem.2024.11.4.5" target="_blank"
+                                    rel="noopener">DOI 10.55524/ijirem.2024.11.4.5 ↗</a>
+                            </div>
+                        </div>
+                        <span class="pub__year">Fall 2024</span>
+                    </li>
 
-  <footer>
-    <div class="container">
-      <p>&copy; 2025 Center for Applied Artificial Intelligence (CAAI). All rights reserved. | <a
-          href="mailto:admission@thekoreancad.com" style="color: #bbb; text-decoration: underline;">Contact Us</a></p>
-    </div>
-  </footer>
+                    <li class="pub">
+                        <span class="pub__index">[05]</span>
+                        <div>
+                            <p class="pub__cite"><strong>Gurpreet Singh</strong>, Prof. Saurabh Singh. “Assessing
+                                the Vulnerabilities and Impacts of Open SSH Ports on CentOS 9 Virtual Machines
+                                Hosted on Mac ARM Computers (CVE-2023-25136).” <em>Journal IDPR</em>.</p>
+                            <div class="pub__links">
+                                <a href="https://doi.org/10.55524/ijirem.2024.11.4.5" target="_blank"
+                                    rel="noopener">DOI ↗</a>
+                                <a href="https://www.researchgate.net/publication/383033326_ASSESSING_THE_VULNERABILITIES_AND_IMPACTS_OF_OPEN_SSH_PORTS_ON_CENTOS_9_VIRTUAL_MACHINES_HOSTED_ON_MAC_ARM_COMPUTERS_CVE-2023-_25136"
+                                    target="_blank" rel="noopener">ResearchGate ↗</a>
+                            </div>
+                        </div>
+                        <span class="pub__year">Spring 2024</span>
+                    </li>
 
+                    <li class="pub">
+                        <span class="pub__index">[06]</span>
+                        <div>
+                            <p class="pub__cite"><strong>Nuzhat Rehmani</strong>. Research article published under
+                                The Korean Academy, marking an early academic milestone aligned with CAAI’s vision.
+                                <em>The Korean Academy</em>.</p>
+                        </div>
+                        <span class="pub__year">Aug 2023</span>
+                    </li>
+
+                    <li class="pub">
+                        <span class="pub__index">[07]</span>
+                        <div>
+                            <p class="pub__cite"><strong>Gurpreet Singh</strong>, Prof. Preethi Ananthachari.
+                                “Repercussion of ChatGPT in Cybersecurity.” <em>International Journal of Research
+                                    Publication and Reviews</em>, vol. 4(2), pp. 1429–1430.</p>
+                            <div class="pub__links">
+                                <a href="https://ijrpr.com/uploads/V4ISSUE2/IJRPR10064.pdf" target="_blank"
+                                    rel="noopener">PDF ↗</a>
+                            </div>
+                        </div>
+                        <span class="pub__year">2022</span>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- ============ Datasets ============ -->
+        <section class="shell">
+            <div class="prose">
+                <p class="prose__label" data-reveal>03 — Datasets</p>
+                <div data-reveal>
+                    <h2>Released openly.</h2>
+
+                    <ul class="pub-list">
+                        <li class="pub">
+                            <span class="pub__index">[01]</span>
+                            <div>
+                                <p class="pub__cite"><strong>Gurpreet Singh</strong>. “Synthetic Image Dataset of
+                                    Five Object Classes Generated Using Stable Diffusion XL.” <em>Zenodo</em>.</p>
+                                <div class="pub__links">
+                                    <a href="https://doi.org/10.5281/zenodo.16414387" target="_blank"
+                                        rel="noopener">DOI 10.5281/zenodo.16414387 ↗</a>
+                                </div>
+                            </div>
+                            <span class="pub__year">Jul 2025</span>
+                        </li>
+                    </ul>
+
+                    <div class="pub-note">
+                        <strong>A note on scope.</strong> This page lists work produced under CAAI. Members and the
+                        mentor also publish independently under their own institutional affiliations — including a
+                        recent conference acceptance organised by the IEEE — and that work is not listed here.
+                        Datasets in preparation from the current projects are described on the
+                        <a class="link-quiet" href="resources.html"
+                            style="display:inline-flex; vertical-align:baseline;">datasets page</a>.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ CTA ============ -->
+        <section class="band band--ink">
+            <div class="shell cta">
+                <div data-reveal>
+                    <p class="eyebrow eyebrow--plain">Your name here</p>
+                    <h2>Twelve outputs, mostly first papers.</h2>
+                </div>
+                <div data-reveal>
+                    <p>Almost everyone listed above was writing their first paper when they started. That is the
+                        whole design of the lab — you arrive with a question and leave with a citation.</p>
+                    <div class="cta__actions">
+                        <a class="btn btn--light" href="join-us.html">How to apply <span class="arrow">→</span></a>
+                        <a class="btn btn--light" href="projects.html">Current projects</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ============ Footer ============ -->
+    <footer class="site-footer">
+        <div class="shell">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="footer-brand__name">CAAI</div>
+                    <p>Center for Applied Artificial Intelligence — a guided research lab operating under
+                        The Korean Academy.</p>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Research</h4>
+                    <ul>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="research-areas.html">Areas</a></li>
+                        <li><a href="publications.html">Publications</a></li>
+                        <li><a href="resources.html">Datasets &amp; Code</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Lab</h4>
+                    <ul>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="members.html">People</a></li>
+                        <li><a href="news.html">News &amp; Events</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="mailto:admission@thekoreancad.com">admission@thekoreancad.com</a></li>
+                        <li><a href="join-us.html">Apply to the lab</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-base">
+                <span>© 2025 Center for Applied Artificial Intelligence</span>
+                <span>All rights reserved</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="landing.js"></script>
 </body>
 
 </html>
